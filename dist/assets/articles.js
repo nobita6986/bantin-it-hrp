@@ -4,7 +4,7 @@ const articles = [
     sample: true,
     section: 'news',
     category: 'update',
-    title: 'Hướng dẫn cài đặt & cập nhật APP BI trên Iphone và Androi',
+    title: 'Hướng dẫn cài đặt & cập nhật APP BI trên iPhone và Androi',
     summary: 'Tạo yêu cầu, theo dõi tiến độ và tìm hướng dẫn ngay từ trang chủ cổng hỗ trợ IT.',
     date: '2026-11-12',
     minutes: 3,
