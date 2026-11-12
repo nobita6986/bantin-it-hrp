@@ -227,9 +227,7 @@ function renderArticle(article) {
             <button class="copy-button" type="button" data-copy>${icon("link")} Sao chép liên kết</button>
           </div>
           <p class="sr-only" id="copy-status" role="status"></p>
-          ${article.sample ? '<p class="sample-note">Bài viết minh họa</p>' : ""}
         </div>
-        ${article.image ? `<div class="article-image">${cover(article, true)}</div>` : ""}
         <div class="article-body">${article.body}</div>
       </article>
       ${suggestions.length ? `<section class="related"><h2>Bài viết liên quan</h2><ul>${suggestions.map((item) =>
