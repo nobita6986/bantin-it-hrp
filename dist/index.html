@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Tin cập nhật, tính năng mới và tài liệu hướng dẫn từ phòng IT.">
+  <meta name="theme-color" content="#f8faff">
+  <title>Bản tin IT</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script src="assets/articles.js" defer></script>
+  <script src="assets/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#noi-dung">Đến nội dung chính</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#tin-moi">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m8 7-5 5 5 5m8-10 5 5-5 5m-3-13-2 16"/></svg>
+        </span>
+        <span>Bản tin <strong>IT</strong></span>
+      </a>
+      <nav class="site-nav" aria-label="Điều hướng chính">
+        <a href="#tin-moi" data-nav="news">Tin mới</a>
+        <a href="#tai-lieu" data-nav="docs">Tài liệu và HDSD</a>
+      </nav>
+      <button class="search-trigger" type="button" aria-haspopup="dialog" aria-label="Tìm kiếm toàn trang" aria-keyshortcuts="Control+K Meta+K">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/></svg>
+        <span>Tìm kiếm</span>
+        <kbd aria-hidden="true">Ctrl K</kbd>
+      </button>
+    </div>
+  </header>
+
+  <main class="wrap" id="noi-dung" tabindex="-1">
+    <noscript><p class="empty-state">Bật JavaScript để xem và tìm kiếm bài viết.</p></noscript>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <span class="footer-brand">Bản tin IT</span>
+      <span>Phòng Công nghệ thông tin</span>
+    </div>
+  </footer>
+
+  <dialog id="site-search" aria-labelledby="search-title">
+    <div class="dialog-inner">
+      <div class="dialog-head">
+        <h2 id="search-title">Tìm kiếm toàn trang</h2>
+        <form method="dialog"><button class="icon-button" type="submit" aria-label="Đóng tìm kiếm">×</button></form>
+      </div>
+      <label class="sr-only" for="global-query">Từ khóa tìm kiếm</label>
+      <input class="search-input" type="search" id="global-query" placeholder="Nhập tên bài viết, chủ đề…" autocomplete="off" autofocus>
+      <p class="search-status" id="global-status" role="status"></p>
+      <ul class="search-results" id="global-results"></ul>
+    </div>
+  </dialog>
+</body>
+</html>
