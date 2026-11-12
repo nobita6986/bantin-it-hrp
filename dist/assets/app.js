@@ -94,6 +94,7 @@ function emptyState(title, detail) {
 }
 
 function featuredCard(article) {
+  const footerImage = article.featuredFooterImage;
   return `<article class="featured">
     <div class="featured-copy">
       <span class="featured-label">${icon("spark")} Tin nổi bật</span>
@@ -104,6 +105,10 @@ function featuredCard(article) {
       <a class="button button-primary" href="${articleUrl(article)}">Đọc bài viết ${icon("arrow")}</a>
     </div>
     <div class="featured-image">${cover(article, true)}</div>
+    ${footerImage ? `
+      <img class="featured-footer-image" src="assets/${encodeURIComponent(footerImage.src)}"
+        alt="${escapeHtml(footerImage.alt)}" width="${footerImage.width}" height="${footerImage.height}"
+        loading="lazy" decoding="async">` : ""}
   </article>`;
 }
 

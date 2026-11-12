@@ -153,6 +153,13 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .featured .button { margin-top: 19px; }
 .featured-image { position: relative; min-width: 0; background: #e8e8ff; }
 .featured-image img { position: absolute; height: 100%; object-fit: cover; }
+.featured-footer-image {
+  grid-column: 1 / -1;
+  width: min(690px, calc(100% - 48px));
+  height: auto;
+  margin: 24px auto;
+  border-radius: 12px;
+}
 .cover-placeholder { display: grid; place-items: center; height: 100%; min-height: 110px; background: var(--accent-light); color: var(--accent); }
 .cover-placeholder svg { width: 44px; height: 44px; }
 

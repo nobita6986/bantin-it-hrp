@@ -11,6 +11,7 @@ const articles = [
     image: 'hero.webp',
     featured: true,
     hideFeaturedSampleLabel: true,
+    featuredFooterImage: { src: 'ios-vs-android.png', alt: 'Biểu trưng Android và iOS', width: 690, height: 362 },
     body: `
       <p>Giao diện mới gom các thao tác thường dùng vào trang chủ để bạn có thể gửi yêu cầu và theo dõi phản hồi ở cùng một nơi.</p>
       <h2>Trang chủ có gì mới?</h2>
