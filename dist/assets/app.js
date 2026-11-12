@@ -96,19 +96,23 @@ function emptyState(title, detail) {
 function featuredCard(article) {
   const footerImage = article.featuredFooterImage;
   return `<article class="featured">
-    <div class="featured-copy">
+    <div class="featured-copy${footerImage ? " featured-copy--with-image" : ""}">
       <span class="featured-label">${icon("spark")} Tin nổi bật</span>
       ${article.sample && !article.hideFeaturedSampleLabel ? '<span class="sample-tag">Tin minh họa</span>' : ""}
       <h2>${escapeHtml(article.title)}</h2>
       ${article.summary ? `<p>${escapeHtml(article.summary)}</p>` : ""}
-      <div class="meta">${icon("calendar")}${dateLabel(article)} <span aria-hidden="true">·</span> ${article.minutes} phút đọc</div>
-      <a class="button button-primary" href="${articleUrl(article)}">Đọc bài viết ${icon("arrow")}</a>
+      <div class="featured-details">
+        <div>
+          <div class="meta">${icon("calendar")}${dateLabel(article)} <span aria-hidden="true">·</span> ${article.minutes} phút đọc</div>
+          <a class="button button-primary" href="${articleUrl(article)}">Đọc bài viết ${icon("arrow")}</a>
+        </div>
+        ${footerImage ? `
+          <img class="featured-footer-image" src="assets/${encodeURIComponent(footerImage.src)}"
+            alt="${escapeHtml(footerImage.alt)}" width="${footerImage.width}" height="${footerImage.height}"
+            loading="lazy" decoding="async">` : ""}
+      </div>
     </div>
     <div class="featured-image">${cover(article, true)}</div>
-    ${footerImage ? `
-      <img class="featured-footer-image" src="assets/${encodeURIComponent(footerImage.src)}"
-        alt="${escapeHtml(footerImage.alt)}" width="${footerImage.width}" height="${footerImage.height}"
-        loading="lazy" decoding="async">` : ""}
   </article>`;
 }
 
