@@ -97,9 +97,9 @@ function featuredCard(article) {
   return `<article class="featured">
     <div class="featured-copy">
       <span class="featured-label">${icon("spark")} Tin nổi bật</span>
-      ${article.sample ? '<span class="sample-tag">Tin minh họa</span>' : ""}
+      ${article.sample && !article.hideFeaturedSampleLabel ? '<span class="sample-tag">Tin minh họa</span>' : ""}
       <h2>${escapeHtml(article.title)}</h2>
-      <p>${escapeHtml(article.summary)}</p>
+      ${article.summary ? `<p>${escapeHtml(article.summary)}</p>` : ""}
       <div class="meta">${icon("calendar")}${dateLabel(article)} <span aria-hidden="true">·</span> ${article.minutes} phút đọc</div>
       <a class="button button-primary" href="${articleUrl(article)}">Đọc bài viết ${icon("arrow")}</a>
     </div>
@@ -114,7 +114,7 @@ function newsCard(article) {
       <div class="card-body">
         <div class="card-meta">${badge(article)} ${dateLabel(article)}${article.sample ? '<span class="sr-only">Tin minh họa</span>' : ""}</div>
         <h3>${escapeHtml(article.title)}</h3>
-        <p>${escapeHtml(article.summary)}</p>
+        ${article.summary ? `<p>${escapeHtml(article.summary)}</p>` : ""}
         <span class="card-action" aria-hidden="true">Đọc tiếp ${icon("arrow")}</span>
       </div>
     </a>
@@ -211,7 +211,7 @@ function renderArticle(article) {
         <div class="article-heading">
           ${badge(article)}
           <h1 id="page-title" tabindex="-1">${escapeHtml(article.title)}</h1>
-          <p class="article-summary">${escapeHtml(article.summary)}</p>
+          ${article.summary ? `<p class="article-summary">${escapeHtml(article.summary)}</p>` : ""}
           <div class="article-info">
             <span class="meta">${icon("calendar")} ${dateLabel(article)}</span>
             <span class="meta">${icon("clock")} ${article.minutes} phút đọc</span>

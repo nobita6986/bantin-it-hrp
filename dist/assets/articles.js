@@ -5,11 +5,12 @@ const articles = [
     section: 'news',
     category: 'update',
     title: 'Hướng dẫn cài đặt & cập nhật APP BI trên iPhone và Androi',
-    summary: 'Tạo yêu cầu, theo dõi tiến độ và tìm hướng dẫn ngay từ trang chủ cổng hỗ trợ IT.',
+    summary: '',
     date: '2026-11-12',
     minutes: 3,
     image: 'hero.webp',
     featured: true,
+    hideFeaturedSampleLabel: true,
     body: `
       <p>Giao diện mới gom các thao tác thường dùng vào trang chủ để bạn có thể gửi yêu cầu và theo dõi phản hồi ở cùng một nơi.</p>
       <h2>Trang chủ có gì mới?</h2>
