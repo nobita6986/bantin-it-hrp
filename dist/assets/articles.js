@@ -13,15 +13,30 @@ const articles = [
     hideFeaturedSampleLabel: true,
     featuredFooterImage: { src: 'ios-vs-android.png', alt: 'Biểu trưng Android và iOS', width: 690, height: 362 },
     body: `
-      <p>Giao diện mới gom các thao tác thường dùng vào trang chủ để bạn có thể gửi yêu cầu và theo dõi phản hồi ở cùng một nơi.</p>
-      <h2>Trang chủ có gì mới?</h2>
+      <h2>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
+      <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau:</p>
+
+      <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
+      <p><em>Bước chuẩn bị.</em></p>
+      <p>Mở <strong>App Store</strong> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
+      <p><em>Verification:</em> Biểu tượng TestFlight (hình cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
+
+      <h3>2. Quét mã QR để nhận lời mời tải app BI</h3>
+      <p><em>1 phút.</em></p>
+      <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
+      <p><em>Verification:</em> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
+
+      <h3>3. Tiến hành cài đặt ứng dụng BI</h3>
+      <p><em>1 - 2 phút.</em></p>
+      <p>Nhấn vào nút <strong>Chấp nhận</strong> (nếu hệ thống yêu cầu), sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
+      <p><em>Verification:</em> Biểu tượng ứng dụng <strong>BI</strong> xuất hiện trên màn hình chính với một dấu chấm tròn màu cam nhỏ nằm ngay trước tên ứng dụng.</p>
+
+      <h2>Một số lưu ý quan trọng</h2>
       <ul>
-        <li>Nút <strong>Tạo yêu cầu</strong> giúp bạn mở biểu mẫu hỗ trợ từ trang chủ.</li>
-        <li>Mục <strong>Yêu cầu của tôi</strong> hiển thị tiến độ và phản hồi mới nhất của từng yêu cầu.</li>
-        <li>Kho hướng dẫn gợi ý các bài viết theo chủ đề khi bạn cần tự xử lý một vấn đề thường gặp.</li>
+        <li><strong>Không dùng Zalo để quét mã:</strong> Bạn nên dùng <strong>Camera của iPhone</strong> để quét mã QR. Nếu quét bằng Zalo hoặc trình duyệt bên thứ ba, link có thể bị chặn chuyển hướng sang TestFlight. (Nếu lỡ mở bằng Zalo, hãy nhấn biểu tượng <code>...</code> ở góc trên bên phải và chọn <strong>Mở bằng Safari</strong>).</li>
+        <li><strong>Quyền truy cập:</strong> Trong lần đầu mở ứng dụng BI, nếu hệ thống hỏi cấp quyền (như Thông báo, Mạng cục bộ, Dịch vụ định vị...), bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</li>
+        <li><strong>Cập nhật phiên bản:</strong> Bản thử nghiệm trên TestFlight có thời hạn sử dụng trong <strong>90 ngày</strong>. Khi có bản cập nhật mới, bạn chỉ cần vào ứng dụng <strong>TestFlight</strong> và nhấn <strong>Cập nhật</strong> (Update) để tiếp tục dùng mà không bị mất dữ liệu.</li>
       </ul>
-      <h2>Khi gửi yêu cầu hỗ trợ</h2>
-      <p>Chọn đúng nhóm vấn đề, ghi rõ thông báo lỗi và thời điểm xảy ra. Nếu đính kèm ảnh màn hình, hãy che thông tin cá nhân và dữ liệu nội bộ không liên quan.</p>
     `,
   },
   {
