@@ -14,35 +14,65 @@ const articles = [
     hideFeaturedSampleLabel: true,
     featuredFooterImage: { src: 'ios-vs-android.png', alt: 'Biểu trưng Android và iOS', width: 690, height: 362 },
     body: `
-      <h2>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
-      <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau hoặc tham khảo video chi tiết.</p>
-      <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="240" height="427" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-      <p><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share">Xem video trên YouTube</a></p>
+      <div class="bi-guide">
+        <div class="bi-guide-lead">
+          <div class="bi-guide-intro">
+            <h2>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
+            <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau hoặc tham khảo video chi tiết.</p>
+          </div>
+          <figure class="bi-guide-video">
+            <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+            <figcaption><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share">Xem video trên YouTube</a></figcaption>
+          </figure>
+          <section class="bi-guide-panel bi-guide-prepare">
+            <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
+            <p><em>Bước chuẩn bị.</em></p>
+            <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
+            <img class="article-download-screenshot" src="assets/testflight-download.png" alt="Mũi tên chỉ biểu tượng tải TestFlight trong App Store" width="1496" height="830" loading="lazy" decoding="async">
+            <p class="bi-guide-check"><strong>Kiểm tra.</strong> Biểu tượng TestFlight (hình cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
+          </section>
+        </div>
 
-      <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
-      <p><em>Bước chuẩn bị.</em></p>
-      <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <span class="article-image-label"><strong>Nhận</strong> <img class="article-inline-screenshot" src="assets/testflight-download.png" alt="Mũi tên chỉ biểu tượng tải TestFlight trong App Store" width="1496" height="830" decoding="async"></span> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
-      <p><em>Verification:</em> Biểu tượng TestFlight (hình cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
+        <section class="bi-guide-panel">
+          <h3>2. Quét mã QR để nhận lời mời tải app BI</h3>
+          <div class="bi-guide-pair">
+            <div class="bi-guide-copy">
+              <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
+              <p class="bi-guide-check"><strong>Kiểm tra.</strong> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
+            </div>
+            <img class="article-qr-code" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" decoding="async">
+          </div>
+        </section>
 
-      <h3>2. Quét mã QR để nhận lời mời tải app BI</h3>
-      <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
-      <img class="article-qr-code" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" decoding="async">
-      <p><em>Verification:</em> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
+        <section class="bi-guide-panel">
+          <h3>3. Tiến hành cài đặt ứng dụng BI</h3>
+          <div class="bi-guide-install">
+            <div class="bi-guide-copy">
+              <p>Nhấn vào nút <strong>Chấp nhận</strong> (nếu hệ thống yêu cầu), sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
+              <img class="article-install-screenshot" src="assets/hrp-bi-install.png" alt="Màn hình HRP BI trên TestFlight với nút Cài đặt" width="675" height="862" loading="lazy" decoding="async">
+            </div>
+            <div class="bi-guide-copy">
+              <p class="bi-guide-check"><strong>Kiểm tra.</strong> Biểu tượng ứng dụng <strong>BI</strong> xuất hiện trên màn hình chính với một dấu chấm tròn màu cam nhỏ nằm ngay trước tên ứng dụng.</p>
+              <img class="article-verification-screenshot" src="assets/hrp-bi-home-screen.png" alt="Biểu tượng HRP BI và dấu chấm màu cam bên cạnh tên ứng dụng trên màn hình chính iPhone" width="1462" height="822" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </section>
 
-      <h3>3. Tiến hành cài đặt ứng dụng BI</h3>
-      <p>Nhấn vào nút <strong>Chấp nhận</strong> (nếu hệ thống yêu cầu), sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
-      <img class="article-install-screenshot" src="assets/hrp-bi-install.png" alt="Màn hình HRP BI trên TestFlight với nút Cài đặt" width="675" height="862" loading="lazy" decoding="async">
-      <p><em>Verification:</em> Biểu tượng ứng dụng <strong>BI</strong> xuất hiện trên màn hình chính với một dấu chấm tròn màu cam nhỏ nằm ngay trước tên ứng dụng.</p>
-      <img class="article-verification-screenshot" src="assets/hrp-bi-home-screen.png" alt="Biểu tượng HRP BI và dấu chấm màu cam bên cạnh tên ứng dụng trên màn hình chính iPhone" width="1462" height="822" loading="lazy" decoding="async">
-
-      <h2>Một số lưu ý quan trọng</h2>
-      <ul>
-        <li><strong>Không dùng Zalo để quét mã:</strong> Bạn nên dùng <strong>Camera của iPhone</strong> để quét mã QR. Nếu quét bằng Zalo hoặc trình duyệt bên thứ ba, link có thể bị chặn chuyển hướng sang TestFlight. (Nếu lỡ mở bằng Zalo, hãy nhấn biểu tượng <code>...</code> ở góc trên bên phải và chọn <strong>Mở bằng Safari</strong>).</li>
-        <li><strong>Quyền truy cập:</strong> Trong lần đầu mở ứng dụng BI, nếu hệ thống hỏi cấp quyền (như Thông báo, Mạng cục bộ, Dịch vụ định vị...), bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</li>
-        <li><strong>Cập nhật phiên bản:</strong> Bản thử nghiệm trên TestFlight có thời hạn sử dụng trong <strong>90 ngày</strong>. Khi có bản cập nhật mới, bạn chỉ cần vào ứng dụng <strong>TestFlight</strong> và nhấn <strong>Cập nhật</strong> (Update) để tiếp tục dùng mà không bị mất dữ liệu.
-          <img class="article-install-screenshot" src="assets/hrp-bi-update.png" alt="Màn hình HRP BI trên TestFlight với nút Cập nhật" width="677" height="871" loading="lazy" decoding="async">
-        </li>
-      </ul>
+        <section class="bi-guide-panel bi-guide-notes">
+          <h2>Một số lưu ý quan trọng</h2>
+          <ul>
+            <li><strong>Không dùng Zalo để quét mã:</strong> Bạn nên dùng <strong>Camera của iPhone</strong> để quét mã QR. Nếu quét bằng Zalo hoặc trình duyệt bên thứ ba, link có thể bị chặn chuyển hướng sang TestFlight. (Nếu lỡ mở bằng Zalo, hãy nhấn biểu tượng <code>...</code> ở góc trên bên phải và chọn <strong>Mở bằng Safari</strong>).</li>
+            <li><strong>Quyền truy cập:</strong> Trong lần đầu mở ứng dụng BI, nếu hệ thống hỏi cấp quyền (như Thông báo, Mạng cục bộ, Dịch vụ định vị...), bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</li>
+          </ul>
+          <div class="bi-guide-pair bi-guide-update">
+            <div class="bi-guide-copy">
+              <h3>Cập nhật phiên bản</h3>
+              <p>Bản thử nghiệm trên TestFlight có thời hạn sử dụng trong <strong>90 ngày</strong>. Khi có bản cập nhật mới, bạn chỉ cần vào ứng dụng <strong>TestFlight</strong> và nhấn <strong>Cập nhật</strong> (Update) để tiếp tục dùng mà không bị mất dữ liệu.</p>
+            </div>
+            <img class="article-install-screenshot" src="assets/hrp-bi-update.png" alt="Màn hình HRP BI trên TestFlight với nút Cập nhật" width="677" height="871" loading="lazy" decoding="async">
+          </div>
+        </section>
+      </div>
     `,
   },
   {
