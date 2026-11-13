@@ -314,6 +314,14 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .article-body li + li { margin-top: 6px; }
 .article-body a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 .article-inline-icon { display: inline-block; width: 24px; height: auto; vertical-align: middle; }
+.article-qr-code {
+  width: min(100%, 288px);
+  height: auto;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+}
 .article-image-label { display: inline-block; white-space: nowrap; }
 .article-inline-screenshot {
   display: inline-block;
