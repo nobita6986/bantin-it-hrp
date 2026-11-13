@@ -214,7 +214,7 @@ function renderArticle(article) {
   const others = related.filter((item) => item.category !== article.category);
   const suggestions = [...relevant, ...others].slice(0, 2);
   main.innerHTML = `
-    <div class="reading-page">
+    <div class="reading-page${article.compactReadingLayout ? " reading-page--compact" : ""}">
       <a class="back-link" href="${routes[article.section]}">${icon("back")} Quay lại ${name}</a>
       <article class="article">
         <div class="article-heading">

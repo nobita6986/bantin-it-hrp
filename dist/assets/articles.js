@@ -1,6 +1,7 @@
 const articles = [
   {
     id: 'cong-ho-tro-it',
+    compactReadingLayout: true,
     sample: true,
     section: 'news',
     category: 'update',

@@ -313,6 +313,18 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .article-body ol, .article-body ul { padding-inline-start: 1.4em; margin-bottom: 0; }
 .article-body li + li { margin-top: 6px; }
 .article-body a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
+.reading-page--compact { margin-block: 12px 32px; }
+.reading-page--compact .back-link { margin-bottom: 4px; }
+.reading-page--compact .article-heading,
+.reading-page--compact .article-body { padding-inline: clamp(16px, 4vw, 30px); }
+.reading-page--compact .article-heading { padding-block: 16px 0; }
+.reading-page--compact .article-heading h1 { margin-top: 8px; font-size: clamp(1.4rem, 4vw, 2rem); }
+.reading-page--compact .article-info { margin-top: 4px; }
+.reading-page--compact .article-body { padding-block: 6px 20px; font-size: .94rem; line-height: 1.5; }
+.reading-page--compact .article-body > * + * { margin-top: 8px; }
+.reading-page--compact .article-body h2 { font-size: 1.12rem; }
+.reading-page--compact .article-body h3 { font-size: 1.02rem; }
+.reading-page--compact .article-body :not(:first-child):is(h2, h3) { margin-top: 16px; }
 .article-inline-icon { display: inline-block; width: 24px; height: auto; vertical-align: middle; }
 .article-qr-code {
   width: min(100%, 144px);
