@@ -29,6 +29,7 @@ const articles = [
 
       <h3>3. Tiến hành cài đặt ứng dụng BI</h3>
       <p>Nhấn vào nút <strong>Chấp nhận</strong> (nếu hệ thống yêu cầu), sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
+      <img class="article-install-screenshot" src="assets/hrp-bi-install.png" alt="Màn hình HRP BI trên TestFlight với nút Cài đặt" width="675" height="862" loading="lazy" decoding="async">
       <p><em>Verification:</em> Biểu tượng ứng dụng <strong>BI</strong> xuất hiện trên màn hình chính với một dấu chấm tròn màu cam nhỏ nằm ngay trước tên ứng dụng.</p>
 
       <h2>Một số lưu ý quan trọng</h2>
