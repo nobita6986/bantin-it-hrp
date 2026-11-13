@@ -18,7 +18,7 @@ const articles = [
 
       <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
       <p><em>Bước chuẩn bị.</em></p>
-      <p>Mở <strong>App Store</strong> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
+      <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
       <p><em>Verification:</em> Biểu tượng TestFlight (hình cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
 
       <h3>2. Quét mã QR để nhận lời mời tải app BI</h3>

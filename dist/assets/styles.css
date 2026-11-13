@@ -313,6 +313,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .article-body ol, .article-body ul { padding-inline-start: 1.4em; margin-bottom: 0; }
 .article-body li + li { margin-top: 6px; }
 .article-body a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
+.article-inline-icon { display: inline-block; width: 24px; height: auto; vertical-align: middle; }
 .related { margin-top: 25px; }
 .related h2 { font-size: 1.2rem; }
 .related ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 12px 0 0; padding: 0; list-style: none; }
