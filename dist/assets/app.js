@@ -235,7 +235,7 @@ function renderArticle(article) {
       <a class="back-link" href="${routes[article.section]}">${icon("back")} Quay lại ${name}</a>
       <article class="article">
         <div class="article-heading">
-          ${badge(article)}
+          ${article.hideCategoryBadge ? "" : badge(article)}
           <h1 id="page-title" tabindex="-1">${escapeHtml(article.title)}</h1>
           ${article.summary ? `<p class="article-summary">${escapeHtml(article.summary)}</p>` : ""}
           <div class="article-info">

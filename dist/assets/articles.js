@@ -100,7 +100,9 @@ const articles = [
             <div class="bi-guide-video bi-guide-android-video">
               <button class="bi-guide-video-toggle" type="button" aria-expanded="false" aria-controls="bi-guide-android-video-content">
                 <span class="bi-guide-video-play" aria-hidden="true"></span>
-                Video hướng dẫn Android
+                <span class="bi-guide-android-video-badge">VIDEO HƯỚNG DẪN</span>
+                <span class="bi-guide-android-video-copy"><strong>Video hướng dẫn Android</strong><small>Cài đặt HRP BI qua Google Play</small></span>
+                <span class="bi-guide-android-video-cta">Phát video hướng dẫn</span>
               </button>
               <figure class="bi-guide-video-content" id="bi-guide-android-video-content">
                 <iframe class="article-short-video" src="https://www.youtube.com/embed/tEAiYreuigw" title="Video hướng dẫn cài đặt ứng dụng BI trên Android" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
@@ -139,6 +141,102 @@ const articles = [
               </div>
             </li>
           </ol>
+        </section>
+      </div>
+    `,
+  },
+  {
+    id: 'gioi-thieu-web-bi',
+    section: 'news',
+    category: 'feature',
+    title: 'Tổng Quan Về Web Bi',
+    hideCategoryBadge: true,
+    summary: 'Tổng quan nền tảng BI và HRIS HR Partner cùng các chức năng quản trị, báo cáo và vận hành nhân sự.',
+    date: '2026-11-13',
+    minutes: 5,
+    body: `
+      <div class="web-bi-overview">
+        <p class="web-bi-lead"><strong>Hệ thống Báo cáo và Quản trị Nhân sự HRP (HR Partner)</strong> là nền tảng toàn diện, kết hợp giữa quản trị dữ liệu thông minh (Business Intelligence - BI) và hệ thống thông tin quản lý nhân sự (HRIS). Được thiết kế chuyên biệt cho cấp quản lý và Ban Giám đốc, nền tảng cung cấp bức tranh toàn cảnh về tình hình nhân sự, đồng thời số hóa các quy trình vận hành cốt lõi, giúp doanh nghiệp tối ưu hóa tuyển dụng, quản lý rủi ro và ra quyết định chiến lược hiệu quả.</p>
+        <p>Dưới đây là tổng hợp các chức năng trọng yếu của hệ thống:</p>
+
+        <section class="web-bi-group">
+          <h2>I. Phân tích &amp; Báo cáo Quản trị (BI Dashboard)</h2>
+          <div class="web-bi-grid">
+            <section class="web-bi-module">
+              <h3>1. Hệ thống Báo cáo Đa chiều</h3>
+              <ul>
+                <li>Cung cấp các danh mục báo cáo phân lớp: Báo cáo tổng quát, Báo cáo chi tiết và Báo cáo theo nhóm.</li>
+                <li>Tích hợp công cụ kiểm soát chất lượng dữ liệu: Review thông tin người lao động, báo cáo CCCD trùng lặp (phòng chống gian lận hồ sơ) và báo cáo người lao động nghỉ việc.</li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <h3>2. Bảng điều khiển Tổng quan (Executive Dashboard)</h3>
+              <ul>
+                <li><strong>Chỉ số KPI trọng yếu:</strong> Tự động tổng hợp lượt tuyển mới, số ngày phát sinh tuyển dụng, số lượng dự án đang vận hành và quy mô đội ngũ chuyên viên tuyển dụng (Recruiters).</li>
+                <li><strong>So sánh tăng trưởng:</strong> Đối chiếu dữ liệu kỳ hiện tại với các kỳ trước (tuần/tháng/quý) để đo lường mức độ tăng trưởng.</li>
+                <li><strong>Bộ lọc dữ liệu linh hoạt:</strong> Trích xuất dữ liệu theo mốc thời gian hoặc bóc tách chi tiết qua “Bộ lọc nâng cao”.</li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <h3>3. Phân tích Xu hướng &amp; Hiệu suất Tuyển dụng</h3>
+              <ul>
+                <li><strong>Xu hướng thời gian:</strong> Biểu đồ biến động theo ngày, tuần, tháng giúp nhận diện chu kỳ nguồn lao động và điểm “đỉnh tuyển”.</li>
+                <li><strong>Phân bổ theo dự án:</strong> Thống kê tỷ trọng nhân sự cung ứng cho từng khách hàng, đánh giá quy mô dự án.</li>
+                <li><strong>Đo lường kênh nguồn (HRP và Vendor):</strong> Phân tích tỷ trọng, hiệu quả giữa nguồn tuyển nội bộ và thuê ngoài, chi tiết đến từng dự án.</li>
+                <li><strong>Đánh giá năng suất:</strong> Xếp hạng các chuyên viên tuyển dụng có thành tích tốt nhất.</li>
+                <li><strong>Cơ cấu lao động:</strong> Phân loại nhân sự theo tính chất hợp đồng (thời vụ, chính thức).</li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <h3>4. Quản lý Hiện trạng &amp; Biến động Trạng thái Lao động</h3>
+              <ul>
+                <li><strong>Chốt hiện trạng (Snapshot):</strong> Thống kê cơ cấu trạng thái người lao động tại một thời điểm cụ thể (đang làm, đang chờ việc, đã nghỉ).</li>
+                <li><strong>Luồng chuyển tiếp trạng thái:</strong> Theo dõi dòng chảy nhân sự, chẳng hạn tỷ lệ chuyển từ “Đang làm” sang “Đã nghỉ”; phân tách rõ tuyển mới và biến động nội bộ.</li>
+              </ul>
+            </section>
+          </div>
+        </section>
+
+        <section class="web-bi-group">
+          <h2>II. Vận hành &amp; Quản trị Nhân sự (HRIS)</h2>
+          <div class="web-bi-grid">
+            <section class="web-bi-module">
+              <h3>5. Quản trị Tin tuyển dụng (Job Postings &amp; Campaigns)</h3>
+              <ul>
+                <li><strong>Quản lý chiến dịch:</strong> Đăng tải, lưu trữ và theo dõi trạng thái các yêu cầu tuyển dụng cho từng dự án.</li>
+                <li><strong>Thu hút &amp; Phân luồng:</strong> Khởi tạo mô tả công việc (JD), phân phối tin tuyển dụng ra các kênh và thu thập hồ sơ ứng viên (CV) vào kho dữ liệu chung.</li>
+                <li><strong>Kết nối dữ liệu:</strong> Đồng bộ hiệu quả chiến dịch tuyển dụng lên Bảng điều khiển tổng quan.</li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <h3>6. Quản lý Chấm công (Time &amp; Attendance)</h3>
+              <ul>
+                <li><strong>Kiểm soát thời gian thực tế:</strong> Ghi nhận giờ ra/vào, ca làm việc, thời gian đi muộn/về sớm và số giờ tăng ca (OT).</li>
+                <li><strong>Tổng hợp tự động:</strong> Hỗ trợ chốt công cuối kỳ nhanh chóng, giảm sai sót và cung cấp dữ liệu đầu vào chính xác cho bộ phận tính lương (C&amp;B).</li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <h3>7. Quản lý Nghỉ phép (Leave Management)</h3>
+              <ul>
+                <li><strong>Số hóa đơn từ:</strong> Hỗ trợ người lao động tạo và gửi trực tuyến các loại đơn xin nghỉ (phép năm, nghỉ ốm, không lương, thai sản...).</li>
+                <li><strong>Kiểm soát quỹ phép:</strong> Tự động theo dõi và cập nhật số ngày phép còn lại của từng cá nhân.</li>
+                <li><strong>Phê duyệt nhanh:</strong> Cấp quản lý xem lịch sử và duyệt đơn ngay trên hệ thống, giúp luồng công việc thông suốt.</li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <h3>8. Quản lý Ứng lương (Salary Advance)</h3>
+              <ul>
+                <li><strong>Đề xuất linh hoạt:</strong> Cho phép nhân sự gửi yêu cầu tạm ứng thu nhập dựa trên số ngày công đã hoàn thành.</li>
+                <li><strong>Quy trình đối trừ tự động:</strong> Hệ thống hóa luồng phê duyệt từ quản lý đến kế toán, ghi nhận khoản ứng để khấu trừ vào kỳ lương tiếp theo, bảo đảm minh bạch và an toàn dòng tiền.</li>
+              </ul>
+            </section>
+          </div>
         </section>
       </div>
     `,
