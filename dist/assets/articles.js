@@ -2,10 +2,11 @@ const articles = [
   {
     id: 'cong-ho-tro-it',
     compactReadingLayout: true,
+    quickJump: { target: 'bi-guide-android', label: 'Chuyển nhanh hướng dẫn trên Android' },
     sample: true,
     section: 'news',
     category: 'update',
-    title: 'Hướng dẫn cài đặt & cập nhật APP BI trên iPhone và Android',
+    title: 'HƯỚNG DẪN CÀI ĐẶT & CẬP NHẬT APP BI TRÊN IPHONE VÀ ANDROID',
     summary: '',
     date: '2026-11-12',
     minutes: 3,
@@ -17,7 +18,7 @@ const articles = [
       <div class="bi-guide">
         <div class="bi-guide-lead">
           <div class="bi-guide-intro">
-            <h2>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
+            <h2 class="bi-guide-section-title"><img class="bi-guide-section-icon" src="assets/hand-pointer-right.png" alt="" aria-hidden="true" width="28" height="21"><span>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</span></h2>
             <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau hoặc tham khảo video chi tiết.</p>
           </div>
           <div class="bi-guide-video">
@@ -83,8 +84,8 @@ const articles = [
           </div>
         </section>
 
-        <section class="bi-guide-panel bi-guide-android">
-          <h2>Hướng dẫn cài đặt ứng dụng BI trên Android</h2>
+        <section class="bi-guide-panel bi-guide-android" id="bi-guide-android" tabindex="-1">
+          <h2 class="bi-guide-section-title"><img class="bi-guide-section-icon" src="assets/hand-pointer-right.png" alt="" aria-hidden="true" width="28" height="21"><span>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN ANDROID</span></h2>
           <p>Quét mã QR bằng điện thoại Android để mở BI trên Google Play, hoặc chạm nút bên cạnh nếu đang dùng điện thoại.</p>
           <div class="bi-guide-android-entry">
             <img class="article-android-qr" src="assets/bi-android-play-qr.png" alt="Mã QR mở ứng dụng BI trên Google Play" width="750" height="750" loading="lazy" decoding="async">
@@ -97,28 +98,28 @@ const articles = [
           <ol class="bi-guide-android-steps">
             <li>
               <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><span class="bi-guide-android-number">1</span><h3>Quét mã QR</h3></div>
+                <div class="bi-guide-android-step-title"><h3>1. Quét mã QR</h3></div>
                 <p>Mở Camera trên điện thoại, quét mã QR rồi chạm vào liên kết Google Play hiện ở giữa màn hình.</p>
                 <img class="article-android-step-image" src="assets/bi-android-scan.svg" alt="Minh họa điện thoại Android dùng camera quét mã QR" width="300" height="360" loading="lazy" decoding="async">
               </div>
             </li>
             <li>
               <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><span class="bi-guide-android-number">2</span><h3>Tiến hành cài đặt ứng dụng BI</h3></div>
+                <div class="bi-guide-android-step-title"><h3>2. Tiến hành cài đặt ứng dụng BI</h3></div>
                 <p>Kiểm tra đúng ứng dụng BI trên Google Play, chạm <strong>Cài đặt</strong> rồi chờ hoàn tất.</p>
                 <img class="article-android-step-image article-android-step-image--screenshot article-android-step-image--install-screen" src="assets/bi-android-install-screen.png" alt="Ảnh Google Play có trang HRP BI và nút Cài đặt" width="407" height="856" loading="lazy" decoding="async">
               </div>
             </li>
             <li>
               <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><span class="bi-guide-android-number">3</span><h3>Mở ứng dụng</h3></div>
+                <div class="bi-guide-android-step-title"><h3>3. Mở ứng dụng</h3></div>
                 <p>Sau khi cài đặt hoàn tất, ngoài màn hình chính sẽ xuất hiện app HRP BI. Tiến hành truy cập app và đăng nhập bằng tài khoản IT đã cấp. Trong lần đầu mở ứng dụng BI, nếu hệ thống hỏi cấp quyền (như Thông báo, Mạng cục bộ, Dịch vụ định vị...), bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</p>
                 <img class="article-android-step-image article-android-step-image--screenshot" src="assets/bi-android-home-screen.png" alt="Ảnh màn hình chính Android có biểu tượng HRP BI được khoanh đỏ" width="402" height="820" loading="lazy" decoding="async">
               </div>
             </li>
             <li>
               <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><span class="bi-guide-android-number">4</span><h3>Cập nhật ứng dụng</h3></div>
+                <div class="bi-guide-android-step-title"><h3>4. Cập nhật ứng dụng</h3></div>
                 <p>Khi có phiên bản mới, hãy quét lại mã QR trên đầu trang hướng dẫn để vào trang cập nhật trên Google Play và bấm <strong>cập nhật</strong>.</p>
                 <img class="article-android-step-image article-android-step-image--screenshot" src="assets/bi-android-update-screen.png" alt="Ảnh Google Play có nút Cập nhật HRP BI được đánh dấu" width="412" height="847" loading="lazy" decoding="async">
               </div>

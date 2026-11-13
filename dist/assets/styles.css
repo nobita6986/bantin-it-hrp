@@ -303,12 +303,27 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .copy-button { display: inline-flex; align-items: center; gap: 5px; min-height: 44px; padding: 3px 8px; border: 0; border-radius: 6px; background: transparent; color: var(--accent-dark); font-size: .81rem; font-weight: 650; }
 .copy-button:hover { background: var(--accent-light); }
 .copy-button svg { width: 16px; height: 16px; }
+.article-jump-link { white-space: nowrap; }
 .sample-note { width: fit-content; margin-top: 6px; padding: 3px 8px; border-radius: 5px; background: #fff2d4; color: #715207; font-size: .77rem; font-weight: 650; }
 .article-image { aspect-ratio: 2.5; background: var(--accent-light); }
 .article-image img { height: 100%; object-fit: cover; }
 .article-body { color: #29364e; overflow-wrap: anywhere; }
 .article-body > * + * { margin-top: 13px; }
 .article-body h2 { font-size: 1.27rem; letter-spacing: -.028em; color: var(--ink); }
+.reading-page--compact .article-body .bi-guide-section-title {
+  display: grid;
+  grid-template-columns: 1.4em minmax(0, 1fr);
+  align-items: start;
+  column-gap: .45em;
+  font-family: inherit;
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -.028em;
+  color: var(--ink);
+  text-transform: uppercase;
+}
+.bi-guide-section-icon { display: block; width: 1.4em; height: 1.05em; margin-top: .08em; object-fit: contain; }
 .article-body :not(:first-child):is(h2, h3) { margin-top: 26px; }
 .article-body ol, .article-body ul { padding-inline-start: 1.4em; margin-bottom: 0; }
 .article-body li + li { margin-top: 6px; }
@@ -447,6 +462,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   border-radius: 12px;
   background: var(--paper);
 }
+.bi-guide-android { scroll-margin-top: 16px; }
 .article-android-qr {
   display: block;
   width: 100%;
@@ -507,19 +523,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   gap: 8px;
   min-width: 0;
 }
-.bi-guide-android-step-title h3 { color: var(--ink); font-size: .94rem; }
-.bi-guide-android-number {
-  display: grid;
-  place-items: center;
-  flex: none;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background: var(--accent-light);
-  color: var(--accent-dark);
-  font-size: .8rem;
-  font-weight: 750;
-}
+.bi-guide-android-step-title h3 { color: var(--accent-dark); font-size: .94rem; }
 .bi-guide-android-step > p { grid-area: copy; font-size: .88rem; line-height: 1.45; }
 .article-android-step-image {
   grid-area: image;
@@ -641,7 +645,6 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
     gap: 7px 9px;
     min-height: 0;
   }
-  .bi-guide-android-step-title h3 { font-size: .9rem; }
   .bi-guide-android-step > p { font-size: .86rem; }
   .article-android-step-image { border-radius: 8px; }
 }

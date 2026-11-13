@@ -14,6 +14,7 @@ const icons = {
   calendar: '<rect x="3.5" y="5.5" width="17" height="15" rx="2"/><path d="M7.5 3v5m9-5v5m-13 2.5h17"/>',
   chevron: '<path d="m9 6 6 6-6 6"/>',
   clock: '<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  down: '<path d="M12 4v15m-6-6 6 6 6-6"/>',
   grid: '<rect x="4" y="4" width="6" height="6" rx="1"/><rect x="14" y="4" width="6" height="6" rx="1"/><rect x="4" y="14" width="6" height="6" rx="1"/><rect x="14" y="14" width="6" height="6" rx="1"/>',
   link: '<path d="m10 13 4-4m-5 7-2 2a3.5 3.5 0 0 1-5-5l4-4a3.5 3.5 0 0 1 5 0m2 6a3.5 3.5 0 0 0 5 0l4-4a3.5 3.5 0 0 0-5-5l-2 2"/>',
   search: '<circle cx="11" cy="11" r="6.5"/><path d="m16 16 4 4"/>',
@@ -209,6 +210,7 @@ function renderDocs() {
 
 function renderArticle(article) {
   const name = sectionNames[article.section];
+  const quickJump = article.quickJump;
   const related = orderedArticles.filter((item) => item.section === article.section && item !== article);
   const relevant = related.filter((item) => item.category === article.category);
   const others = related.filter((item) => item.category !== article.category);
@@ -224,9 +226,11 @@ function renderArticle(article) {
           <div class="article-info">
             <span class="meta">${icon("calendar")} ${dateLabel(article)}</span>
             <span class="meta">${icon("clock")} ${article.minutes} phút đọc</span>
-            <button class="copy-button" type="button" data-copy>${icon("link")} Sao chép liên kết</button>
+            ${quickJump
+    ? `<a class="copy-button article-jump-link" href="${articleUrl(article)}?jump=${encodeURIComponent(quickJump.target)}">${icon("down")} ${escapeHtml(quickJump.label)}</a>`
+    : `<button class="copy-button" type="button" data-copy>${icon("link")} Sao chép liên kết</button>`}
           </div>
-          <p class="sr-only" id="copy-status" role="status"></p>
+          ${quickJump ? "" : '<p class="sr-only" id="copy-status" role="status"></p>'}
         </div>
         <div class="article-body">${article.body}</div>
       </article>
@@ -245,10 +249,12 @@ function renderNotFound() {
 
 function renderRoute(moveFocus = false) {
   const hash = window.location.hash;
+  const [routeHash, hashQuery = ""] = hash.split("?", 2);
+  const hashParams = new URLSearchParams(hashQuery);
   let section;
   let article;
-  if (hash.startsWith("#bai-viet/")) {
-    article = orderedArticles.find((item) => articleUrl(item) === hash);
+  if (routeHash.startsWith("#bai-viet/")) {
+    article = orderedArticles.find((item) => articleUrl(item) === routeHash);
     section = article?.section;
     if (article) renderArticle(article);
     else renderNotFound();
@@ -266,9 +272,17 @@ function renderRoute(moveFocus = false) {
   });
   const heading = document.querySelector("#page-title");
   document.title = section === "news" && !article ? "Bản tin IT" : `${heading.textContent} | Bản tin IT`;
-  if (moveFocus) {
+  const jumpTarget = article?.quickJump?.target === hashParams.get("jump") ? hashParams.get("jump") : null;
+  if (moveFocus && !jumpTarget) {
     window.scrollTo(0, 0);
     heading.focus({ preventScroll: true });
+  }
+  if (jumpTarget) {
+    requestAnimationFrame(() => {
+      const target = document.getElementById(jumpTarget);
+      target?.scrollIntoView({ behavior: "smooth", block: "start" });
+      target?.focus({ preventScroll: true });
+    });
   }
 }
 
