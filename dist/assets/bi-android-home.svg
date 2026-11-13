@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 360">
+<defs><linearGradient id="wall" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#c8d9ff"/><stop offset="1" stop-color="#eadcff"/></linearGradient></defs>
+<rect width="300" height="360" rx="22" fill="#e7eaff"/>
+<rect x="42" y="6" width="216" height="348" rx="34" fill="#182033"/>
+<rect x="51" y="15" width="198" height="330" rx="26" fill="url(#wall)"/>
+<rect x="117" y="20" width="64" height="12" rx="6" fill="#182033"/>
+<text x="68" y="42" fill="#fff" font-family="Arial,sans-serif" font-size="10" font-weight="700">9:41</text>
+<path d="M205 36h14m-11-4h11m-8-4h8" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M224 31q7-7 14 0m-11 3q4-4 8 0m-4 4h.1" stroke="#fff" stroke-width="2" fill="none" stroke-linecap="round"/>
+<circle cx="151" cy="108" r="42" fill="#fff" opacity=".2"/>
+<text x="150" y="105" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="19" font-weight="500">09:41</text>
+<text x="150" y="123" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="8">Thứ Hai, 12 tháng 11</text>
+<rect x="116" y="166" width="68" height="68" rx="18" fill="#fff" stroke="#fff" stroke-width="2"/>
+<image href="hrp-logo.webp" x="124" y="180" width="52" height="40" preserveAspectRatio="xMidYMid meet"/>
+<text x="150" y="249" text-anchor="middle" fill="#fff" font-family="Arial,sans-serif" font-size="10" font-weight="700">BI</text>
+<circle cx="82" cy="293" r="13" fill="#fff" opacity=".65"/>
+<circle cx="121" cy="293" r="13" fill="#fff" opacity=".65"/>
+<circle cx="179" cy="293" r="13" fill="#fff" opacity=".65"/>
+<circle cx="218" cy="293" r="13" fill="#fff" opacity=".65"/>
+<rect x="114" y="314" width="72" height="5" rx="3" fill="#7b8392"/>
+</svg>
