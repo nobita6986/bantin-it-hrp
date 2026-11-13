@@ -70,6 +70,7 @@ function dateLabel(article) {
 }
 
 function badge(article) {
+  if (article.hideCategoryBadge) return "";
   return `<span class="badge badge--${article.category}">${escapeHtml(categoryLabel(article))}</span>`;
 }
 
@@ -123,7 +124,7 @@ function featuredCard(article) {
         ${latestNews.length ? latestNews.map((item, index) => `
           <a class="featured-latest-item" href="${articleUrl(item)}">
             <span class="featured-latest-index">${String(index + 1).padStart(2, "0")}</span>
-            <span class="featured-latest-copy"><span class="featured-latest-meta">${escapeHtml(categoryLabel(item))} · ${dateLabel(item)}</span><strong>${escapeHtml(item.title)}</strong></span>
+            <span class="featured-latest-copy"><span class="featured-latest-meta">${item.hideCategoryBadge ? "" : `${escapeHtml(categoryLabel(item))} · `}${dateLabel(item)}</span><strong>${escapeHtml(item.title)}</strong></span>
             ${icon("chevron")}
           </a>`).join("") : '<p class="featured-latest-empty">Chưa có tin mới đăng.</p>'}
       </div>
@@ -309,7 +310,7 @@ function updateGlobalSearch() {
     : "Bài viết gần đây";
   globalResults.innerHTML = visible.map((article) => `<li>
     <a href="${articleUrl(article)}">
-      <span><small>${sectionNames[article.section]} · ${escapeHtml(categoryLabel(article))}</small><strong>${escapeHtml(article.title)}</strong></span>
+      <span><small>${sectionNames[article.section]}${article.hideCategoryBadge ? "" : ` · ${escapeHtml(categoryLabel(article))}`}</small><strong>${escapeHtml(article.title)}</strong></span>
       ${icon("chevron")}
     </a>
   </li>`).join("");
