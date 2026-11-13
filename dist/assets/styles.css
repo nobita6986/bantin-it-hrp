@@ -327,6 +327,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .reading-page--compact .article-body :not(:first-child):is(h2, h3) { margin-top: 16px; }
 .article-inline-icon { display: inline-block; width: 24px; height: auto; vertical-align: middle; }
 .article-install-screenshot { width: min(100%, 240px); height: auto; border-radius: 8px; }
+.article-verification-screenshot { width: min(100%, 420px); height: auto; border-radius: 8px; }
 .article-qr-code {
   width: min(100%, 144px);
   height: auto;
