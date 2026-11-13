@@ -150,6 +150,7 @@ const articles = [
     section: 'news',
     category: 'feature',
     title: 'Tổng Quan Về Web Bi',
+    wideReadingLayout: true,
     hideCategoryBadge: true,
     summary: 'Tổng quan nền tảng BI và HRIS HR Partner cùng các chức năng quản trị, báo cáo và vận hành nhân sự.',
     date: '2026-11-13',
