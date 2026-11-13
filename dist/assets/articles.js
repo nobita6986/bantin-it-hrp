@@ -20,10 +20,16 @@ const articles = [
             <h2>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
             <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau hoặc tham khảo video chi tiết.</p>
           </div>
-          <figure class="bi-guide-video">
-            <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-            <figcaption><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share">Xem video trên YouTube</a></figcaption>
-          </figure>
+          <div class="bi-guide-video">
+            <button class="bi-guide-video-toggle" type="button" aria-expanded="false" aria-controls="bi-guide-video-content">
+              <span class="bi-guide-video-play" aria-hidden="true"></span>
+              Video hướng dẫn
+            </button>
+            <figure class="bi-guide-video-content" id="bi-guide-video-content">
+              <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+              <figcaption><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share">Xem video trên YouTube</a></figcaption>
+            </figure>
+          </div>
           <section class="bi-guide-panel bi-guide-prepare">
             <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
             <p><em>Bước chuẩn bị.</em></p>
@@ -40,6 +46,10 @@ const articles = [
           <div class="bi-guide-pair bi-guide-scan">
             <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
             <img class="article-qr-code" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" decoding="async">
+            <div class="bi-guide-invite">
+              <p>Nếu đang đọc trên iPhone</p>
+              <a href="https://testflight.apple.com/join/VGd3SbtC">Mở trong TestFlight</a>
+            </div>
           </div>
           <p class="bi-guide-check"><strong>Kiểm tra.</strong> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
         </section>

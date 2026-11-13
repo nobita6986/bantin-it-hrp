@@ -319,6 +319,16 @@ main.addEventListener("click", (event) => {
   }
   const copy = event.target.closest("[data-copy]");
   if (copy) copyLink(copy);
+
+  const videoToggle = event.target.closest(".bi-guide-video-toggle");
+  if (videoToggle) {
+    const expanded = videoToggle.getAttribute("aria-expanded") === "true";
+    videoToggle.setAttribute("aria-expanded", String(!expanded));
+    if (expanded) {
+      const player = videoToggle.nextElementSibling.querySelector("iframe");
+      player.src = player.src;
+    }
+  }
 });
 
 main.addEventListener("input", (event) => {
