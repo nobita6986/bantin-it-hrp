@@ -27,31 +27,31 @@ const articles = [
           <section class="bi-guide-panel bi-guide-prepare">
             <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
             <p><em>Bước chuẩn bị.</em></p>
-            <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
-            <img class="article-download-screenshot" src="assets/testflight-download.png" alt="Mũi tên chỉ biểu tượng tải TestFlight trong App Store" width="1496" height="830" loading="lazy" decoding="async">
+            <div class="bi-guide-pair bi-guide-download">
+              <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
+              <img class="article-download-screenshot" src="assets/testflight-download.png" alt="Mũi tên chỉ biểu tượng tải TestFlight trong App Store" width="1496" height="830" loading="lazy" decoding="async">
+            </div>
             <p class="bi-guide-check"><strong>Kiểm tra.</strong> Biểu tượng TestFlight (hình cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
           </section>
         </div>
 
         <section class="bi-guide-panel">
           <h3>2. Quét mã QR để nhận lời mời tải app BI</h3>
-          <div class="bi-guide-pair">
-            <div class="bi-guide-copy">
-              <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
-              <p class="bi-guide-check"><strong>Kiểm tra.</strong> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
-            </div>
+          <div class="bi-guide-pair bi-guide-scan">
+            <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
             <img class="article-qr-code" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" decoding="async">
           </div>
+          <p class="bi-guide-check"><strong>Kiểm tra.</strong> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
         </section>
 
         <section class="bi-guide-panel">
           <h3>3. Tiến hành cài đặt ứng dụng BI</h3>
           <div class="bi-guide-install">
-            <div class="bi-guide-copy">
+            <div class="bi-guide-copy bi-guide-install-pair">
               <p>Nhấn vào nút <strong>Chấp nhận</strong> (nếu hệ thống yêu cầu), sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
               <img class="article-install-screenshot" src="assets/hrp-bi-install.png" alt="Màn hình HRP BI trên TestFlight với nút Cài đặt" width="675" height="862" loading="lazy" decoding="async">
             </div>
-            <div class="bi-guide-copy">
+            <div class="bi-guide-copy bi-guide-install-pair">
               <p class="bi-guide-check"><strong>Kiểm tra.</strong> Biểu tượng ứng dụng <strong>BI</strong> xuất hiện trên màn hình chính với một dấu chấm tròn màu cam nhỏ nằm ngay trước tên ứng dụng.</p>
               <img class="article-verification-screenshot" src="assets/hrp-bi-home-screen.png" alt="Biểu tượng HRP BI và dấu chấm màu cam bên cạnh tên ứng dụng trên màn hình chính iPhone" width="1462" height="822" loading="lazy" decoding="async">
             </div>
