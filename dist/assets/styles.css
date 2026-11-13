@@ -328,14 +328,14 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .article-body ol, .article-body ul { padding-inline-start: 1.4em; margin-bottom: 0; }
 .article-body li + li { margin-top: 6px; }
 .article-body a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
-.reading-page--compact { margin-block: 12px 32px; }
+.reading-page--compact { max-width: 1160px; margin-block: 12px 32px; }
 .reading-page--compact .back-link { margin-bottom: 4px; }
 .reading-page--compact .article-heading,
 .reading-page--compact .article-body { padding-inline: clamp(16px, 4vw, 30px); }
 .reading-page--compact .article-heading { padding-block: 16px 0; }
 .reading-page--compact .article-heading h1 { margin-top: 8px; font-size: clamp(1.4rem, 4vw, 2rem); }
 .reading-page--compact .article-info { margin-top: 4px; }
-.reading-page--compact .article-body { padding-block: 6px 20px; font-size: .94rem; line-height: 1.5; }
+.reading-page--compact .article-body { padding-block: 6px 20px; font-size: 1rem; line-height: 1.5; }
 .reading-page--compact .article-body > * + * { margin-top: 8px; }
 .reading-page--compact .article-body h2 { font-size: 1.12rem; }
 .reading-page--compact .article-body h3 { font-size: 1.02rem; }
@@ -462,6 +462,14 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   border-radius: 12px;
   background: var(--paper);
 }
+.bi-guide-android-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 250px;
+  align-items: start;
+  gap: 16px;
+}
+.bi-guide-android-intro { display: grid; align-content: start; gap: 10px; min-width: 0; }
+.bi-guide-android-video .article-short-video { width: min(100%, 208px); height: auto; aspect-ratio: 9 / 16; }
 .bi-guide-android { scroll-margin-top: 16px; }
 .article-android-qr {
   display: block;
@@ -524,7 +532,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   min-width: 0;
 }
 .bi-guide-android-step-title h3 { color: var(--accent-dark); font-size: .94rem; }
-.bi-guide-android-step > p { grid-area: copy; font-size: .88rem; line-height: 1.45; }
+.bi-guide-android-step > p { grid-area: copy; font-size: .95rem; line-height: 1.45; }
 .article-android-step-image {
   grid-area: image;
   width: 100%;
@@ -635,6 +643,8 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
     gap: 10px;
     padding: 9px;
   }
+  .bi-guide-android-top { grid-template-columns: minmax(0, 1fr); gap: 10px; }
+  .bi-guide-android-intro { gap: 8px; }
   .bi-guide-android-link { gap: 6px; }
   .bi-guide-android-link p { font-size: .82rem; line-height: 1.4; }
   .article-body .bi-guide-android-button { width: 100%; padding-inline: 8px; }
@@ -645,7 +655,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
     gap: 7px 9px;
     min-height: 0;
   }
-  .bi-guide-android-step > p { font-size: .86rem; }
+  .bi-guide-android-step > p { font-size: .9rem; }
   .article-android-step-image { border-radius: 8px; }
 }
 

@@ -85,13 +85,27 @@ const articles = [
         </section>
 
         <section class="bi-guide-panel bi-guide-android" id="bi-guide-android" tabindex="-1">
-          <h2 class="bi-guide-section-title"><img class="bi-guide-section-icon" src="assets/hand-pointer-right.png" alt="" aria-hidden="true" width="28" height="21"><span>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN ANDROID</span></h2>
-          <p>Quét mã QR bằng điện thoại Android để mở BI trên Google Play, hoặc chạm nút bên cạnh nếu đang dùng điện thoại.</p>
-          <div class="bi-guide-android-entry">
-            <img class="article-android-qr" src="assets/bi-android-play-qr.png" alt="Mã QR mở ứng dụng BI trên Google Play" width="750" height="750" loading="lazy" decoding="async">
-            <div class="bi-guide-android-link">
-              <a class="bi-guide-android-button" href="https://play.google.com/store/apps/details?id=vn.hrpartner.bi">Mở trên Google Play</a>
-              <p>Đang xem trên máy tính? Dùng camera điện thoại để quét mã.</p>
+          <div class="bi-guide-android-top">
+            <div class="bi-guide-android-intro">
+              <h2 class="bi-guide-section-title"><img class="bi-guide-section-icon" src="assets/hand-pointer-right.png" alt="" aria-hidden="true" width="28" height="21"><span>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN ANDROID</span></h2>
+              <p>Quét mã QR bằng điện thoại Android để mở BI trên Google Play, hoặc chạm nút bên cạnh nếu đang dùng điện thoại.</p>
+              <div class="bi-guide-android-entry">
+                <img class="article-android-qr" src="assets/bi-android-play-qr.png" alt="Mã QR mở ứng dụng BI trên Google Play" width="750" height="750" loading="lazy" decoding="async">
+                <div class="bi-guide-android-link">
+                  <a class="bi-guide-android-button" href="https://play.google.com/store/apps/details?id=vn.hrpartner.bi">Mở trên Google Play</a>
+                  <p>Đang xem trên máy tính? Dùng camera điện thoại để quét mã.</p>
+                </div>
+              </div>
+            </div>
+            <div class="bi-guide-video bi-guide-android-video">
+              <button class="bi-guide-video-toggle" type="button" aria-expanded="false" aria-controls="bi-guide-android-video-content">
+                <span class="bi-guide-video-play" aria-hidden="true"></span>
+                Video hướng dẫn Android
+              </button>
+              <figure class="bi-guide-video-content" id="bi-guide-android-video-content">
+                <iframe class="article-short-video" src="https://www.youtube.com/embed/tEAiYreuigw" title="Video hướng dẫn cài đặt ứng dụng BI trên Android" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                <figcaption><a href="https://www.youtube.com/shorts/tEAiYreuigw?feature=share">Xem video trên YouTube</a></figcaption>
+              </figure>
             </div>
           </div>
           <p class="bi-guide-android-note">Hình minh họa có thể khác đôi chút tùy điện thoại Android.</p>
