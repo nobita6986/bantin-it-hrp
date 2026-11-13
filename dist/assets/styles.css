@@ -439,17 +439,21 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 }
 .bi-guide-android-entry {
   display: grid;
-  grid-template-columns: minmax(0, 176px) minmax(0, 1fr);
+  grid-template-columns: 148px minmax(0, 1fr);
   align-items: center;
-  gap: 14px;
+  gap: 18px;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
 }
 .article-android-qr {
   display: block;
   width: 100%;
   height: auto;
-  padding: 8px;
+  padding: 6px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 10px;
   background: var(--surface);
 }
 .bi-guide-android-link {
@@ -462,8 +466,8 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 44px;
-  padding: 8px 14px;
+  min-height: 46px;
+  padding: 8px 16px;
   border-radius: 8px;
   background: var(--accent);
   color: #fff;
@@ -472,21 +476,67 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   text-decoration: none;
 }
 .article-body .bi-guide-android-button:hover { background: var(--accent-dark); }
-.bi-guide-android-note { color: var(--muted); font-size: .88rem; }
-.bi-guide-android-steps { display: grid; gap: 4px; }
-.bi-guide-android-steps > li { padding-block: 8px; border-top: 1px solid var(--line); }
+.bi-guide-android-note { color: var(--muted); font-size: .84rem; }
+.bi-guide-android-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.bi-guide-android-steps > li {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface);
+}
 .bi-guide-android-step {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) min(28%, 150px);
+  grid-template-columns: minmax(0, 1fr) 86px;
+  grid-template-areas: "title image" "copy image";
   align-items: center;
-  gap: 14px;
+  gap: 8px 10px;
+  min-height: 118px;
 }
+.bi-guide-android-step-title {
+  display: flex;
+  grid-area: title;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+}
+.bi-guide-android-step-title h3 { color: var(--ink); font-size: .94rem; }
+.bi-guide-android-number {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: .8rem;
+  font-weight: 750;
+}
+.bi-guide-android-step > p { grid-area: copy; font-size: .88rem; line-height: 1.45; }
 .article-android-step-image {
+  grid-area: image;
   width: 100%;
   height: auto;
   border: 1px solid var(--line);
   border-radius: 10px;
   background: var(--accent-light);
+}
+.article-android-step-image--screenshot {
+  height: 140px;
+  object-fit: cover;
+  object-position: top center;
+}
+.article-android-step-image--install-screen { object-position: center 28%; }
+@media (min-width: 760px) {
+  .bi-guide-android-steps { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (min-width: 640px) {
@@ -576,22 +626,26 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   }
   .article-verification-screenshot { width: min(100%, 210px); }
   .bi-guide-update { padding-top: 10px; }
-  .bi-guide-android-entry { grid-template-columns: minmax(0, 144px) minmax(0, 1fr); gap: 10px; }
-  .bi-guide-android-link { gap: 6px; }
-  .bi-guide-android-link p { font-size: .85rem; }
-  .article-body .bi-guide-android-button { width: 100%; padding-inline: 8px; }
-  .bi-guide-android-steps { padding-inline-start: 1.2em; }
-  .bi-guide-android-step {
-    grid-template-columns: minmax(0, 1fr) clamp(84px, 25vw, 120px);
+  .bi-guide-android-entry {
+    grid-template-columns: clamp(104px, 38vw, 138px) minmax(0, 1fr);
     gap: 10px;
+    padding: 9px;
   }
-  .bi-guide-android-steps > li { padding-block: 7px; }
+  .bi-guide-android-link { gap: 6px; }
+  .bi-guide-android-link p { font-size: .82rem; line-height: 1.4; }
+  .article-body .bi-guide-android-button { width: 100%; padding-inline: 8px; }
+  .bi-guide-android-steps { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .bi-guide-android-steps > li { padding: 10px; }
+  .bi-guide-android-step {
+    grid-template-columns: minmax(0, 1fr) clamp(84px, 25vw, 112px);
+    gap: 7px 9px;
+    min-height: 0;
+  }
+  .bi-guide-android-step-title h3 { font-size: .9rem; }
+  .bi-guide-android-step > p { font-size: .86rem; }
+  .article-android-step-image { border-radius: 8px; }
 }
-@media (width < 360px) {
-  .bi-guide-android-entry { grid-template-columns: minmax(0, 1fr); justify-items: center; }
-  .bi-guide-android-link { justify-items: center; text-align: center; }
-  .bi-guide-android-link p { max-width: 24em; }
-}
+
 .related { margin-top: 25px; }
 .related h2 { font-size: 1.2rem; }
 .related ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin: 12px 0 0; padding: 0; list-style: none; }
