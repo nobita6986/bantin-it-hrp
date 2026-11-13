@@ -15,7 +15,9 @@ const articles = [
     featuredFooterImage: { src: 'ios-vs-android.png', alt: 'Biểu trưng Android và iOS', width: 690, height: 362 },
     body: `
       <h2>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
-      <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau:</p>
+      <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau hoặc tham khảo video chi tiết.</p>
+      <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="240" height="427" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+      <p><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share">Xem video trên YouTube</a></p>
 
       <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
       <p><em>Bước chuẩn bị.</em></p>

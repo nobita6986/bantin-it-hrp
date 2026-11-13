@@ -313,6 +313,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .article-body ol, .article-body ul { padding-inline-start: 1.4em; margin-bottom: 0; }
 .article-body li + li { margin-top: 6px; }
 .article-body a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
+.article-short-video { display: block; width: min(100%, 240px); height: auto; aspect-ratio: 9 / 16; border: 0; border-radius: 8px; }
 .reading-page--compact { margin-block: 12px 32px; }
 .reading-page--compact .back-link { margin-bottom: 4px; }
 .reading-page--compact .article-heading,
