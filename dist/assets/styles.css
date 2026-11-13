@@ -315,9 +315,9 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .article-body a { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 .article-inline-icon { display: inline-block; width: 24px; height: auto; vertical-align: middle; }
 .article-qr-code {
-  width: min(100%, 288px);
+  width: min(100%, 144px);
   height: auto;
-  padding: 16px;
+  padding: 8px;
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 8px;
