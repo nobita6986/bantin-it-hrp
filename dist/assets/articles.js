@@ -93,7 +93,7 @@ const articles = [
                 <img class="article-android-qr" src="assets/bi-android-play-qr.png" alt="Mã QR mở ứng dụng BI trên Google Play" width="750" height="750" loading="lazy" decoding="async">
                 <div class="bi-guide-android-link">
                   <a class="bi-guide-android-button" href="https://play.google.com/store/apps/details?id=vn.hrpartner.bi">Mở trên Google Play</a>
-                  <p>Đang xem trên máy tính? Dùng camera điện thoại để quét mã.</p>
+                  <p>Dùng camera điện thoại để quét mã, hoặc nhấn nút để mở Google Play.</p>
                 </div>
               </div>
             </div>

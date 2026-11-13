@@ -96,6 +96,7 @@ function emptyState(title, detail) {
 
 function featuredCard(article) {
   const footerImage = article.featuredFooterImage;
+  const latestNews = news.filter((item) => item !== article).slice(0, 3);
   return `<article class="featured">
     <div class="featured-copy${footerImage ? " featured-copy--with-image" : ""}">
       <span class="featured-label">${icon("spark")} Tin nổi bật</span>
@@ -113,7 +114,21 @@ function featuredCard(article) {
             loading="lazy" decoding="async">` : ""}
       </div>
     </div>
-    <div class="featured-image">${cover(article, true)}</div>
+    <aside class="featured-latest" aria-labelledby="featured-latest-title">
+      <div class="featured-latest-heading">
+        <span class="featured-latest-icon">${icon("spark")}</span>
+        <div><h3 id="featured-latest-title">Tin mới đăng</h3><p>Cập nhật mới nhất từ phòng IT</p></div>
+      </div>
+      <div class="featured-latest-list">
+        ${latestNews.length ? latestNews.map((item, index) => `
+          <a class="featured-latest-item" href="${articleUrl(item)}">
+            <span class="featured-latest-index">${String(index + 1).padStart(2, "0")}</span>
+            <span class="featured-latest-copy"><span class="featured-latest-meta">${escapeHtml(categoryLabel(item))} · ${dateLabel(item)}</span><strong>${escapeHtml(item.title)}</strong></span>
+            ${icon("chevron")}
+          </a>`).join("") : '<p class="featured-latest-empty">Chưa có tin mới đăng.</p>'}
+      </div>
+      <a class="featured-latest-all" href="#tin-moi">Xem tất cả tin mới ${icon("arrow")}</a>
+    </aside>
   </article>`;
 }
 
