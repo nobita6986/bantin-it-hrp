@@ -1,3 +1,45 @@
+const biIphoneApp = {
+  name: 'HRP BI',
+  platform: 'iPhone (TestFlight)',
+  testflightUrl: 'https://testflight.apple.com/join/VGd3SbtC',
+  guideArticleId: 'cong-ho-tro-it',
+  updates: [
+    {
+      version: '1.0.12',
+      build: '162',
+      date: '2026-11-12',
+      latest: true,
+      summary: 'Tối ưu đồng bộ báo cáo & độ ổn định iOS',
+      changes: [
+        'Cập nhật hiệu năng tải Dashboard và bộ lọc dữ liệu báo cáo.',
+        'Cải thiện độ ổn định phiên đăng nhập và hiển thị thông báo trên iPhone.',
+      ],
+    },
+    {
+      version: '1.0.11',
+      build: '158',
+      date: '2026-11-05',
+      sample: true,
+      summary: 'Bổ sung biểu đồ biến động & bộ lọc KPI',
+      changes: [
+        'Hoàn thiện giao diện xem nhanh các chỉ số KPI tuyển dụng trên màn hình dọc.',
+        'Khắc phục lỗi hiển thị phông chữ ở một số bảng dữ liệu chi tiết.',
+      ],
+    },
+    {
+      version: '1.0.10',
+      build: '151',
+      date: '2026-10-28',
+      sample: true,
+      summary: 'Ra mắt ứng dụng HRP BI trên TestFlight',
+      changes: [
+        'Ra mắt ứng dụng HRP BI trên iPhone dành cho cấp quản lý và Ban Giám đốc.',
+        'Hỗ trợ cài đặt và cập nhật trực tiếp qua ứng dụng TestFlight.',
+      ],
+    },
+  ],
+};
+
 const articles = [
   {
     id: 'cong-ho-tro-it',
