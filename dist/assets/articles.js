@@ -157,7 +157,7 @@ const articles = [
     minutes: 5,
     body: `
       <div class="web-bi-overview">
-        <p class="web-bi-lead"><a href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer"><strong>Hệ thống Báo cáo và Quản trị Nhân sự HRP (HR Partner)</strong></a> là nền tảng toàn diện, kết hợp giữa quản trị dữ liệu thông minh (Business Intelligence - BI) và hệ thống thông tin quản lý nhân sự (HRIS). Được thiết kế chuyên biệt cho cấp quản lý và Ban Giám đốc, nền tảng cung cấp bức tranh toàn cảnh về tình hình nhân sự, đồng thời số hóa các quy trình vận hành cốt lõi, giúp doanh nghiệp tối ưu hóa tuyển dụng, quản lý rủi ro và ra quyết định chiến lược hiệu quả.</p>
+        <p class="web-bi-lead"><strong>Hệ thống Báo cáo và Quản trị Nhân sự HRP (HR Partner)</strong> địa chỉ truy cập <a href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">https://bi.hrpartner.vn/dashboard</a>. Đây là nền tảng toàn diện, kết hợp giữa quản trị dữ liệu thông minh (Business Intelligence - BI) và hệ thống thông tin quản lý nhân sự (HRIS). Được thiết kế chuyên biệt cho cấp quản lý và Ban Giám đốc, nền tảng cung cấp bức tranh toàn cảnh về tình hình nhân sự, đồng thời số hóa các quy trình vận hành cốt lõi, giúp doanh nghiệp tối ưu hóa tuyển dụng, quản lý rủi ro và ra quyết định chiến lược hiệu quả.</p>
         <p>Dưới đây là tổng hợp các chức năng trọng yếu của hệ thống:</p>
 
         <section class="web-bi-group">
