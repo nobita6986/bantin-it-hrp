@@ -204,6 +204,7 @@ kbd { padding: 2px 6px; border: 1px solid #d6def2; border-radius: 6px; backgroun
   gap: 16px;
 }
 .home-panel {
+  container-type: inline-size;
   position: relative;
   overflow: hidden;
   display: flex;
@@ -403,25 +404,151 @@ kbd { padding: 2px 6px; border: 1px solid #d6def2; border-radius: 6px; backgroun
 
 .home-panel-footer-bar {
   margin-top: auto;
-  padding-top: 2px;
+  padding-top: 6px;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  flex-wrap: nowrap;
+  align-items: flex-end;
   justify-content: space-between;
-  gap: 6px 10px;
+  gap: 8px;
 }
 .home-panel-more {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 30px;
+  display: inline-block;
+  min-width: 0;
+  padding-block: 4px;
   color: var(--accent);
   font-size: .8rem;
   font-weight: 730;
+  line-height: 1.32;
 }
 .home-panel-more:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
-.home-panel-more svg { width: 15px; height: 15px; transition: transform 180ms; }
+.home-panel-more svg {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 2px;
+  vertical-align: -3px;
+  transition: transform 180ms;
+}
 .home-panel-more:hover svg { transform: translateX(3px); }
+.home-panel-thumb-link {
+  flex: none;
+  display: block;
+}
+.home-panel-thumb {
+  position: relative;
+  display: block;
+  width: 122px;
+  height: 58px;
+  border: 2px solid rgb(255 255 255 / 92%);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px -4px rgb(30 42 94 / 16%);
+  transition: transform 220ms cubic-bezier(.22, 1, .36, 1), box-shadow 220ms;
+}
+.home-panel:hover .home-panel-thumb {
+  transform: scale(1.035);
+  box-shadow: 0 10px 22px -4px rgb(30 42 94 / 20%);
+}
+.home-panel-thumb-bg {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.home-panel-thumb-grid {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 2px 3px;
+}
+.home-panel-emblem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  min-width: 0;
+}
+.home-emblem-squircle {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+}
+.home-emblem-squircle--white {
+  background: #fff;
+  box-shadow: 0 3px 8px rgb(30 42 94 / 15%);
+}
+.home-emblem-squircle--white img {
+  width: 22px;
+  height: 14px;
+  object-fit: contain;
+}
+.home-emblem-squircle--indigo {
+  background: linear-gradient(135deg, #4338ca 0%, #2563eb 100%);
+  color: #fff;
+  box-shadow: 0 3px 8px rgb(55 48 163 / 28%);
+}
+.home-emblem-squircle--indigo svg,
+.home-emblem-squircle--apple svg {
+  width: 15px;
+  height: 15px;
+}
+.home-emblem-squircle--apple {
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  color: #fff;
+  box-shadow: 0 3px 8px rgb(15 23 42 / 24%);
+}
+.home-emblem-dot {
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  width: 7px;
+  height: 7px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  background: #f97316;
+}
+.home-emblem-up {
+  position: absolute;
+  top: -3px;
+  right: -3px;
+  display: grid;
+  place-items: center;
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid #fff;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: #fff;
+}
+.home-emblem-up svg {
+  width: 7.5px;
+  height: 7.5px;
+}
+.home-emblem-label {
+  color: #172554;
+  font-size: .56rem;
+  font-weight: 800;
+  line-height: 1.05;
+  letter-spacing: -.01em;
+  white-space: nowrap;
+}
+@container (max-width: 306px) {
+  .home-panel-thumb { width: 104px; height: 52px; border-radius: 11px; }
+  .home-emblem-squircle { width: 24px; height: 24px; border-radius: 7px; }
+  .home-emblem-squircle--white img { width: 19px; height: 12px; }
+  .home-emblem-squircle--indigo svg,
+  .home-emblem-squircle--apple svg { width: 13px; height: 13px; }
+  .home-emblem-label { font-size: .52rem; }
+  .home-panel-more { font-size: .76rem; }
+}
 
 .ios-releases-actions {
   display: flex;
