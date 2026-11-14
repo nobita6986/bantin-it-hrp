@@ -122,7 +122,8 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 
 .featured {
   display: grid;
-  grid-template-columns: 1fr 1.04fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.04fr);
+  align-items: stretch;
   background: linear-gradient(125deg, #f2f2ff, #f8f8ff);
   min-height: 322px;
   overflow: hidden;
@@ -157,9 +158,9 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .featured-latest {
   display: grid;
   align-content: center;
-  gap: 14px;
+  gap: 11px;
   min-width: 0;
-  padding: clamp(20px, 3vw, 38px);
+  padding: clamp(18px, 2.7vw, 34px);
   border-inline-start: 1px solid #e1e1fc;
   background: linear-gradient(145deg, #f6f7ff, #edf4ff);
 }
@@ -168,14 +169,14 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
 .featured-latest-icon svg { width: 20px; height: 20px; }
 .featured-latest-heading h3 { font-size: clamp(1.1rem, 2vw, 1.42rem); letter-spacing: -.03em; }
 .featured-latest-heading p { margin-top: 3px; color: var(--muted); font-size: .82rem; }
-.featured-latest-list { display: grid; gap: 8px; }
+.featured-latest-list { display: grid; gap: 7px; }
 .featured-latest-item {
   display: grid;
   grid-template-columns: 34px minmax(0, 1fr) 16px;
   align-items: center;
   gap: 10px;
   min-width: 0;
-  padding: 11px;
+  padding: 9px 10px;
   border: 1px solid rgb(207 215 239 / 80%);
   border-radius: 12px;
   background: rgb(255 255 255 / 82%);
@@ -904,7 +905,7 @@ dialog::backdrop { background: rgb(20 29 54 / 52%); }
   .featured { grid-template-columns: 1fr; border-radius: 17px; }
   .featured-copy { padding: 23px; }
   .featured h2 { max-width: none; }
-  .featured-latest { gap: 12px; padding: 18px 23px 20px; border-inline-start: 0; border-top: 1px solid #e1e1fc; }
+  .featured-latest { gap: 10px; padding: 17px 20px 18px; border-inline-start: 0; border-top: 1px solid #e1e1fc; }
   .news-section, .docs-section { margin-top: 28px; }
   .section-head { flex-direction: column; align-items: start; margin-bottom: 14px; }
   .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }

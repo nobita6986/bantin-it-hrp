@@ -97,7 +97,7 @@ function emptyState(title, detail) {
 
 function featuredCard(article) {
   const footerImage = article.featuredFooterImage;
-  const latestNews = news.filter((item) => item !== article).slice(0, 3);
+  const latestNews = news.filter((item) => item !== article).slice(0, 4);
   return `<article class="featured">
     <div class="featured-copy${footerImage ? " featured-copy--with-image" : ""}">
       <span class="featured-label">${icon("spark")} Tin nổi bật</span>
