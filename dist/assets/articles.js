@@ -249,7 +249,7 @@ const articles = [
     id: 'gioi-thieu-web-bi',
     section: 'news',
     category: 'feature',
-    title: 'Tổng Quan Về Web Bi',
+    title: 'TỔNG QUAN VỀ WEB BI',
     wideReadingLayout: true,
     hideCategoryBadge: true,
     summary: 'Tổng quan nền tảng BI và HRIS HR Partner cùng các chức năng quản trị, báo cáo và vận hành nhân sự.',
