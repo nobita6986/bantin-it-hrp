@@ -280,6 +280,7 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   white-space: nowrap;
 }
 .ios-latest-tag { font-style: normal; font-weight: 730; color: #16794f; }
+.ios-open-tag { font-style: normal; font-weight: 730; color: #9a5800; }
 .featured-latest-copy strong {
   display: -webkit-box;
   overflow: hidden;
@@ -359,7 +360,24 @@ kbd { padding: 1px 5px; border: 1px solid var(--line); border-radius: 5px; backg
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 7px;
+}
+.ios-release-badges .ios-version-pill { white-space: normal; text-align: left; }
+.ios-pr-badge {
+  padding: 3px 8px;
+  border-radius: 6px;
+  background: var(--accent-light);
+  color: var(--accent-dark);
+  font-size: .74rem;
+  font-weight: 760;
+}
+.ios-open-badge {
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: #fff2d4;
+  color: #715207;
+  font-size: .73rem;
+  font-weight: 730;
 }
 .ios-build-label {
   padding: 3px 8px;

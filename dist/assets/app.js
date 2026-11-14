@@ -97,12 +97,22 @@ function emptyState(title, detail) {
   return `<div class="empty-state"><strong>${title}</strong><p>${detail}</p></div>`;
 }
 
-function biIphoneVersionId(version) {
-  return `ios-v-${String(version).replace(/[^a-zA-Z0-9_-]/g, "-")}`;
+function biIphoneUpdateKey(itemOrKey) {
+  const raw = typeof itemOrKey === "object" && itemOrKey !== null ? (itemOrKey.id || itemOrKey.version) : itemOrKey;
+  return String(raw || "").replace(/[^a-zA-Z0-9_-]/g, "-");
 }
 
-function biIphoneUpdatesUrl(version) {
-  return version ? `${routes.biIphoneUpdates}?v=${encodeURIComponent(version)}` : routes.biIphoneUpdates;
+function biIphoneVersionId(itemOrKey) {
+  return `ios-v-${biIphoneUpdateKey(itemOrKey)}`;
+}
+
+function biIphoneUpdatesUrl(itemOrKey) {
+  const key = itemOrKey ? biIphoneUpdateKey(itemOrKey) : "";
+  return key ? `${routes.biIphoneUpdates}?v=${encodeURIComponent(key)}` : routes.biIphoneUpdates;
+}
+
+function formatChangeLine(line) {
+  return escapeHtml(line).replace(/^(Build [^:]+:)/, "<strong>$1</strong>");
 }
 
 function featuredCard(article) {
@@ -152,23 +162,31 @@ function latestNewsPanel() {
 function biIphoneUpdatesPanel() {
   const appInfo = typeof biIphoneApp !== "undefined" ? biIphoneApp : { updates: [], testflightUrl: "" };
   const updates = appInfo.updates.slice(0, 3);
+  const moreLabel = appInfo.updates.length > 3
+    ? `Xem tất cả ${appInfo.updates.length} bản cập nhật`
+    : "Xem chi tiết phiên bản";
   return `<section class="home-panel home-panel--ios" aria-labelledby="ios-updates-title">
     <div class="home-panel-badges">
       <h2 class="featured-label" id="ios-updates-title">${icon("spark")} Các Phiên Bản Update App BI trên iPhone</h2>
     </div>
     <div class="featured-latest-list">
-      ${updates.length ? updates.map((item) => `
-        <a class="featured-latest-item ios-update-item" href="${biIphoneUpdatesUrl(item.version)}">
+      ${updates.length ? updates.map((item) => {
+        const statusPrefix = item.status
+          ? `<em class="ios-open-tag">${escapeHtml(item.pr ? `${item.pr} · ${item.status}` : item.status)}</em> · `
+          : `${item.latest ? '<em class="ios-latest-tag">Mới nhất</em> · ' : ""}${item.pr ? `${escapeHtml(item.pr)} · ` : ""}`;
+        return `
+        <a class="featured-latest-item ios-update-item" href="${biIphoneUpdatesUrl(item)}">
           <span class="ios-version-pill${item.latest ? " ios-version-pill--latest" : ""}">v${escapeHtml(item.version)}</span>
           <span class="featured-latest-copy">
-            <span class="featured-latest-meta">${item.latest ? '<em class="ios-latest-tag">Mới nhất</em> · ' : ""}Build ${escapeHtml(item.build)} · ${dateLabel(item)}</span>
+            <span class="featured-latest-meta">${statusPrefix}Build ${escapeHtml(item.build)} · ${dateLabel(item)}</span>
             <strong>${escapeHtml(item.summary)}</strong>
           </span>
           ${icon("chevron")}
-        </a>`).join("") : '<p class="featured-latest-empty">Chưa có thông tin phiên bản.</p>'}
+        </a>`;
+      }).join("") : '<p class="featured-latest-empty">Chưa có thông tin phiên bản.</p>'}
     </div>
     <div class="home-panel-footer-bar">
-      <a class="home-panel-more" href="${biIphoneUpdatesUrl()}">Xem chi tiết phiên bản ${icon("arrow")}</a>
+      <a class="home-panel-more" href="${biIphoneUpdatesUrl()}">${moreLabel} ${icon("arrow")}</a>
       ${appInfo.testflightUrl ? `<a class="ios-testflight-chip" href="${escapeHtml(appInfo.testflightUrl)}" target="_blank" rel="noopener noreferrer">TestFlight ${icon("external")}</a>` : ""}
     </div>
   </section>`;
@@ -300,7 +318,7 @@ function renderArticle(article) {
     </div>`;
 }
 
-function renderBiIphoneUpdates(activeVersion) {
+function renderBiIphoneUpdates(activeKey) {
   const appInfo = typeof biIphoneApp !== "undefined" ? biIphoneApp : { updates: [], testflightUrl: "", guideArticleId: "" };
   const guideArticle = orderedArticles.find((item) => item.id === appInfo.guideArticleId);
   main.innerHTML = `
@@ -320,20 +338,27 @@ function renderBiIphoneUpdates(activeVersion) {
         </div>
         <div class="article-body">
           <div class="ios-release-list">
-            ${appInfo.updates.map((item) => `
-              <section class="ios-release-card${item.version === activeVersion ? " ios-release-card--active" : ""}" id="${biIphoneVersionId(item.version)}" tabindex="-1">
+            ${appInfo.updates.map((item) => {
+              const key = biIphoneUpdateKey(item);
+              const isActive = activeKey && (key === activeKey || item.version === activeKey);
+              const versionTitle = item.versionDetail || `Phiên bản ${item.version} (Build ${item.build})`;
+              return `
+              <section class="ios-release-card${isActive ? " ios-release-card--active" : ""}" id="${biIphoneVersionId(item)}" tabindex="-1">
                 <div class="ios-release-head">
                   <div class="ios-release-badges">
-                    <span class="ios-version-pill${item.latest ? " ios-version-pill--latest" : ""}">Phiên bản ${escapeHtml(item.version)}</span>
-                    <span class="ios-build-label">Bản dựng ${escapeHtml(item.build)}</span>
+                    ${item.pr ? `<span class="ios-pr-badge">${escapeHtml(item.pr)}</span>` : ""}
+                    ${item.status ? `<span class="ios-open-badge">${escapeHtml(item.status)}</span>` : ""}
+                    <span class="ios-version-pill${item.latest ? " ios-version-pill--latest" : ""}">${escapeHtml(versionTitle)}</span>
+                    ${item.release ? `<span class="ios-build-label">${escapeHtml(item.release)}</span>` : ""}
                     ${item.latest ? '<span class="ios-latest-badge">Mới nhất</span>' : ""}
                     ${item.sample ? '<span class="sample-tag">Nội dung minh họa</span>' : ""}
                   </div>
-                  <span class="meta">${icon("calendar")} ${dateLabel(item)}</span>
+                  <span class="meta">${item.timeLabel ? `${icon("clock")} ${escapeHtml(item.timeLabel)}` : `${icon("calendar")} ${dateLabel(item)}`}</span>
                 </div>
-                <p class="ios-release-summary"><strong>${escapeHtml(item.summary)}</strong></p>
-                ${item.changes?.length ? `<ul>${item.changes.map((line) => `<li>${escapeHtml(line)}</li>`).join("")}</ul>` : ""}
-              </section>`).join("")}
+                ${item.summary ? `<p class="ios-release-summary"><strong>${escapeHtml(item.summary)}</strong></p>` : ""}
+                ${item.changes?.length ? `<ul>${item.changes.map((line) => `<li>${formatChangeLine(line)}</li>`).join("")}</ul>` : ""}
+              </section>`;
+            }).join("")}
           </div>
           <section class="bi-guide-panel ios-release-guide-box">
             <div class="bi-guide-pair bi-guide-update ios-release-guide-pair">
@@ -408,7 +433,9 @@ function updateGlobalSearch() {
   const visible = query.trim() ? orderedArticles.filter((article) => matches(article, query)) : orderedArticles.slice(0, 5);
   const iosSearchText = normalize([
     "Các Phiên Bản Update App BI trên iPhone TestFlight iOS",
-    ...(typeof biIphoneApp !== "undefined" ? biIphoneApp.updates.map((u) => `${u.version} ${u.build} ${u.summary}`) : []),
+    ...(typeof biIphoneApp !== "undefined"
+      ? biIphoneApp.updates.map((u) => [u.pr, u.status, u.version, u.versionDetail, u.build, u.release, u.summary, ...(u.changes || [])].join(" "))
+      : []),
   ].join(" "));
   const matchIosUpdates = query.trim() && normalize(query).split(/\s+/).every((word) => iosSearchText.includes(word));
   const totalCount = visible.length + (matchIosUpdates ? 1 : 0);
