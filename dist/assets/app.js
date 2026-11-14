@@ -187,7 +187,6 @@ function biIphoneUpdatesPanel() {
     </div>
     <div class="home-panel-footer-bar">
       <a class="home-panel-more" href="${biIphoneUpdatesUrl()}">${moreLabel} ${icon("arrow")}</a>
-      ${appInfo.testflightUrl ? `<a class="ios-testflight-chip" href="${escapeHtml(appInfo.testflightUrl)}" target="_blank" rel="noopener noreferrer">TestFlight ${icon("external")}</a>` : ""}
     </div>
   </section>`;
 }

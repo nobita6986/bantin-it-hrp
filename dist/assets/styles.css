@@ -422,28 +422,6 @@ kbd { padding: 2px 6px; border: 1px solid #d6def2; border-radius: 6px; backgroun
 .home-panel-more:hover { color: var(--accent-dark); text-decoration: underline; text-underline-offset: 3px; }
 .home-panel-more svg { width: 15px; height: 15px; transition: transform 180ms; }
 .home-panel-more:hover svg { transform: translateX(3px); }
-.ios-testflight-chip {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 4px 10px;
-  border: 1px solid #bcd4fb;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #fff, #eff6ff);
-  box-shadow: 0 2px 6px rgb(29 78 216 / 8%);
-  color: #1d4ed8;
-  font-size: .72rem;
-  font-weight: 740;
-  white-space: nowrap;
-  transition: background .18s ease, border-color .18s ease, color .18s ease, box-shadow .18s ease;
-}
-.ios-testflight-chip:hover {
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
-  border-color: #1d4ed8;
-  box-shadow: 0 4px 12px rgb(29 78 216 / 24%);
-  color: #fff;
-}
-.ios-testflight-chip svg { width: 12px; height: 12px; }
 
 .ios-releases-actions {
   display: flex;
