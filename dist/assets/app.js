@@ -218,6 +218,7 @@ function updateNews() {
 function renderNews() {
   main.innerHTML = `
     <section class="intro" aria-labelledby="page-title">
+      <span class="intro-eyebrow"><span class="intro-dot" aria-hidden="true"></span> Cổng thông tin nội bộ · HR Partner</span>
       <h1 id="page-title" tabindex="-1">Bản tin phòng <span>IT</span></h1>
       <p>Theo dõi các bản cập nhật, tính năng mới và thông báo từ phòng IT.</p>
     </section>
