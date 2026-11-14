@@ -312,96 +312,231 @@ const articles = [
   },
   {
     id: 'gioi-thieu-web-bi',
+    compactReadingLayout: true,
+    hideCategoryBadge: true,
+    hideArticleSummary: true,
+    jumpTargets: ['web-bi-pillar-1', 'web-bi-pillar-2'],
     section: 'news',
     category: 'feature',
     title: 'TỔNG QUAN VỀ WEB BI',
-    wideReadingLayout: true,
-    hideCategoryBadge: true,
     summary: 'Tổng quan nền tảng BI và HRIS HR Partner cùng các chức năng quản trị, báo cáo và vận hành nhân sự.',
     date: '2026-11-13',
     minutes: 5,
     image: 'web-bi.jpg',
     body: `
       <div class="web-bi-overview">
-        <p class="web-bi-lead"><strong>Hệ thống Báo cáo và Quản trị Nhân sự HRP (HR Partner)</strong> địa chỉ truy cập <a href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">https://bi.hrpartner.vn/dashboard</a>. Đây là nền tảng toàn diện, kết hợp giữa quản trị dữ liệu thông minh (Business Intelligence - BI) và hệ thống thông tin quản lý nhân sự (HRIS). Được thiết kế chuyên biệt cho cấp quản lý và Ban Giám đốc, nền tảng cung cấp bức tranh toàn cảnh về tình hình nhân sự, đồng thời số hóa các quy trình vận hành cốt lõi, giúp doanh nghiệp tối ưu hóa tuyển dụng, quản lý rủi ro và ra quyết định chiến lược hiệu quả.</p>
-        <p>Dưới đây là tổng hợp các chức năng trọng yếu của hệ thống:</p>
+        <section class="web-bi-hero" aria-label="Giới thiệu tổng quan nền tảng Web BI">
+          <div class="web-bi-hero-copy">
+            <span class="web-bi-eyebrow"><span class="intro-dot" aria-hidden="true"></span> NỀN TẢNG BI &amp; HRIS · DÀNH CHO CẤP QUẢN LÝ &amp; BAN GIÁM ĐỐC</span>
+            <p class="web-bi-lead"><strong>Hệ thống Báo cáo và Quản trị Nhân sự HRP (HR Partner)</strong> là nền tảng toàn diện, kết hợp giữa quản trị dữ liệu thông minh <strong>(Business Intelligence - BI)</strong> và hệ thống thông tin quản lý nhân sự <strong>(HRIS)</strong>.</p>
+            <p class="web-bi-sublead">Nền tảng cung cấp bức tranh toàn cảnh về tình hình nhân sự, đồng thời số hóa các quy trình vận hành cốt lõi — giúp doanh nghiệp tối ưu hóa tuyển dụng, quản lý rủi ro và ra quyết định chiến lược hiệu quả.</p>
+            <div class="web-bi-cta-row">
+              <a class="bi-action-btn bi-action-btn--ios" href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">Mở Web BI Dashboard ↗</a>
+              <a class="web-bi-url-chip" href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">https://bi.hrpartner.vn/dashboard</a>
+              <span class="web-bi-stat-pill">2 Phân hệ · 8 Chức năng trọng yếu</span>
+            </div>
+          </div>
+          <div class="web-bi-hero-visual">
+            <img src="assets/web-bi.jpg" alt="Minh họa hệ thống Báo cáo BI và Quản trị Nhân sự HR Partner" width="960" height="537" decoding="async">
+          </div>
+        </section>
 
-        <section class="web-bi-group">
-          <h2>I. Phân tích &amp; Báo cáo Quản trị (BI Dashboard)</h2>
+        <nav class="bi-platform-nav" aria-label="Chọn phân hệ chức năng Web BI">
+          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/gioi-thieu-web-bi?jump=web-bi-pillar-1" data-jump-target="web-bi-pillar-1">
+            <span class="bi-platform-switch-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16v-5"/><path d="M12 16V8"/><path d="M17 16v-3"/></svg>
+            </span>
+            <span class="bi-platform-switch-copy">
+              <strong>I. Phân tích &amp; Báo cáo Quản trị (BI)</strong>
+              <small>Báo cáo đa chiều, KPI Dashboard, xu hướng &amp; biến động lao động</small>
+            </span>
+            <span class="bi-platform-switch-go" aria-hidden="true">4 module ↓</span>
+          </a>
+          <a class="bi-platform-switch bi-platform-switch--android" href="#bai-viet/gioi-thieu-web-bi?jump=web-bi-pillar-2" data-jump-target="web-bi-pillar-2">
+            <span class="bi-platform-switch-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+            </span>
+            <span class="bi-platform-switch-copy">
+              <strong>II. Vận hành &amp; Quản trị Nhân sự (HRIS)</strong>
+              <small>Tin tuyển dụng, chấm công, nghỉ phép &amp; tạm ứng lương tự động</small>
+            </span>
+            <span class="bi-platform-switch-go" aria-hidden="true">4 module ↓</span>
+          </a>
+        </nav>
+
+        <section class="web-bi-group web-bi-group--bi" id="web-bi-pillar-1" tabindex="-1">
+          <div class="web-bi-group-head">
+            <span class="bi-platform-badge bi-platform-badge--ios">PHÂN HỆ I · BUSINESS INTELLIGENCE</span>
+            <h2>I. Phân tích &amp; Báo cáo Quản trị (BI Dashboard)</h2>
+            <p>Tổng hợp dữ liệu đa chiều, đo lường hiệu suất tuyển dụng và theo dõi dòng chảy nhân sự theo thời gian thực.</p>
+          </div>
+
           <div class="web-bi-grid">
             <section class="web-bi-module">
-              <h3>1. Hệ thống Báo cáo Đa chiều</h3>
-              <ul>
-                <li>Cung cấp các danh mục báo cáo phân lớp: Báo cáo tổng quát, Báo cáo chi tiết và Báo cáo theo nhóm.</li>
-                <li>Tích hợp công cụ kiểm soát chất lượng dữ liệu: Review thông tin người lao động, báo cáo CCCD trùng lặp (phòng chống gian lận hồ sơ) và báo cáo người lao động nghỉ việc.</li>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 4.5-9 4.5-9-4.5L12 2Z"/><path d="m3 11.5 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MODULE 01 · ĐA CHIỀU &amp; KIỂM SOÁT RỦI RO</span>
+                  <h3>1. Hệ thống Báo cáo Đa chiều</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li><strong>Danh mục báo cáo phân lớp:</strong> Cung cấp đầy đủ Báo cáo tổng quát, Báo cáo chi tiết và Báo cáo theo nhóm.</li>
+                <li><strong>Kiểm soát chất lượng dữ liệu:</strong> Tích hợp công cụ Review thông tin người lao động, báo cáo CCCD trùng lặp (phòng chống gian lận hồ sơ) và báo cáo người lao động nghỉ việc.</li>
               </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Báo cáo 3 cấp</span><span>Chống trùng CCCD</span><span>Review hồ sơ</span>
+              </div>
             </section>
 
             <section class="web-bi-module">
-              <h3>2. Bảng điều khiển Tổng quan (Executive Dashboard)</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MODULE 02 · EXECUTIVE DASHBOARD</span>
+                  <h3>2. Bảng điều khiển Tổng quan</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
                 <li><strong>Chỉ số KPI trọng yếu:</strong> Tự động tổng hợp lượt tuyển mới, số ngày phát sinh tuyển dụng, số lượng dự án đang vận hành và quy mô đội ngũ chuyên viên tuyển dụng (Recruiters).</li>
                 <li><strong>So sánh tăng trưởng:</strong> Đối chiếu dữ liệu kỳ hiện tại với các kỳ trước (tuần/tháng/quý) để đo lường mức độ tăng trưởng.</li>
                 <li><strong>Bộ lọc dữ liệu linh hoạt:</strong> Trích xuất dữ liệu theo mốc thời gian hoặc bóc tách chi tiết qua “Bộ lọc nâng cao”.</li>
               </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>KPI thời gian thực</span><span>Đối chiếu kỳ trước</span><span>Bộ lọc nâng cao</span>
+              </div>
             </section>
 
             <section class="web-bi-module">
-              <h3>3. Phân tích Xu hướng &amp; Hiệu suất Tuyển dụng</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MODULE 03 · RECRUITMENT ANALYTICS</span>
+                  <h3>3. Phân tích Xu hướng &amp; Hiệu suất Tuyển dụng</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
                 <li><strong>Xu hướng thời gian:</strong> Biểu đồ biến động theo ngày, tuần, tháng giúp nhận diện chu kỳ nguồn lao động và điểm “đỉnh tuyển”.</li>
                 <li><strong>Phân bổ theo dự án:</strong> Thống kê tỷ trọng nhân sự cung ứng cho từng khách hàng, đánh giá quy mô dự án.</li>
                 <li><strong>Đo lường kênh nguồn (HRP và Vendor):</strong> Phân tích tỷ trọng, hiệu quả giữa nguồn tuyển nội bộ và thuê ngoài, chi tiết đến từng dự án.</li>
-                <li><strong>Đánh giá năng suất:</strong> Xếp hạng các chuyên viên tuyển dụng có thành tích tốt nhất.</li>
-                <li><strong>Cơ cấu lao động:</strong> Phân loại nhân sự theo tính chất hợp đồng (thời vụ, chính thức).</li>
+                <li><strong>Đánh giá năng suất &amp; Cơ cấu:</strong> Xếp hạng chuyên viên tuyển dụng xuất sắc nhất và phân loại nhân sự theo tính chất hợp đồng (thời vụ, chính thức).</li>
               </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Đỉnh tuyển dụng</span><span>HRP vs Vendor</span><span>Xếp hạng Recruiter</span>
+              </div>
             </section>
 
             <section class="web-bi-module">
-              <h3>4. Quản lý Hiện trạng &amp; Biến động Trạng thái Lao động</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MODULE 04 · WORKFORCE SNAPSHOT &amp; FLOW</span>
+                  <h3>4. Quản lý Hiện trạng &amp; Biến động Trạng thái Lao động</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
                 <li><strong>Chốt hiện trạng (Snapshot):</strong> Thống kê cơ cấu trạng thái người lao động tại một thời điểm cụ thể (đang làm, đang chờ việc, đã nghỉ).</li>
                 <li><strong>Luồng chuyển tiếp trạng thái:</strong> Theo dõi dòng chảy nhân sự, chẳng hạn tỷ lệ chuyển từ “Đang làm” sang “Đã nghỉ”; phân tách rõ tuyển mới và biến động nội bộ.</li>
               </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Snapshot tức thời</span><span>Dòng chảy nhân sự</span><span>Biến động nội bộ</span>
+              </div>
             </section>
           </div>
         </section>
 
-        <section class="web-bi-group">
-          <h2>II. Vận hành &amp; Quản trị Nhân sự (HRIS)</h2>
+        <section class="web-bi-group web-bi-group--hris" id="web-bi-pillar-2" tabindex="-1">
+          <div class="web-bi-group-head">
+            <span class="bi-platform-badge bi-platform-badge--android">PHÂN HỆ II · HUMAN RESOURCE INFORMATION SYSTEM</span>
+            <h2>II. Vận hành &amp; Quản trị Nhân sự (HRIS)</h2>
+            <p>Số hóa khép kín quy trình vận hành nhân sự từ chiến dịch tuyển dụng, chấm công, đơn từ nghỉ phép đến đối trừ ứng lương.</p>
+          </div>
+
           <div class="web-bi-grid">
             <section class="web-bi-module">
-              <h3>5. Quản trị Tin tuyển dụng (Job Postings &amp; Campaigns)</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v4"/><path d="M2 13h20"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 05 · JOB POSTINGS &amp; CAMPAIGNS</span>
+                  <h3>5. Quản trị Tin tuyển dụng</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--hris">
                 <li><strong>Quản lý chiến dịch:</strong> Đăng tải, lưu trữ và theo dõi trạng thái các yêu cầu tuyển dụng cho từng dự án.</li>
                 <li><strong>Thu hút &amp; Phân luồng:</strong> Khởi tạo mô tả công việc (JD), phân phối tin tuyển dụng ra các kênh và thu thập hồ sơ ứng viên (CV) vào kho dữ liệu chung.</li>
                 <li><strong>Kết nối dữ liệu:</strong> Đồng bộ hiệu quả chiến dịch tuyển dụng lên Bảng điều khiển tổng quan.</li>
               </ul>
+              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
+                <span>Quản lý JD &amp; CV</span><span>Theo dõi chiến dịch</span><span>Đồng bộ Dashboard</span>
+              </div>
             </section>
 
             <section class="web-bi-module">
-              <h3>6. Quản lý Chấm công (Time &amp; Attendance)</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 06 · TIME &amp; ATTENDANCE</span>
+                  <h3>6. Quản lý Chấm công</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--hris">
                 <li><strong>Kiểm soát thời gian thực tế:</strong> Ghi nhận giờ ra/vào, ca làm việc, thời gian đi muộn/về sớm và số giờ tăng ca (OT).</li>
                 <li><strong>Tổng hợp tự động:</strong> Hỗ trợ chốt công cuối kỳ nhanh chóng, giảm sai sót và cung cấp dữ liệu đầu vào chính xác cho bộ phận tính lương (C&amp;B).</li>
               </ul>
+              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
+                <span>Ca kíp &amp; OT</span><span>Chốt công tự động</span><span>Chuẩn dữ liệu C&amp;B</span>
+              </div>
             </section>
 
             <section class="web-bi-module">
-              <h3>7. Quản lý Nghỉ phép (Leave Management)</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 07 · LEAVE MANAGEMENT</span>
+                  <h3>7. Quản lý Nghỉ phép</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--hris">
                 <li><strong>Số hóa đơn từ:</strong> Hỗ trợ người lao động tạo và gửi trực tuyến các loại đơn xin nghỉ (phép năm, nghỉ ốm, không lương, thai sản...).</li>
                 <li><strong>Kiểm soát quỹ phép:</strong> Tự động theo dõi và cập nhật số ngày phép còn lại của từng cá nhân.</li>
                 <li><strong>Phê duyệt nhanh:</strong> Cấp quản lý xem lịch sử và duyệt đơn ngay trên hệ thống, giúp luồng công việc thông suốt.</li>
               </ul>
+              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
+                <span>Đơn từ trực tuyến</span><span>Tự động tính quỹ phép</span><span>Duyệt tức thời</span>
+              </div>
             </section>
 
             <section class="web-bi-module">
-              <h3>8. Quản lý Ứng lương (Salary Advance)</h3>
-              <ul>
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 08 · SALARY ADVANCE</span>
+                  <h3>8. Quản lý Ứng lương</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--hris">
                 <li><strong>Đề xuất linh hoạt:</strong> Cho phép nhân sự gửi yêu cầu tạm ứng thu nhập dựa trên số ngày công đã hoàn thành.</li>
                 <li><strong>Quy trình đối trừ tự động:</strong> Hệ thống hóa luồng phê duyệt từ quản lý đến kế toán, ghi nhận khoản ứng để khấu trừ vào kỳ lương tiếp theo, bảo đảm minh bạch và an toàn dòng tiền.</li>
               </ul>
+              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
+                <span>Ứng theo ngày công</span><span>Luồng duyệt Kế toán</span><span>Khấu trừ minh bạch</span>
+              </div>
             </section>
           </div>
         </section>

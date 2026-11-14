@@ -302,7 +302,7 @@ function renderArticle(article) {
         <div class="article-heading">
           ${article.hideCategoryBadge ? "" : badge(article)}
           <h1 id="page-title" tabindex="-1">${escapeHtml(article.title)}</h1>
-          ${article.summary ? `<p class="article-summary">${escapeHtml(article.summary)}</p>` : ""}
+          ${article.summary && !article.hideArticleSummary ? `<p class="article-summary">${escapeHtml(article.summary)}</p>` : ""}
           <div class="article-info">
             <span class="meta">${icon("calendar")} ${dateLabel(article)}</span>
             <span class="meta">${icon("clock")} ${article.minutes} phút đọc</span>
