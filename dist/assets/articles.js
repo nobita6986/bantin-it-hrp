@@ -102,7 +102,9 @@ const articles = [
   {
     id: 'cong-ho-tro-it',
     compactReadingLayout: true,
+    hideHeaderJump: true,
     quickJump: { target: 'bi-guide-android', label: 'Chuyển nhanh hướng dẫn trên Android' },
+    jumpTargets: ['bi-guide-ios', 'bi-guide-android'],
     sample: true,
     section: 'news',
     category: 'update',
@@ -115,130 +117,193 @@ const articles = [
     hideFeaturedSampleLabel: true,
     featuredFooterImage: { src: 'ios-vs-android.png', alt: 'Biểu trưng Android và iOS', width: 690, height: 362 },
     body: `
-      <div class="bi-guide">
-        <div class="bi-guide-lead">
-          <div class="bi-guide-intro">
-            <h2 class="bi-guide-section-title"><img class="bi-guide-section-icon" src="assets/hand-pointer-right.png" alt="" aria-hidden="true" width="28" height="21"><span>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</span></h2>
-            <p>Để cài đặt ứng dụng <strong>BI</strong> (phiên bản thử nghiệm qua TestFlight), bạn vui lòng thực hiện lần lượt theo 3 bước đơn giản sau hoặc tham khảo video chi tiết.</p>
-          </div>
-          <div class="bi-guide-video">
-            <button class="bi-guide-video-toggle" type="button" aria-expanded="false" aria-controls="bi-guide-video-content">
-              <span class="bi-guide-video-play" aria-hidden="true"></span>
-              Video hướng dẫn
-            </button>
-            <figure class="bi-guide-video-content" id="bi-guide-video-content">
-              <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-              <figcaption><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share">Xem video trên YouTube</a></figcaption>
-            </figure>
-          </div>
-          <section class="bi-guide-panel bi-guide-prepare">
-            <h3>1. Cài đặt ứng dụng hỗ trợ TestFlight</h3>
-            <p><em>Bước chuẩn bị.</em></p>
-            <div class="bi-guide-pair bi-guide-download">
-              <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm kiếm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy (nếu máy bạn đã có sẵn ứng dụng này thì có thể bỏ qua bước này).</p>
-              <img class="article-download-screenshot" src="assets/testflight-download.png" alt="Mũi tên chỉ biểu tượng tải TestFlight trong App Store" width="1496" height="830" loading="lazy" decoding="async">
-            </div>
-            <p class="bi-guide-check"><strong>Kiểm tra.</strong> Biểu tượng TestFlight (hình cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
-          </section>
-        </div>
+      <div class="bi-guide bi-guide-v2">
+        <nav class="bi-platform-nav" aria-label="Chọn nền tảng điện thoại">
+          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/cong-ho-tro-it?jump=bi-guide-ios" data-jump-target="bi-guide-ios">
+            <span class="bi-platform-switch-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43Zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45Z"/></svg>
+            </span>
+            <span class="bi-platform-switch-copy">
+              <strong>Dành cho iPhone (iOS)</strong>
+              <small>Cài đặt &amp; cập nhật qua Apple TestFlight</small>
+            </span>
+            <span class="bi-platform-switch-go" aria-hidden="true">Xem ngay ↓</span>
+          </a>
+          <a class="bi-platform-switch bi-platform-switch--android" href="#bai-viet/cong-ho-tro-it?jump=bi-guide-android" data-jump-target="bi-guide-android">
+            <span class="bi-platform-switch-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 15.341a.857.857 0 1 1 .001-1.715.857.857 0 0 1-.001 1.715Zm-11.046 0a.857.857 0 1 1 .001-1.715.857.857 0 0 1-.001 1.715Zm11.405-6.02 1.997-3.459a.416.416 0 0 0-.721-.416l-2.022 3.503A12.14 12.14 0 0 0 12 8.018c-1.852 0-3.597.338-5.136.931L4.842 5.446a.416.416 0 0 0-.721.416l1.997 3.459C2.688 11.186.435 14.66.24 18.75h23.52c-.195-4.09-2.448-7.564-5.878-9.429Z"/></svg>
+            </span>
+            <span class="bi-platform-switch-copy">
+              <strong>Dành cho Android</strong>
+              <small>Tải &amp; cập nhật trực tiếp trên Google Play</small>
+            </span>
+            <span class="bi-platform-switch-go" aria-hidden="true">Xem ngay ↓</span>
+          </a>
+        </nav>
 
-        <section class="bi-guide-panel">
-          <h3>2. Quét mã QR để nhận lời mời tải app BI</h3>
-          <div class="bi-guide-pair bi-guide-scan">
-            <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng tính năng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng camera vào mã QR được cung cấp và chạm vào đường link màu vàng hiện trên màn hình.</p>
-            <img class="article-qr-code" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" decoding="async">
-            <div class="bi-guide-invite">
-              <p>Nếu đang đọc trên iPhone</p>
-              <a href="https://testflight.apple.com/join/VGd3SbtC">Mở trong TestFlight</a>
-            </div>
-          </div>
-          <p class="bi-guide-check"><strong>Kiểm tra.</strong> Màn hình tự động chuyển hướng sang giao diện TestFlight của ứng dụng <strong>BI</strong> kèm nút <strong>Chấp nhận</strong> (Accept) hoặc <strong>Cài đặt</strong> (Install).</p>
-        </section>
-
-        <section class="bi-guide-panel">
-          <h3>3. Tiến hành cài đặt ứng dụng BI</h3>
-          <div class="bi-guide-install">
-            <div class="bi-guide-copy bi-guide-install-pair">
-              <p>Nhấn vào nút <strong>Chấp nhận</strong> (nếu hệ thống yêu cầu), sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
-              <img class="article-install-screenshot" src="assets/hrp-bi-install.png" alt="Màn hình HRP BI trên TestFlight với nút Cài đặt" width="675" height="862" loading="lazy" decoding="async">
-            </div>
-            <div class="bi-guide-copy bi-guide-install-pair">
-              <p class="bi-guide-check"><strong>Kiểm tra.</strong> Biểu tượng ứng dụng <strong>BI</strong> xuất hiện trên màn hình chính với một dấu chấm tròn màu cam nhỏ nằm ngay trước tên ứng dụng.</p>
-              <img class="article-verification-screenshot" src="assets/hrp-bi-home-screen.png" alt="Biểu tượng HRP BI và dấu chấm màu cam bên cạnh tên ứng dụng trên màn hình chính iPhone" width="1462" height="822" loading="lazy" decoding="async">
-            </div>
-          </div>
-        </section>
-
-        <section class="bi-guide-panel bi-guide-notes">
-          <h2>Một số lưu ý quan trọng</h2>
-          <ul>
-            <li><strong>Không dùng Zalo để quét mã:</strong> Bạn nên dùng <strong>Camera của iPhone</strong> để quét mã QR. Nếu quét bằng Zalo hoặc trình duyệt bên thứ ba, link có thể bị chặn chuyển hướng sang TestFlight. (Nếu lỡ mở bằng Zalo, hãy nhấn biểu tượng <code>...</code> ở góc trên bên phải và chọn <strong>Mở bằng Safari</strong>).</li>
-            <li><strong>Quyền truy cập:</strong> Trong lần đầu mở ứng dụng BI, nếu hệ thống hỏi cấp quyền (như Thông báo, Mạng cục bộ, Dịch vụ định vị...), bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</li>
-          </ul>
-          <div class="bi-guide-pair bi-guide-update">
-            <div class="bi-guide-copy">
-              <h3>Cập nhật phiên bản</h3>
-              <p>Bản thử nghiệm trên TestFlight có thời hạn sử dụng trong <strong>90 ngày</strong>. Khi có bản cập nhật mới, bạn chỉ cần vào ứng dụng <strong>TestFlight</strong> và nhấn <strong>Cập nhật</strong> (Update) để tiếp tục dùng mà không bị mất dữ liệu.</p>
-            </div>
-            <img class="article-install-screenshot" src="assets/hrp-bi-update.png" alt="Màn hình HRP BI trên TestFlight với nút Cập nhật" width="677" height="871" loading="lazy" decoding="async">
-          </div>
-        </section>
-
-        <section class="bi-guide-panel bi-guide-android" id="bi-guide-android" tabindex="-1">
-          <div class="bi-guide-android-top">
-            <div class="bi-guide-android-intro">
-              <h2 class="bi-guide-section-title"><img class="bi-guide-section-icon" src="assets/hand-pointer-right.png" alt="" aria-hidden="true" width="28" height="21"><span>HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN ANDROID</span></h2>
-              <p>Quét mã QR bằng điện thoại Android để mở BI trên Google Play, hoặc chạm nút bên cạnh nếu đang dùng điện thoại.</p>
-              <div class="bi-guide-android-entry">
-                <img class="article-android-qr" src="assets/bi-android-play-qr.png" alt="Mã QR mở ứng dụng BI trên Google Play" width="750" height="750" loading="lazy" decoding="async">
-                <div class="bi-guide-android-link">
-                  <a class="bi-guide-android-button" href="https://play.google.com/store/apps/details?id=vn.hrpartner.bi">Mở trên Google Play</a>
-                  <p>Dùng camera điện thoại để quét mã, hoặc nhấn nút để mở Google Play.</p>
+        <section class="bi-platform-section bi-platform--ios" id="bi-guide-ios" tabindex="-1">
+          <div class="bi-platform-top">
+            <div class="bi-platform-intro">
+              <span class="bi-platform-badge bi-platform-badge--ios">PHẦN I · IPHONE (IOS · TESTFLIGHT)</span>
+              <h2 class="bi-platform-heading">HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN IPHONE</h2>
+              <p>Để cài đặt ứng dụng <strong>HRP BI</strong> trên iPhone (qua TestFlight), bạn thực hiện theo 4 bước bên dưới hoặc quét nhanh mã QR lời mời.</p>
+              <div class="bi-qr-box">
+                <img class="bi-qr-img" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" decoding="async">
+                <div class="bi-qr-actions">
+                  <div class="bi-qr-buttons">
+                    <a class="bi-action-btn bi-action-btn--ios" href="https://testflight.apple.com/join/VGd3SbtC" target="_blank" rel="noopener noreferrer">Mở trong TestFlight ↗</a>
+                    <a class="bi-action-btn bi-action-btn--ghost" href="#phien-ban-bi-iphone">Các bản cập nhật iOS →</a>
+                  </div>
+                  <p>Mở <strong>Camera mặc định của iPhone</strong> để quét mã QR, hoặc chạm nút trên nếu bạn đang đọc trực tiếp trên iPhone.</p>
                 </div>
               </div>
             </div>
-            <div class="bi-guide-video bi-guide-android-video">
+            <div class="bi-guide-video bi-platform-video">
+              <button class="bi-guide-video-toggle" type="button" aria-expanded="false" aria-controls="bi-guide-video-content">
+                <span class="bi-guide-video-play" aria-hidden="true"></span>
+                <span class="bi-guide-android-video-badge">VIDEO HƯỚNG DẪN</span>
+                <span class="bi-guide-android-video-copy"><strong>Video hướng dẫn iPhone</strong><small>Cài đặt &amp; cập nhật HRP BI qua TestFlight</small></span>
+                <span class="bi-guide-android-video-cta">Phát video hướng dẫn</span>
+              </button>
+              <figure class="bi-guide-video-content" id="bi-guide-video-content">
+                <iframe class="article-short-video" src="https://www.youtube.com/embed/1vwW6s3NdFM" title="Video hướng dẫn cập nhật ứng dụng BI trên iPhone" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+                <figcaption><a href="https://www.youtube.com/shorts/1vwW6s3NdFM?feature=share" target="_blank" rel="noopener noreferrer">Xem video trên YouTube ↗</a></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <ol class="bi-step-grid">
+            <li class="bi-step-card">
+              <div class="bi-step-head">
+                <span class="bi-step-num">Bước 01</span>
+                <h3>Cài đặt ứng dụng hỗ trợ TestFlight</h3>
+              </div>
+              <p>Mở <strong>App Store</strong>&nbsp;<img class="article-inline-icon" src="assets/app-store-icon.png" alt="" width="24" height="22"> trên iPhone, tìm từ khóa <code>TestFlight</code> và nhấn <strong>Nhận</strong> để tải về máy <em>(nếu máy đã có sẵn TestFlight thì bỏ qua bước này)</em>.</p>
+              <div class="bi-step-media bi-step-media--wide">
+                <img src="assets/testflight-download.png" alt="Mũi tên chỉ biểu tượng tải TestFlight trong App Store" width="1496" height="830" loading="lazy" decoding="async">
+              </div>
+              <p class="bi-step-check"><strong>✓ Kiểm tra:</strong> Biểu tượng TestFlight (cánh quạt màu xanh dương) xuất hiện trên màn hình chính của iPhone.</p>
+            </li>
+
+            <li class="bi-step-card">
+              <div class="bi-step-head">
+                <span class="bi-step-num">Bước 02</span>
+                <h3>Quét mã QR để nhận lời mời tải app BI</h3>
+              </div>
+              <p>Mở ứng dụng <strong>Camera</strong> mặc định trên iPhone (hoặc dùng <strong>Quét mã</strong> trong Trung tâm điều khiển), hướng vào mã QR và chạm vào đường link màu vàng hiện trên màn hình.</p>
+              <div class="bi-step-media bi-step-media--qr-row">
+                <img class="bi-step-qr" src="assets/bi-testflight-qr.png" alt="Mã QR nhận lời mời cài đặt ứng dụng BI qua TestFlight" width="750" height="750" loading="lazy" decoding="async">
+                <div class="bi-step-qr-cta">
+                  <span>Nếu đang xem trên iPhone:</span>
+                  <a href="https://testflight.apple.com/join/VGd3SbtC" target="_blank" rel="noopener noreferrer">Nhấn mở lời mời TestFlight ↗</a>
+                </div>
+              </div>
+              <p class="bi-step-check"><strong>✓ Kiểm tra:</strong> Màn hình tự động chuyển sang TestFlight của ứng dụng <strong>HRP BI</strong> kèm nút <strong>Chấp nhận</strong> hoặc <strong>Cài đặt</strong>.</p>
+            </li>
+
+            <li class="bi-step-card">
+              <div class="bi-step-head">
+                <span class="bi-step-num">Bước 03</span>
+                <h3>Tiến hành cài đặt ứng dụng BI</h3>
+              </div>
+              <p>Nhấn <strong>Chấp nhận</strong> (Accept) nếu hệ thống yêu cầu, sau đó nhấn <strong>Cài đặt</strong> (Install) và chờ quá trình tải hoàn tất.</p>
+              <div class="bi-step-media bi-step-media--duo">
+                <img src="assets/hrp-bi-install.png" alt="Màn hình HRP BI trên TestFlight với nút Cài đặt" width="675" height="862" loading="lazy" decoding="async">
+                <img src="assets/hrp-bi-home-screen.png" alt="Biểu tượng HRP BI và dấu chấm màu cam trên màn hình chính iPhone" width="1462" height="822" loading="lazy" decoding="async">
+              </div>
+              <p class="bi-step-check"><strong>✓ Kiểm tra:</strong> Biểu tượng <strong>HRP BI</strong> xuất hiện trên màn hình chính kèm dấu chấm tròn màu cam nhỏ trước tên ứng dụng.</p>
+            </li>
+
+            <li class="bi-step-card">
+              <div class="bi-step-head">
+                <span class="bi-step-num">Bước 04</span>
+                <h3>Cập nhật phiên bản mới (hạn 90 ngày)</h3>
+              </div>
+              <p>Bản thử nghiệm trên TestFlight có thời hạn sử dụng <strong>90 ngày</strong>. Khi có bản cập nhật mới, bạn chỉ cần mở <strong>TestFlight</strong> và nhấn <strong>Cập nhật</strong> (Update) để dùng tiếp mà không mất dữ liệu.</p>
+              <div class="bi-step-media bi-step-media--single-portrait">
+                <img src="assets/hrp-bi-update.png" alt="Màn hình HRP BI trên TestFlight với nút Cập nhật" width="677" height="871" loading="lazy" decoding="async">
+              </div>
+              <p class="bi-step-check"><strong>✓ Lưu ý:</strong> Dữ liệu và tài khoản đăng nhập được giữ nguyên hoàn toàn sau mỗi lần cập nhật.</p>
+            </li>
+          </ol>
+
+          <div class="bi-notes-row" aria-label="Lưu ý quan trọng khi cài đặt trên iPhone">
+            <div class="bi-note-card bi-note-card--warn">
+              <strong>⚠ Không dùng Zalo để quét mã QR</strong>
+              <p>Hãy dùng <strong>Camera mặc định của iPhone</strong>. Nếu quét bằng Zalo hoặc trình duyệt bên thứ ba, link có thể bị chặn chuyển hướng sang TestFlight. <em>(Nếu lỡ mở bằng Zalo, nhấn biểu tượng <code>...</code> góc trên bên phải và chọn <strong>Mở bằng Safari</strong>).</em></p>
+            </div>
+            <div class="bi-note-card bi-note-card--info">
+              <strong>✓ Cấp quyền truy cập trong lần đầu mở app</strong>
+              <p>Khi mở ứng dụng <strong>BI</strong> lần đầu, nếu hệ thống hỏi cấp quyền <em>(như Thông báo, Mạng cục bộ, Dịch vụ định vị, Camera...)</em>, bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="bi-platform-section bi-platform--android" id="bi-guide-android" tabindex="-1">
+          <div class="bi-platform-top">
+            <div class="bi-platform-intro">
+              <span class="bi-platform-badge bi-platform-badge--android">PHẦN II · ANDROID (GOOGLE PLAY)</span>
+              <h2 class="bi-platform-heading">HƯỚNG DẪN CÀI ĐẶT &amp; CẬP NHẬT ỨNG DỤNG BI TRÊN ANDROID</h2>
+              <p>Quét mã QR bằng điện thoại Android để mở ứng dụng <strong>HRP BI</strong> trên Google Play, hoặc chạm nút bên dưới nếu đang dùng điện thoại.</p>
+              <div class="bi-qr-box">
+                <img class="bi-qr-img" src="assets/bi-android-play-qr.png" alt="Mã QR mở ứng dụng BI trên Google Play" width="750" height="750" decoding="async">
+                <div class="bi-qr-actions">
+                  <div class="bi-qr-buttons">
+                    <a class="bi-action-btn bi-action-btn--android" href="https://play.google.com/store/apps/details?id=vn.hrpartner.bi" target="_blank" rel="noopener noreferrer">Mở trên Google Play ↗</a>
+                  </div>
+                  <p>Dùng Camera điện thoại để quét mã hoặc nhấn nút mở Google Play. <em>(Hình minh họa có thể khác đôi chút tùy dòng điện thoại Android).</em></p>
+                </div>
+              </div>
+            </div>
+            <div class="bi-guide-video bi-platform-video bi-platform-video--android">
               <button class="bi-guide-video-toggle" type="button" aria-expanded="false" aria-controls="bi-guide-android-video-content">
                 <span class="bi-guide-video-play" aria-hidden="true"></span>
                 <span class="bi-guide-android-video-badge">VIDEO HƯỚNG DẪN</span>
-                <span class="bi-guide-android-video-copy"><strong>Video hướng dẫn Android</strong><small>Cài đặt HRP BI qua Google Play</small></span>
+                <span class="bi-guide-android-video-copy"><strong>Video hướng dẫn Android</strong><small>Cài đặt &amp; cập nhật HRP BI qua Google Play</small></span>
                 <span class="bi-guide-android-video-cta">Phát video hướng dẫn</span>
               </button>
               <figure class="bi-guide-video-content" id="bi-guide-android-video-content">
                 <iframe class="article-short-video" src="https://www.youtube.com/embed/tEAiYreuigw" title="Video hướng dẫn cài đặt ứng dụng BI trên Android" width="208" height="370" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
-                <figcaption><a href="https://www.youtube.com/shorts/tEAiYreuigw?feature=share">Xem video trên YouTube</a></figcaption>
+                <figcaption><a href="https://www.youtube.com/shorts/tEAiYreuigw?feature=share" target="_blank" rel="noopener noreferrer">Xem video trên YouTube ↗</a></figcaption>
               </figure>
             </div>
           </div>
-          <p class="bi-guide-android-note">Hình minh họa có thể khác đôi chút tùy điện thoại Android.</p>
-          <ol class="bi-guide-android-steps">
-            <li>
-              <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><h3>1. Quét mã QR</h3></div>
-                <p>Mở Camera trên điện thoại, quét mã QR rồi chạm vào liên kết Google Play hiện ở giữa màn hình.</p>
-                <img class="article-android-step-image" src="assets/bi-android-scan.svg" alt="Minh họa điện thoại Android dùng camera quét mã QR" width="300" height="360" loading="lazy" decoding="async">
+
+          <ol class="bi-step-grid bi-step-grid--android">
+            <li class="bi-step-card bi-step-card--side">
+              <div class="bi-step-side-copy">
+                <span class="bi-step-num bi-step-num--android">Bước 01</span>
+                <h3>Quét mã QR</h3>
+                <p>Mở <strong>Camera</strong> trên điện thoại Android, hướng vào mã QR phía trên rồi chạm vào liên kết <strong>Google Play</strong> hiện ở giữa màn hình.</p>
               </div>
+              <img class="bi-android-shot bi-android-shot--svg" src="assets/bi-android-scan.svg" alt="Minh họa điện thoại Android dùng camera quét mã QR" width="300" height="360" loading="lazy" decoding="async">
             </li>
-            <li>
-              <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><h3>2. Tiến hành cài đặt ứng dụng BI</h3></div>
-                <p>Kiểm tra đúng ứng dụng BI trên Google Play, chạm <strong>Cài đặt</strong> rồi chờ hoàn tất.</p>
-                <img class="article-android-step-image article-android-step-image--screenshot article-android-step-image--install-screen" src="assets/bi-android-install-screen.png" alt="Ảnh Google Play có trang HRP BI và nút Cài đặt" width="407" height="856" loading="lazy" decoding="async">
+
+            <li class="bi-step-card bi-step-card--side">
+              <div class="bi-step-side-copy">
+                <span class="bi-step-num bi-step-num--android">Bước 02</span>
+                <h3>Tiến hành cài đặt ứng dụng BI</h3>
+                <p>Kiểm tra đúng ứng dụng <strong>HRP BI</strong> trên Google Play, chạm nút <strong>Cài đặt</strong> màu xanh rồi chờ quá trình tải hoàn tất.</p>
               </div>
+              <img class="bi-android-shot bi-android-shot--install" src="assets/bi-android-install-screen.png" alt="Ảnh Google Play có trang HRP BI và nút Cài đặt" width="407" height="856" loading="lazy" decoding="async">
             </li>
-            <li>
-              <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><h3>3. Mở ứng dụng</h3></div>
-                <p>Sau khi cài đặt hoàn tất, ngoài màn hình chính sẽ xuất hiện app HRP BI. Tiến hành truy cập app và đăng nhập bằng tài khoản IT đã cấp. Trong lần đầu mở ứng dụng BI, nếu hệ thống hỏi cấp quyền (như Thông báo, Mạng cục bộ, Dịch vụ định vị...), bạn hãy chọn <strong>Cho phép</strong> để ứng dụng hoạt động đầy đủ tính năng.</p>
-                <img class="article-android-step-image article-android-step-image--screenshot" src="assets/bi-android-home-screen.png" alt="Ảnh màn hình chính Android có biểu tượng HRP BI được khoanh đỏ" width="402" height="820" loading="lazy" decoding="async">
+
+            <li class="bi-step-card bi-step-card--side">
+              <div class="bi-step-side-copy">
+                <span class="bi-step-num bi-step-num--android">Bước 03</span>
+                <h3>Mở ứng dụng &amp; Cấp quyền</h3>
+                <p>Mở app <strong>HRP BI</strong> ngoài màn hình chính và đăng nhập bằng tài khoản IT đã cấp. Khi được hỏi quyền <em>(Thông báo, Định vị, Camera...)</em>, hãy chọn <strong>Cho phép</strong> để dùng đầy đủ tính năng.</p>
               </div>
+              <img class="bi-android-shot bi-android-shot--home" src="assets/bi-android-home-screen.png" alt="Ảnh màn hình chính Android có biểu tượng HRP BI được khoanh đỏ" width="402" height="820" loading="lazy" decoding="async">
             </li>
-            <li>
-              <div class="bi-guide-android-step">
-                <div class="bi-guide-android-step-title"><h3>4. Cập nhật ứng dụng</h3></div>
-                <p>Khi có phiên bản mới, hãy quét lại mã QR trên đầu trang hướng dẫn để vào trang cập nhật trên Google Play và bấm <strong>cập nhật</strong>.</p>
-                <img class="article-android-step-image article-android-step-image--screenshot" src="assets/bi-android-update-screen.png" alt="Ảnh Google Play có nút Cập nhật HRP BI được đánh dấu" width="412" height="847" loading="lazy" decoding="async">
+
+            <li class="bi-step-card bi-step-card--side">
+              <div class="bi-step-side-copy">
+                <span class="bi-step-num bi-step-num--android">Bước 04</span>
+                <h3>Cập nhật ứng dụng</h3>
+                <p>Khi có phiên bản mới, hãy quét lại mã QR trên đầu mục Android (hoặc nhấn <strong>Mở trên Google Play</strong>) để vào trang ứng dụng và bấm <strong>Cập nhật</strong>.</p>
               </div>
+              <img class="bi-android-shot bi-android-shot--update" src="assets/bi-android-update-screen.png" alt="Ảnh Google Play có nút Cập nhật HRP BI được đánh dấu" width="412" height="847" loading="lazy" decoding="async">
             </li>
           </ol>
         </section>

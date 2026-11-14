@@ -306,11 +306,12 @@ function renderArticle(article) {
           <div class="article-info">
             <span class="meta">${icon("calendar")} ${dateLabel(article)}</span>
             <span class="meta">${icon("clock")} ${article.minutes} phút đọc</span>
-            ${quickJump
+            ${quickJump && !article.hideHeaderJump
     ? `<a class="copy-button article-jump-link" href="${articleUrl(article)}?jump=${encodeURIComponent(quickJump.target)}">${icon("down")} ${escapeHtml(quickJump.label)}</a>`
-    : `<button class="copy-button" type="button" data-copy>${icon("link")} Sao chép liên kết</button>`}
+    : ""}
+            <button class="copy-button" type="button" data-copy>${icon("link")} Sao chép liên kết</button>
           </div>
-          ${quickJump ? "" : '<p class="sr-only" id="copy-status" role="status"></p>'}
+          <p class="sr-only" id="copy-status" role="status"></p>
         </div>
         <div class="article-body">${article.body}</div>
       </article>
@@ -413,7 +414,8 @@ function renderRoute(moveFocus = false) {
   });
   const heading = document.querySelector("#page-title");
   document.title = section === "news" && !isSubpage ? "Bản tin IT" : `${heading.textContent} | Bản tin IT`;
-  const articleJump = article?.quickJump?.target === hashParams.get("jump") ? hashParams.get("jump") : null;
+  const jumpParam = hashParams.get("jump");
+  const articleJump = article && jumpParam && (article.quickJump?.target === jumpParam || article.jumpTargets?.includes(jumpParam)) ? jumpParam : null;
   const versionJump = isIosUpdates && hashParams.get("v") ? biIphoneVersionId(hashParams.get("v")) : null;
   const jumpTarget = articleJump || versionJump;
   if (moveFocus && !jumpTarget) {
@@ -495,6 +497,15 @@ main.addEventListener("click", (event) => {
       event.preventDefault();
       newsHeading.scrollIntoView({ behavior: "smooth", block: "start" });
       newsHeading.focus({ preventScroll: true });
+    }
+  }
+  const jumpButton = event.target.closest("[data-jump-target]");
+  if (jumpButton) {
+    const target = document.getElementById(jumpButton.dataset.jumpTarget);
+    if (target) {
+      event.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+      target.focus({ preventScroll: true });
     }
   }
   const copy = event.target.closest("[data-copy]");
