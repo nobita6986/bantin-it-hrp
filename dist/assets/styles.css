@@ -398,6 +398,22 @@ kbd { padding: 2px 6px; border: 1px solid #d6def2; border-radius: 6px; backgroun
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
+.home-panel--latest .featured-latest-list { gap: 6px; }
+.home-panel--latest .featured-latest-item { gap: 8px; padding: 7px 10px; }
+.home-panel--latest .featured-latest-index { width: 26px; height: 26px; font-size: .71rem; }
+.home-panel--latest .featured-latest-copy strong {
+  display: block;
+  overflow: visible;
+  font-size: .78rem;
+  line-height: 1.29;
+  letter-spacing: -.016em;
+  text-wrap: pretty;
+  -webkit-line-clamp: unset;
+}
+@container (max-width: 332px) {
+  .home-panel--latest .featured-latest-item { gap: 7px; padding: 6px 8px; }
+  .home-panel--latest .featured-latest-copy strong { font-size: .74rem; line-height: 1.27; }
+}
 .featured-latest-item > svg { width: 14px; height: 14px; color: var(--accent); transition: transform .18s; }
 .featured-latest-item:hover > svg { transform: translateX(2px); }
 .featured-latest-empty { color: var(--muted); font-size: .85rem; }
