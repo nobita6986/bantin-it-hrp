@@ -101,6 +101,7 @@ const biIphoneApp = {
 const articles = [
   {
     id: 'cong-ho-tro-it',
+    pinRank: 0,
     compactReadingLayout: true,
     hideHeaderJump: true,
     quickJump: { target: 'bi-guide-android', label: 'Chuyển nhanh hướng dẫn trên Android' },
@@ -312,6 +313,7 @@ const articles = [
   },
   {
     id: 'gioi-thieu-web-bi',
+    pinRank: 1,
     compactReadingLayout: true,
     hideCategoryBadge: true,
     hideArticleSummary: true,
@@ -537,6 +539,401 @@ const articles = [
               <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
                 <span>Ứng theo ngày công</span><span>Luồng duyệt Kế toán</span><span>Khấu trừ minh bạch</span>
               </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    `,
+  },
+  {
+    id: 'tong-quan-hrp-bi-ios',
+    pinRank: 2,
+    compactReadingLayout: true,
+    hideCategoryBadge: true,
+    hideArticleSummary: true,
+    jumpTargets: ['hrp-ios-features', 'hrp-ios-notes'],
+    section: 'news',
+    category: 'feature',
+    title: 'Tổng quan Chức năng & Lưu ý Sử dụng Ứng dụng HRP BI (iOS)',
+    summary: 'Tổng quan 7 nhóm chức năng nghiệp vụ nhân sự – vận hành và 6 lưu ý quan trọng khi sử dụng ứng dụng di động HRP BI trên iPhone và iPad.',
+    keywords: 'hrp bi ios iphone ipad cham cong gps offline giai trinh nghi phep cccd qr ung luong qlda dashboard bao cao tuyen dung kcn nhac viec',
+    date: '2026-11-15',
+    minutes: 8,
+    image: 'hrp-bi-ios.jpg',
+    body: `
+      <div class="web-bi-overview">
+        <section class="web-bi-hero" aria-label="Giới thiệu ứng dụng di động HRP BI trên iOS">
+          <div class="web-bi-hero-copy">
+            <span class="web-bi-eyebrow"><span class="intro-dot" aria-hidden="true"></span> ỨNG DỤNG DI ĐỘNG NỘI BỘ · IPHONE &amp; IPAD (IOS 16.0+)</span>
+            <p class="web-bi-lead"><strong>HRP BI</strong> là ứng dụng di động nội bộ trên <strong>iPhone và iPad</strong> của hệ thống <strong>HR Partner</strong>, hỗ trợ nhân viên văn phòng, chuyên viên tuyển dụng, quản lý dự án (QLDA), trưởng nhóm và ban lãnh đạo thực hiện các nghiệp vụ nhân sự – vận hành hằng ngày.</p>
+            <p class="web-bi-sublead">Các mục menu và thao tác trong ứng dụng sẽ tự động hiển thị theo đúng vai trò và quyền hạn của từng tài khoản.</p>
+            <div class="web-bi-cta-row">
+              <a class="bi-action-btn bi-action-btn--ios" href="#bai-viet/cong-ho-tro-it">Hướng dẫn cài đặt &amp; cập nhật →</a>
+              <a class="web-bi-url-chip" href="#phien-ban-bi-iphone">Xem lịch sử phiên bản iOS →</a>
+              <span class="web-bi-stat-pill">7 Nhóm chức năng · 6 Lưu ý quan trọng</span>
+            </div>
+          </div>
+          <div class="web-bi-hero-visual">
+            <img src="assets/hrp-bi-ios.jpg" alt="Minh họa ứng dụng di động HRP BI trên iPhone và iPad" width="960" height="536" decoding="async">
+          </div>
+        </section>
+
+        <nav class="bi-platform-nav" aria-label="Chuyển nhanh nội dung ứng dụng HRP BI iOS">
+          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/tong-quan-hrp-bi-ios?jump=hrp-ios-features" data-jump-target="hrp-ios-features">
+            <span class="bi-platform-switch-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5.5h3"/><path d="M11 18.5h2"/></svg>
+            </span>
+            <span class="bi-platform-switch-copy">
+              <strong>1. Tổng quan Các Chức năng Chính</strong>
+              <small>Đăng nhập, Chấm công, Nghỉ phép, Hồ sơ NLĐ, Ứng lương, Dashboard &amp; Báo cáo</small>
+            </span>
+            <span class="bi-platform-switch-go" aria-hidden="true">7 nhóm ↓</span>
+          </a>
+          <a class="bi-platform-switch bi-platform-switch--notes" href="#bai-viet/tong-quan-hrp-bi-ios?jump=hrp-ios-notes" data-jump-target="hrp-ios-notes">
+            <span class="bi-platform-switch-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+            </span>
+            <span class="bi-platform-switch-copy">
+              <strong>2. Các Lưu ý Quan trọng Khi Sử dụng</strong>
+              <small>Quyền iOS, GPS/Offline, Giải trình, Cấp mới CCCD, Ứng lương &amp; Báo cáo</small>
+            </span>
+            <span class="bi-platform-switch-go" aria-hidden="true">6 lưu ý ↓</span>
+          </a>
+        </nav>
+
+        <section class="web-bi-group web-bi-group--bi" id="hrp-ios-features" tabindex="-1">
+          <div class="web-bi-group-head">
+            <span class="bi-platform-badge bi-platform-badge--ios">PHẦN 1 · NGHIỆP VỤ NHÂN SỰ &amp; VẬN HÀNH DI ĐỘNG</span>
+            <h2>1. Tổng quan Các Chức năng Chính</h2>
+            <p>Hệ thống chức năng hiển thị linh hoạt theo đúng phân quyền tài khoản trên iPhone và iPad.</p>
+          </div>
+
+          <div class="web-bi-grid">
+            <section class="web-bi-module web-bi-module--wide">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.1 · QUICK SIGN-IN &amp; THEME</span>
+                  <h3>1.1. Đăng nhập nhanh &amp; Cá nhân hóa</h3>
+                </div>
+              </div>
+              <div class="hrp-subgrid hrp-subgrid--2">
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Đăng nhập bằng Email hoặc Mã nhân viên</h4>
+                  <p>Cho phép bật tùy chọn <strong>Lưu tài khoản đã đăng nhập</strong> để lưu nhiều tài khoản trên máy và chuyển đổi/đăng nhập nhanh chỉ với 1 chạm.</p>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Đổi tông màu giao diện</h4>
+                  <p>Người dùng có thể bấm nút <strong>Menu</strong> (góc trên bên phải) để đổi giữa <strong>5 bảng màu giao diện</strong> khác nhau theo sở thích.</p>
+                </div>
+              </div>
+            </section>
+
+            <section class="web-bi-module web-bi-module--wide">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3Z"/><circle cx="12" cy="13" r="3.2"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.2 · MÀN HÌNH MẶC ĐỊNH SAU ĐĂNG NHẬP</span>
+                  <h3>1.2. Chấm công, Giải trình &amp; Nghỉ phép</h3>
+                </div>
+              </div>
+              <p class="web-bi-mod-lead">Đây là màn hình mở ra mặc định ngay sau khi đăng nhập, bao gồm các tab chức năng:</p>
+              <div class="hrp-subgrid hrp-subgrid--3">
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Chấm công</h4>
+                  <ul class="web-bi-list">
+                    <li>Chụp ảnh trực tiếp kèm tọa độ GPS và giờ chuẩn của hệ thống.</li>
+                    <li>Tích hợp sẵn <strong>4 chế độ làm đẹp ảnh chân dung</strong> (Gốc, Tự nhiên, Sáng mịn, Hồng hào) và ô ghi chú nhanh khi cần.</li>
+                    <li><strong>Hỗ trợ chấm công khi mất mạng (ngoại tuyến):</strong> Ảnh và thời điểm chấm công được lưu vào hàng đợi trên máy và tự động gửi lên hệ thống ngay khi điện thoại có kết nối mạng trở lại.</li>
+                    <li>Tra cứu lịch sử chấm công theo từng ngày và xuất tệp báo cáo chấm công.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Giải trình &amp; Duyệt giải trình</h4>
+                  <ul class="web-bi-list">
+                    <li>Nhân sự kiểm tra các mốc giờ trong ngày bị thiếu chấm hoặc chấm ngoài khung giờ cho phép để gửi giải trình hợp thức hóa công.</li>
+                    <li>Cấp quản lý nhận đơn trong tab <strong>Duyệt giải trình</strong> để phê duyệt hoặc từ chối kèm ghi chú phản hồi.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Nghỉ phép &amp; Duyệt nghỉ</h4>
+                  <ul class="web-bi-list">
+                    <li>Theo dõi quỹ phép năm hiện có và số phép tồn chuyển từ năm trước.</li>
+                    <li>Tạo đơn xin nghỉ chọn chi tiết từng ngày và buổi (<strong>Cả ngày, Buổi sáng, Buổi chiều</strong>) theo 5 loại nghỉ: <em>Phép năm, Nghỉ ốm, Nghỉ cưới, Nghỉ tang, Nghỉ không lương</em>; cho phép rút lại đơn khi đang chờ duyệt.</li>
+                    <li>Cấp quản lý xử lý phê duyệt, từ chối hoặc hủy đơn nghỉ đã duyệt trong hộp thư <strong>Duyệt nghỉ</strong>.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="web-bi-module web-bi-module--wide">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6"/><path d="M22 11h-6"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.3 · WORKFORCE, ONBOARDING &amp; SALARY ADVANCE</span>
+                  <h3>1.3. Quản lý Nhân sự, Cấp mới NLĐ &amp; Ứng lương (QLDA)</h3>
+                </div>
+              </div>
+              <div class="hrp-subgrid hrp-subgrid--2">
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Danh sách Người lao động (NLĐ)</h4>
+                  <ul class="web-bi-list">
+                    <li>Xem và tìm kiếm hồ sơ NLĐ theo phạm vi được phân quyền (<strong>Đang quản lý, Do tôi tuyển, Theo nhóm, Hồ sơ đã tải lên, Tất cả</strong>).</li>
+                    <li>Lọc theo dự án, trạng thái làm việc, xem chi tiết thông tin/giấy tờ đính kèm và xuất danh sách NLĐ.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Cấp mới hồ sơ NLĐ</h4>
+                  <ul class="web-bi-list">
+                    <li>Nhập danh sách một hoặc nhiều NLĐ cùng lúc trong một lần gửi.</li>
+                    <li><strong>Quét mã QR trên thẻ CCCD/Căn cước</strong> bằng camera để tự động điền số CCCD, họ tên, ngày sinh, giới tính, quê quán và ngày cấp.</li>
+                    <li>Tự động kiểm tra và cảnh báo nếu số CCCD đã tồn tại trên hệ thống.</li>
+                    <li>Đính kèm ảnh chân dung, CCCD mặt trước/mặt sau, thẻ an toàn và hợp đồng lao động (hỗ trợ chụp/chọn nhiều trang ảnh hợp đồng để ứng dụng tự gộp thành 1 file PDF).</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Sửa trực tiếp hồ sơ NLĐ</h4>
+                  <p>Dành cho nhân sự được phân quyền cập nhật thông tin cá nhân, thông tin <strong>60 ngân hàng nội địa</strong> và trạng thái làm việc (<strong>Đang làm / Đã nghỉ</strong>).</p>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Ứng lương (dành riêng cho Quản lý dự án - QLDA)</h4>
+                  <ul class="web-bi-list">
+                    <li>Hệ thống tự động kiểm tra điều kiện ứng lương của từng NLĐ trong dự án và hiển thị thống kê tổng số lần/số tiền NLĐ đã ứng trong <strong>30 ngày gần nhất</strong>.</li>
+                    <li>Tạo phiếu yêu cầu ứng lương (<strong>Tiền mặt</strong> hoặc <strong>Chuyển khoản</strong>), nhắn tin trao đổi trực tiếp trên phiếu yêu cầu và tải ảnh chứng từ đối chiếu giải ngân.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16v-5"/><path d="M12 16V8"/><path d="M17 16v-3"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.4 · DASHBOARD &amp; CCCD VERIFICATION</span>
+                  <h3>1.4. Tổng quan Số liệu (Dashboard) &amp; Chuẩn hóa CCCD</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li><strong>Tổng quát &amp; Theo nhóm:</strong> Theo dõi số lượng nhân sự, tốc độ tuyển dụng và tỷ trọng phân bổ theo từng kỳ thời gian hoặc đi sâu vào kết quả chi tiết của từng nhóm.</li>
+                <li><strong>Chuẩn hóa thông tin NLĐ:</strong> Rà soát các hồ sơ có thông tin nhập tay bị lệch so với mã QR trên ảnh CCCD, ảnh mờ không đọc được QR hoặc hồ sơ trùng CCCD để chuẩn hóa lại chỉ với vài thao tác.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Tổng quát &amp; Theo nhóm</span><span>Đối chiếu QR CCCD</span><span>Lọc trùng hồ sơ</span>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.5 · PERIODIC WORK REPORTS</span>
+                  <h3>1.5. Báo cáo Công việc Định kỳ</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li>Quản lý các kỳ báo cáo được giao theo <strong>Ngày / Tuần / Tháng</strong> qua 4 khu vực: <strong>Cần nộp, Lịch sử, Chờ duyệt</strong> và <strong>Tổng hợp báo cáo</strong>.</li>
+                <li>Hỗ trợ <strong>Lưu nháp</strong> khi đang làm dở và <strong>Nộp báo cáo</strong> khi hoàn tất; cấp quản lý có thể phê duyệt hoặc trả lại để nhân sự bổ sung, đồng thời theo dõi tỷ lệ hoàn thành/quá hạn của đội ngũ.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Ngày · Tuần · Tháng</span><span>Lưu nháp &amp; Nộp</span><span>Theo dõi tiến độ</span>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.6 · INTERNAL JOB ORDERS</span>
+                  <h3>1.6. Tin Tuyển dụng Nội bộ</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li>Tra cứu danh sách các đơn hàng tuyển dụng đang mở, lọc nhanh theo <strong>Khu công nghiệp (KCN)</strong> và <strong>Hình thức lao động</strong>.</li>
+                <li>Xem chi tiết thông tin nhà máy, môi trường làm việc, mức thu nhập dự kiến, các khoản phụ cấp, đơn giá ca ngày/đêm/Chủ nhật/Lễ, yêu cầu tuyển chọn và danh sách giấy tờ hồ sơ cần chuẩn bị cho ứng viên.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Lọc KCN &amp; Hình thức</span><span>Đơn giá ca &amp; Phụ cấp</span><span>Hồ sơ ứng viên</span>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">MỤC 1.7 · ALERTS &amp; PERSONAL REMINDERS</span>
+                  <h3>1.7. Thông báo Hệ thống &amp; Chuông Nhắc việc Cá nhân</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li><strong>Thông báo trực tuyến:</strong> Nhận thông báo mới ngay trong ứng dụng; chạm vào thông báo sẽ chuyển thẳng đến màn hình công việc cần xử lý.</li>
+                <li><strong>Nhắc việc cá nhân (biểu tượng hình chuông góc trên):</strong> Cho phép tự tạo lịch hẹn giờ nhắc việc (<strong>Hàng ngày</strong> hoặc <strong>1 lần</strong>) với nhiều kiểu âm báo để tránh quên chấm công hoặc quên nộp báo cáo.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Điều hướng 1 chạm</span><span>Hẹn giờ Hàng ngày / 1 lần</span><span>Tùy chọn âm báo</span>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="web-bi-group web-bi-group--notes" id="hrp-ios-notes" tabindex="-1">
+          <div class="web-bi-group-head">
+            <span class="bi-platform-badge--notes">PHẦN 2 · QUY ĐỊNH &amp; LƯU Ý VẬN HÀNH BẮT BUỘC</span>
+            <h2>2. Các Lưu ý Quan trọng Khi Sử dụng</h2>
+            <p>Nắm rõ các yêu cầu về quyền thiết bị, đồng bộ ngoại tuyến và quy tắc dữ liệu để thao tác chính xác ngay từ lần đầu.</p>
+          </div>
+
+          <div class="web-bi-grid">
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.1 · QUYỀN THIẾT BỊ IOS</span>
+                  <h3>2.1. Cài đặt Quyền trên Điện thoại</h3>
+                </div>
+              </div>
+              <div class="hrp-callout hrp-callout--important">
+                <span class="hrp-callout-head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                  IMPORTANT
+                </span>
+                <p class="hrp-callout-lead">Trong lần đầu sử dụng các tính năng liên quan, bạn cần bấm <strong>Cho phép</strong> đủ 4 quyền trên iPhone/iPad:</p>
+                <ul class="web-bi-list">
+                  <li><strong>Camera:</strong> Để chụp ảnh chấm công, quét QR CCCD và chụp tài liệu hồ sơ.</li>
+                  <li><strong>Vị trí (GPS) khi dùng ứng dụng:</strong> Bắt buộc để xác thực địa điểm chấm công.</li>
+                  <li><strong>Thư viện ảnh:</strong> Để tải ảnh chân dung, CCCD, hợp đồng và lưu tệp xuất ra.</li>
+                  <li><strong>Thông báo:</strong> Để tính năng Nhắc việc đổ chuông đúng giờ ngay cả khi đóng màn hình.</li>
+                </ul>
+              </div>
+              <p class="hrp-note-foot">Ứng dụng yêu cầu <strong>iOS 16.0 trở lên</strong> và luôn hiển thị ở <strong>chế độ nền sáng</strong> (kể cả khi điện thoại đang bật chế độ tối) để đảm bảo ảnh chụp giấy tờ và bảng biểu luôn rõ nét.</p>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.2 · GPS, GIỜ CHUẨN &amp; OFFLINE</span>
+                  <h3>2.2. Lưu ý khi Chấm công</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--notes">
+                <li><strong>Kiểm tra nhãn &ldquo;Giờ chuẩn&rdquo; và tín hiệu GPS:</strong> Trước khi chụp chấm công, nên đứng ở khu vực thoáng sóng để sai số GPS thấp và kiểm tra nhãn giờ đang báo <code>&ldquo;Giờ chuẩn&rdquo;</code>. Nếu điện thoại vừa tắt nguồn khởi động lại hoặc bị lệch giờ, hãy chạm vào nhãn giờ trên màn hình để đồng bộ lại giờ chuẩn rồi mới chấm công.</li>
+                <li><strong>Giới hạn của chấm công ngoại tuyến (khi mất mạng):</strong>
+                  <ul class="web-bi-sublist">
+                    <li>Ảnh sau khi chụp nếu để chờ <strong>quá 24 giờ</strong> mới gửi hoặc lượt chấm công ngoại tuyến nằm chờ <strong>quá 7 ngày</strong> không có mạng để đồng bộ sẽ bị hệ thống từ chối — khi đó bạn bắt buộc phải chụp chấm công lượt mới.</li>
+                    <li>Không gỡ cài đặt ứng dụng hoặc đăng xuất khi trên màn hình vẫn còn lượt chấm công báo <code>&ldquo;Đang chờ gửi&rdquo;</code> hoặc <code>&ldquo;Chờ mạng / Thử lại&rdquo;</code>.</li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.3 · QUY TẮC ĐƠN TỪ &amp; PHÊ DUYỆT</span>
+                  <h3>2.3. Lưu ý khi Giải trình Chấm công &amp; Xin Nghỉ phép</h3>
+                </div>
+              </div>
+              <div class="hrp-note-group">
+                <p class="hrp-note-subhead">Đối với Giải trình chấm công:</p>
+                <ul class="web-bi-list web-bi-list--notes">
+                  <li>Chỉ gửi được giải trình cho ngày hôm nay hoặc các ngày trước đó (không gửi trước cho ngày tương lai) và chỉ áp dụng cho các mốc thực sự bị thiếu chấm hoặc nằm ngoài khung giờ hợp lệ.</li>
+                  <li>Mỗi mốc chấm công trong ngày chỉ được gửi giải trình <strong>1 lần duy nhất</strong> (độ dài lý do từ 3 đến 500 ký tự).</li>
+                </ul>
+              </div>
+              <div class="hrp-note-group">
+                <p class="hrp-note-subhead">Đối với Xin nghỉ phép:</p>
+                <ul class="web-bi-list web-bi-list--notes">
+                  <li>Ngày nghỉ phải thuộc năm hiện hành và không trùng với đơn đang chờ duyệt hoặc đã duyệt.</li>
+                  <li>Trong cùng 1 ngày, chỉ tách riêng <strong>Buổi sáng + Buổi chiều</strong> khi đăng ký 2 loại nghỉ khác nhau; nếu cùng 1 loại nghỉ cho cả ngày thì chọn <strong>Cả ngày</strong>.</li>
+                  <li><strong>Giới hạn số ngày tối đa trên mỗi đơn:</strong> Nghỉ tang / Nghỉ cưới tối đa <strong>3 ngày/đơn</strong>; Nghỉ ốm / Nghỉ không lương tối đa <strong>7 ngày/đơn</strong>.</li>
+                  <li>Nếu số dư <strong>Phép năm</strong> không đủ cho tổng số ngày chọn, bạn cần đổi phần ngày vượt sang <strong>Nghỉ không lương</strong> hoặc loại nghỉ phù hợp khác.</li>
+                </ul>
+              </div>
+              <p class="hrp-note-foot"><strong>Lưu ý phân quyền:</strong> Tài khoản dùng chung (ví dụ tài khoản chung của bộ phận) không áp dụng tính năng xin nghỉ phép cá nhân. Cấp quản lý không thể tự duyệt giải trình hoặc đơn nghỉ của chính mình.</p>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M15 8h2"/><path d="M15 12h2"/><path d="M7 16h10"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.4 · HỒ SƠ, TỆP ĐÍNH KÈM &amp; CCCD</span>
+                  <h3>2.4. Lưu ý khi Cấp mới &amp; Cập nhật Hồ sơ NLĐ</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--notes">
+                <li><strong>Giữ nguyên bản nháp khi chuyển tab:</strong> Khi đang nhập dở danh sách ở mục <em>Cấp mới</em>, bạn có thể chuyển sang mục <em>Tin tuyển dụng</em> hoặc <em>Nhân sự</em> để tra cứu rồi quay lại mà không bị mất dữ liệu đang nhập (bản nháp chỉ xóa khi gửi thành công hoặc đăng xuất).</li>
+                <li><strong>Định dạng và dung lượng tệp hồ sơ:</strong> Mỗi tệp đính kèm tối đa <strong>10 MB</strong> (chấp nhận ảnh JPG, PNG, WEBP hoặc tệp PDF). Khi chụp hợp đồng nhiều trang, hãy chọn nhiều ảnh cùng lúc để ứng dụng tự gom thành 1 tệp PDF gọn nhẹ.</li>
+                <li><strong>Xử lý hồ sơ trùng hoặc đã nghỉ việc:</strong>
+                  <ul class="web-bi-sublist">
+                    <li>Số CCCD bắt buộc gồm đúng <strong>12 chữ số</strong> (hoặc CMND 9 số) và không được trùng nhau giữa các dòng trong cùng một lần nhập.</li>
+                    <li>Nếu một số CCCD đang có hồ sơ ở trạng thái <strong>Đang làm việc</strong>, cần chuyển hồ sơ cũ sang trạng thái <strong>Đã nghỉ</strong> (bắt buộc điền đủ <em>Ngày nghỉ</em> và <em>Lý do nghỉ</em>) trước khi cấp mới đợt làm việc tiếp theo. Hồ sơ đã kết thúc không thể mở lại mà cần tạo đợt làm việc mới.</li>
+                    <li>Nếu vừa tải ảnh lên và bấm <strong>Lưu</strong> ngay mà nhận thông báo tệp đang đồng bộ, chỉ cần chờ vài giây rồi bấm <strong>Lưu</strong> lại (không lo bị tạo trùng hồ sơ).</li>
+                  </ul>
+                </li>
+              </ul>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.5 · DÀNH CHO QUẢN LÝ DỰ ÁN (QLDA)</span>
+                  <h3>2.5. Lưu ý khi Yêu cầu Ứng lương (dành cho QLDA)</h3>
+                </div>
+              </div>
+              <div class="hrp-callout hrp-callout--warning">
+                <span class="hrp-callout-head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+                  WARNING
+                </span>
+                <p class="hrp-callout-lead">Điều kiện bắt buộc để NLĐ được ứng lương &amp; chuyển khoản:</p>
+                <ul class="web-bi-list web-bi-list--notes">
+                  <li><strong>Điều kiện chung:</strong> NLĐ phải đang ở trạng thái <strong>Đang làm việc</strong> (không phải <em>Đã nghỉ</em> hay <em>Chờ xác nhận đi làm</em>), không thuộc nguồn tuyển Vendor, đã có ảnh chân dung trên hồ sơ, không bị vướng trùng CCCD chưa chuẩn hóa và không đang mở làm việc cùng lúc ở nhiều dự án.</li>
+                  <li><strong>Điều kiện nhận qua Chuyển khoản:</strong> Hồ sơ NLĐ phải có đầy đủ tên ngân hàng, số tài khoản và tên chủ tài khoản phải <strong>trùng khớp chính chủ</strong> với họ tên NLĐ. Nếu dùng tài khoản người thân hoặc thiếu thông tin ngân hàng, bạn bắt buộc chọn hình thức <strong>Tiền mặt</strong> hoặc cập nhật lại tài khoản ngân hàng chính chủ trước khi gửi yêu cầu.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.6 · THỜI HẠN &amp; NỘP LẠI BÁO CÁO</span>
+                  <h3>2.6. Lưu ý khi Nộp Báo cáo Công việc</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--notes">
+                <li><strong>Lưu nháp chưa phải là Đã nộp:</strong> Nút <em>Lưu nháp</em> chỉ giúp giữ lại nội dung đang viết dở. Bạn cần bấm <strong>Nộp báo cáo</strong> trước thời hạn quy định.</li>
+                <li><strong>Khóa biểu mẫu khi quá hạn:</strong> Ngay khi quá hạn nộp, kỳ báo cáo chưa nộp (kể cả đang có bản nháp) sẽ tự động chuyển sang chế độ <strong>Chỉ xem</strong> và không thể gửi đi được nữa.</li>
+                <li>Trường hợp báo cáo đã nộp nhưng được người duyệt đánh giá <strong>Cần bổ sung / Từ chối</strong>, bạn vẫn có thể mở lại biểu mẫu để chỉnh sửa và nộp lại.</li>
+              </ul>
             </section>
           </div>
         </section>

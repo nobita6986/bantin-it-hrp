@@ -32,7 +32,12 @@ const globalResults = document.querySelector("#global-results");
 const globalStatus = document.querySelector("#global-status");
 const searchTrigger = document.querySelector(".search-trigger");
 const state = { newsCategory: "all", docsCategory: "all", docsQuery: "" };
-const orderedArticles = [...articles].sort((a, b) => b.date.localeCompare(a.date));
+const orderedArticles = [...articles].sort((a, b) => {
+  const rankA = a.pinRank ?? Number.POSITIVE_INFINITY;
+  const rankB = b.pinRank ?? Number.POSITIVE_INFINITY;
+  if (rankA !== rankB) return rankA - rankB;
+  return b.date.localeCompare(a.date);
+});
 const news = orderedArticles.filter((article) => article.section === "news");
 const docs = orderedArticles.filter((article) => article.section === "docs");
 const featured = news.find((article) => article.featured) ?? news[0];
@@ -63,7 +68,7 @@ function categoryLabel(article) {
 }
 
 function matches(article, query) {
-  const text = normalize([article.title, article.summary, categoryLabel(article)].join(" "));
+  const text = normalize([article.title, article.summary, article.keywords || "", categoryLabel(article)].join(" "));
   return normalize(query).split(/\s+/).every((word) => text.includes(word));
 }
 
