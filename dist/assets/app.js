@@ -624,7 +624,7 @@ dialog.addEventListener("click", (event) => {
   const link = event.target.closest(".search-results a");
   if (link && !event.ctrlKey && !event.metaKey && !event.shiftKey && !event.altKey) {
     dialog.close();
-    if (link.hash === window.location.hash) renderRoute(true);
+    if (link.hash === window.location.hash) transitionRoute(true);
   }
 });
 
@@ -635,5 +635,14 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-window.addEventListener("hashchange", () => renderRoute(true));
+const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+function transitionRoute(moveFocus = false) {
+  if (document.startViewTransition && !reducedMotion.matches) {
+    document.startViewTransition(() => renderRoute(moveFocus));
+  } else {
+    renderRoute(moveFocus);
+  }
+}
+
+window.addEventListener("hashchange", () => transitionRoute(true));
 renderRoute();
