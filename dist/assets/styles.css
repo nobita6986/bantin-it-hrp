@@ -2140,6 +2140,35 @@ dialog::backdrop { background: rgb(15 23 42 / 46%); backdrop-filter: blur(4px); 
 }
 .hrp-callout--warning .hrp-callout-lead { color: #78350f; }
 
+.web-bi-hero-note { grid-column: 1 / -1; }
+.hrp-callout--note {
+  border: 1px solid #bae6fd;
+  border-left: 4px solid #0284c7;
+  background: linear-gradient(145deg, #f0f9ff 0%, #f7fbff 100%);
+}
+.hrp-callout--note .hrp-callout-head {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+.hrp-callout--note p {
+  margin: 0;
+  color: #0f172a;
+  font-size: .885rem;
+  line-height: 1.54;
+}
+.hrp-feature-strip {
+  padding: 12px 15px;
+  border: 1px solid #dbe4f8;
+  border-left: 3.5px solid #4338ca;
+  border-radius: 12px;
+  background: linear-gradient(145deg, #f5f8ff 0%, #eef3ff 100%);
+  color: #334155;
+  font-size: .885rem;
+  line-height: 1.54;
+}
+.hrp-feature-strip strong { color: var(--ink); }
+.hrp-sublist--indigo li::before { background: var(--accent) !important; }
+
 .hrp-note-group {
   display: grid;
   gap: 7px;

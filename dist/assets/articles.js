@@ -317,228 +317,434 @@ const articles = [
     compactReadingLayout: true,
     hideCategoryBadge: true,
     hideArticleSummary: true,
-    jumpTargets: ['web-bi-pillar-1', 'web-bi-pillar-2'],
+    jumpTargets: ['mini-bi-modules', 'mini-bi-notes'],
     section: 'news',
     category: 'feature',
-    title: 'TỔNG QUAN VỀ WEB BI',
-    summary: 'Tổng quan nền tảng BI và HRIS HR Partner cùng các chức năng quản trị, báo cáo và vận hành nhân sự.',
-    date: '2026-11-13',
-    minutes: 5,
+    title: 'Tổng quan Hệ thống & Lưu ý Sử dụng Nền tảng Web Mini BI (HR Partner)',
+    summary: 'Tổng quan 9 phân hệ quản trị – điều hành trung tâm trên trình duyệt Web Mini BI (HR Partner) và 6 lưu ý quan trọng dành cho BoD, Admin, Kế toán, QLDA, Tuyển dụng & Nhân sự.',
+    keywords: 'web mini bi hr partner bod admin ke toan qlda vendor cong no so cai excel cccd ai report ung luong nghi phep ma tran cham cong kcn tuyen dung',
+    date: '2026-11-15',
+    minutes: 10,
     image: 'web-bi.jpg',
     body: `
       <div class="web-bi-overview">
-        <section class="web-bi-hero" aria-label="Giới thiệu tổng quan nền tảng Web BI">
+        <section class="web-bi-hero" aria-label="Giới thiệu tổng quan nền tảng Web Mini BI HR Partner">
           <div class="web-bi-hero-copy">
-            <span class="web-bi-eyebrow"><span class="intro-dot" aria-hidden="true"></span> NỀN TẢNG BI &amp; HRIS · DÀNH CHO CẤP QUẢN LÝ &amp; BAN GIÁM ĐỐC</span>
-            <p class="web-bi-lead"><strong>Hệ thống Báo cáo và Quản trị Nhân sự HRP (HR Partner)</strong> là nền tảng toàn diện, kết hợp giữa quản trị dữ liệu thông minh <strong>(Business Intelligence - BI)</strong> và hệ thống thông tin quản lý nhân sự <strong>(HRIS)</strong>.</p>
-            <p class="web-bi-sublead">Nền tảng cung cấp bức tranh toàn cảnh về tình hình nhân sự, đồng thời số hóa các quy trình vận hành cốt lõi — giúp doanh nghiệp tối ưu hóa tuyển dụng, quản lý rủi ro và ra quyết định chiến lược hiệu quả.</p>
+            <span class="web-bi-eyebrow"><span class="intro-dot" aria-hidden="true"></span> TRUNG TÂM ĐIỀU HÀNH TRÊN WEB · BOD · ADMIN · KẾ TOÁN · QLDA · HR</span>
+            <p class="web-bi-lead"><strong>Mini BI (HR Partner)</strong> là nền tảng quản trị và báo cáo điều hành trung tâm trên trình duyệt Web, phục vụ toàn bộ các cấp từ <strong>Ban Giám đốc (BoD), Quản trị viên (Admin), Kế toán, Trưởng nhóm/Trưởng bộ phận, Quản lý dự án (QLDA)</strong> đến <strong>Chuyên viên Tuyển dụng và Nhân viên văn phòng</strong>.</p>
+            <p class="web-bi-sublead">Nếu ứng dụng di động tập trung vào thao tác nhanh tại hiện trường (như chụp ảnh chấm công, quét QR nhanh), thì nền tảng <strong>Web Mini BI</strong> là trung tâm điều hành toàn diện: xử lý dữ liệu bảng tính quy mô lớn, quản lý công nợ và chứng từ tài chính Vendor, kế toán duyệt ứng lương, cấu hình chính sách công – phép – ca làm việc, thiết kế mẫu báo cáo, đăng tin tuyển dụng và quản trị danh mục toàn hệ thống.</p>
             <div class="web-bi-cta-row">
-              <a class="bi-action-btn bi-action-btn--ios" href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">Mở Web BI Dashboard ↗</a>
-              <a class="web-bi-url-chip" href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">https://bi.hrpartner.vn/dashboard</a>
-              <span class="web-bi-stat-pill">2 Phân hệ · 8 Chức năng trọng yếu</span>
+              <a class="bi-action-btn bi-action-btn--ios" href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">Mở Web Mini BI ↗</a>
+              <a class="web-bi-url-chip" href="#bai-viet/tong-quan-hrp-bi-ios">Xem bản Ứng dụng iOS →</a>
+              <span class="web-bi-stat-pill">9 Phân hệ chức năng · 6 Lưu ý vận hành</span>
             </div>
           </div>
           <div class="web-bi-hero-visual">
-            <img src="assets/web-bi.jpg" alt="Minh họa hệ thống Báo cáo BI và Quản trị Nhân sự HR Partner" width="960" height="537" decoding="async">
+            <img src="assets/web-bi.jpg" alt="Minh họa nền tảng quản trị và báo cáo điều hành Web Mini BI HR Partner" width="960" height="537" decoding="async">
+          </div>
+          <div class="web-bi-hero-note hrp-callout hrp-callout--note">
+            <span class="hrp-callout-head">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              NOTE
+            </span>
+            <p>Giao diện Web tương thích trên cả <strong>máy tính và trình duyệt điện thoại</strong>, hỗ trợ đổi chế độ <strong>Sáng / Tối</strong> cùng nhiều tông màu thương hiệu. Thanh menu trên cùng sẽ tự động ẩn/hiện các phân hệ theo đúng quyền hạn thực tế của từng tài khoản đăng nhập.</p>
           </div>
         </section>
 
-        <nav class="bi-platform-nav" aria-label="Chọn phân hệ chức năng Web BI">
-          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/gioi-thieu-web-bi?jump=web-bi-pillar-1" data-jump-target="web-bi-pillar-1">
+        <nav class="bi-platform-nav" aria-label="Chuyển nhanh nội dung nền tảng Web Mini BI">
+          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/gioi-thieu-web-bi?jump=mini-bi-modules" data-jump-target="mini-bi-modules">
             <span class="bi-platform-switch-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16v-5"/><path d="M12 16V8"/><path d="M17 16v-3"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
             </span>
             <span class="bi-platform-switch-copy">
-              <strong>I. Phân tích &amp; Báo cáo Quản trị (BI)</strong>
-              <small>Báo cáo đa chiều, KPI Dashboard, xu hướng &amp; biến động lao động</small>
+              <strong>1. Các Phân hệ Chức năng Chính</strong>
+              <small>Tổng quan, Nhập liệu Excel, Tài chính Vendor, Ứng lương, Nghỉ phép, Báo cáo, Tuyển dụng, Chấm công &amp; Hệ thống</small>
             </span>
-            <span class="bi-platform-switch-go" aria-hidden="true">4 module ↓</span>
+            <span class="bi-platform-switch-go" aria-hidden="true">9 phân hệ ↓</span>
           </a>
-          <a class="bi-platform-switch bi-platform-switch--android" href="#bai-viet/gioi-thieu-web-bi?jump=web-bi-pillar-2" data-jump-target="web-bi-pillar-2">
+          <a class="bi-platform-switch bi-platform-switch--notes" href="#bai-viet/gioi-thieu-web-bi?jump=mini-bi-notes" data-jump-target="mini-bi-notes">
             <span class="bi-platform-switch-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 2v4"/><path d="M16 2v4"/><path d="M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
             </span>
             <span class="bi-platform-switch-copy">
-              <strong>II. Vận hành &amp; Quản trị Nhân sự (HRIS)</strong>
-              <small>Tin tuyển dụng, chấm công, nghỉ phép &amp; tạm ứng lương tự động</small>
+              <strong>2. Các Lưu ý Quan trọng Khi Sử dụng</strong>
+              <small>Chống ghi đè, Dán Excel, Kế toán Vendor, Ứng lương, Chốt phép/Chấm công &amp; Giao báo cáo</small>
             </span>
-            <span class="bi-platform-switch-go" aria-hidden="true">4 module ↓</span>
+            <span class="bi-platform-switch-go" aria-hidden="true">6 lưu ý ↓</span>
           </a>
         </nav>
 
-        <section class="web-bi-group web-bi-group--bi" id="web-bi-pillar-1" tabindex="-1">
+        <section class="web-bi-group web-bi-group--bi" id="mini-bi-modules" tabindex="-1">
           <div class="web-bi-group-head">
-            <span class="bi-platform-badge bi-platform-badge--ios">PHÂN HỆ I · BUSINESS INTELLIGENCE</span>
-            <h2>I. Phân tích &amp; Báo cáo Quản trị (BI Dashboard)</h2>
-            <p>Tổng hợp dữ liệu đa chiều, đo lường hiệu suất tuyển dụng và theo dõi dòng chảy nhân sự theo thời gian thực.</p>
+            <span class="bi-platform-badge bi-platform-badge--ios">PHẦN 1 · 9 PHÂN HỆ QUẢN TRỊ &amp; ĐIỀU HÀNH TRUNG TÂM</span>
+            <h2>1. Các Phân hệ Chức năng Chính</h2>
+            <p>Hệ thống phân hệ chuyên sâu phục vụ phân tích số liệu, vận hành nhân sự, đối soát tài chính Vendor và quản trị toàn công ty.</p>
           </div>
 
           <div class="web-bi-grid">
-            <section class="web-bi-module">
+            <section class="web-bi-module web-bi-module--wide">
               <div class="web-bi-mod-head">
                 <span class="web-bi-mod-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m12 2 9 4.5-9 4.5-9-4.5L12 2Z"/><path d="m3 11.5 9 4.5 9-4.5"/><path d="m3 16.5 9 4.5 9-4.5"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="M7 16v-5"/><path d="M12 16V8"/><path d="M17 16v-3"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num">MODULE 01 · ĐA CHIỀU &amp; KIỂM SOÁT RỦI RO</span>
-                  <h3>1. Hệ thống Báo cáo Đa chiều</h3>
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.1 · ANALYTICS, AI REPORT &amp; DATA QUALITY</span>
+                  <h3>1.1. Tổng quan Số liệu Tuyển dụng &amp; Nhân sự (Tổng quan)</h3>
                 </div>
               </div>
-              <ul class="web-bi-list">
-                <li><strong>Danh mục báo cáo phân lớp:</strong> Cung cấp đầy đủ Báo cáo tổng quát, Báo cáo chi tiết và Báo cáo theo nhóm.</li>
-                <li><strong>Kiểm soát chất lượng dữ liệu:</strong> Tích hợp công cụ Review thông tin người lao động, báo cáo CCCD trùng lặp (phòng chống gian lận hồ sơ) và báo cáo người lao động nghỉ việc.</li>
-              </ul>
-              <div class="web-bi-tags" aria-hidden="true">
-                <span>Báo cáo 3 cấp</span><span>Chống trùng CCCD</span><span>Review hồ sơ</span>
+              <div class="hrp-subgrid hrp-subgrid--2">
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Báo cáo tổng quát, Báo cáo chi tiết &amp; Báo cáo theo nhóm</h4>
+                  <ul class="web-bi-list">
+                    <li>Theo dõi kết quả tuyển dụng theo từng ngày và khoảng thời gian, phân tích chi tiết theo 4 chiều: <strong>Dự án · Người tuyển · Nguồn tuyển (HRP / Vendor) · Loại hình lao động (Thời vụ / Chính thức)</strong>.</li>
+                    <li>Xem bảng xếp hạng mức độ đóng góp của từng chuyên viên tuyển dụng và đi sâu vào từng dòng dữ liệu của mỗi nhóm.</li>
+                    <li><strong>Trợ lý Tổng hợp Báo cáo Tự động (AI Report):</strong> Hỗ trợ sinh bản phân tích nhận định số liệu theo kỳ thời gian, lưu lịch sử các lần phân tích và cho phép tải báo cáo về máy.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Giám sát Chất lượng Hồ sơ &amp; Biến động Nhân sự (hiển thị theo thẩm quyền)</h4>
+                  <ul class="web-bi-list">
+                    <li><strong>Review thông tin NLĐ:</strong> Rà soát và xử lý các hồ sơ có thông tin nhập tay lệch với dữ liệu quét từ mã QR trên ảnh CCCD, hoặc ảnh CCCD bị mờ/thiếu.</li>
+                    <li><strong>Báo cáo CCCD trùng:</strong> Phát hiện các trường hợp trùng số CCCD giữa các dự án/ngày vào làm và hỗ trợ rút hồ sơ trùng theo thẩm quyền.</li>
+                    <li><strong>Báo cáo NLĐ nghỉ việc:</strong> Theo dõi danh sách người lao động nghỉ việc và cho phép đánh dấu ẩn các bản ghi đã rà soát xong kèm lý do.</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="web-bi-module web-bi-module--wide">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M3 15h18"/><path d="M9 3v18"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.2 · EXCEL GRID, WORKER DIRECTORY &amp; CHANGE REQUESTS</span>
+                  <h3>1.2. Nhập liệu Hồ sơ, Quản lý NLĐ &amp; Đề xuất Thay đổi (Nhập liệu &amp; Người lao động)</h3>
+                </div>
+              </div>
+              <div class="hrp-subgrid hrp-subgrid--3">
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Nhập liệu trực tiếp &amp; Bảng tính dán từ Excel</h4>
+                  <ul class="web-bi-list">
+                    <li>Hỗ trợ cả hai cách: nhập biểu mẫu chi tiết từng người hoặc nhập trên <strong>bảng lưới giống Excel</strong> (cho phép sao chép nhiều dòng từ file Excel dán thẳng vào bảng, hoặc tải file Excel mẫu về điền rồi đưa lên), có nút <strong>Hoàn tác</strong> khi dán nhầm.</li>
+                    <li>Lưu bản nháp tự động, kiểm tra cảnh báo trùng CCCD trước khi chốt gửi, đính kèm trọn bộ giấy tờ (ảnh chân dung, CCCD mặt trước/sau, hợp đồng lao động, thẻ an toàn) và thông tin ngân hàng nhận lương.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Danh bạ Người lao động</h4>
+                  <ul class="web-bi-list">
+                    <li>Tra cứu hồ sơ theo phạm vi công việc (hồ sơ do mình tải lên, người mình tuyển, người thuộc dự án mình quản lý, theo nhóm hoặc toàn công ty), lọc theo dự án, trạng thái làm việc và loại hình lao động.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Quy trình Đề xuất &amp; Duyệt thay đổi hồ sơ (Yêu cầu thay đổi)</h4>
+                  <ul class="web-bi-list">
+                    <li>Với các hồ sơ đã gửi chính thức hoặc các trường nhạy cảm (thông tin định danh, tài khoản nhận tiền), người dùng có thể tạo <strong>Yêu cầu thay đổi</strong> kèm lý do để cấp quản lý phê duyệt, giúp kiểm soát chặt chẽ và lưu giữ lịch sử xử lý minh bạch (tài khoản có quyền đặc biệt có thể chỉnh sửa trực tiếp khi được cấp phép).</li>
+                  </ul>
+                </div>
+              </div>
+            </section>
+
+            <section class="web-bi-module web-bi-module--wide">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.3 · VENDOR LEDGER, RECONCILIATION &amp; FINANCE</span>
+                  <h3>1.3. Tài chính &amp; Quản lý Công nợ Vendor (Tài chính)</h3>
+                </div>
+              </div>
+              <p class="web-bi-mod-lead">Đây là phân hệ kế toán – đối soát chuyên sâu trên Web dành cho Kế toán, Quản lý tài chính và Ban Giám đốc:</p>
+              <div class="hrp-feature-strip">
+                <strong>Quản lý sổ cái đa tầng:</strong> Theo dõi công nợ tách bạch theo từng <strong>Nhà cung cấp (Vendor)</strong>, <strong>Kế toán phụ trách dự án</strong> và <strong>Loại hợp đồng (Thời vụ / Chính thức)</strong>.
+              </div>
+              <div class="hrp-subgrid hrp-subgrid--2">
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Ghi nhận đầy đủ nghiệp vụ công nợ &amp; tạm ứng</h4>
+                  <ul class="web-bi-list">
+                    <li>Khởi tạo <strong>Số dư đầu kỳ</strong> (Phải trả hoặc Dư ứng) theo lô có bước xem trước kiểm lỗi.</li>
+                    <li>Ghi nhận phát sinh công nợ, bảng lương phải trả, thanh toán cho Vendor, điều chỉnh tăng/giảm phải trả và <strong>Hoàn tác bút toán</strong> khi cần đính chính.</li>
+                    <li><strong>Quản lý Quỹ tạm ứng chung của Vendor:</strong> Ghi nhận chi ứng tiền cho Vendor, Vendor hoàn ứng, hoặc khấu trừ khoản tạm ứng trực tiếp vào công nợ của từng dự án.</li>
+                  </ul>
+                </div>
+                <div class="hrp-subcard">
+                  <h4 class="hrp-subcard-title">Đối soát, Chứng từ &amp; Báo cáo tháng</h4>
+                  <ul class="web-bi-list">
+                    <li>Xem và in các phiếu chứng từ nội bộ, đính kèm ảnh chụp minh chứng thanh toán/đối chiếu.</li>
+                    <li>Lập biên bản <strong>Đối soát công nợ định kỳ</strong> (tự động tính chênh lệch giữa sổ hệ thống và số xác nhận thực tế).</li>
+                    <li>Phân quyền Kế toán phụ trách theo Dự án, xem <strong>Báo cáo công nợ Vendor hàng tháng</strong> và xuất dữ liệu ra file Excel.</li>
+                  </ul>
+                </div>
               </div>
             </section>
 
             <section class="web-bi-module">
               <div class="web-bi-mod-head">
                 <span class="web-bi-mod-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num">MODULE 02 · EXECUTIVE DASHBOARD</span>
-                  <h3>2. Bảng điều khiển Tổng quan</h3>
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.4 · SALARY ADVANCE WORKFLOW</span>
+                  <h3>1.4. Quản lý &amp; Kế toán Ứng lương NLĐ (Ứng lương)</h3>
                 </div>
               </div>
+              <p class="web-bi-mod-lead">Phối hợp trọn vẹn quy trình giữa Quản lý dự án (QLDA) và Kế toán dự án:</p>
               <ul class="web-bi-list">
-                <li><strong>Chỉ số KPI trọng yếu:</strong> Tự động tổng hợp lượt tuyển mới, số ngày phát sinh tuyển dụng, số lượng dự án đang vận hành và quy mô đội ngũ chuyên viên tuyển dụng (Recruiters).</li>
-                <li><strong>So sánh tăng trưởng:</strong> Đối chiếu dữ liệu kỳ hiện tại với các kỳ trước (tuần/tháng/quý) để đo lường mức độ tăng trưởng.</li>
-                <li><strong>Bộ lọc dữ liệu linh hoạt:</strong> Trích xuất dữ liệu theo mốc thời gian hoặc bóc tách chi tiết qua “Bộ lọc nâng cao”.</li>
+                <li><strong>Dành cho QLDA:</strong> Chọn dự án đang phụ trách, kiểm tra tự động điều kiện ứng lương của từng NLĐ, xem tổng số lần và số tiền NLĐ đã ứng trong 30 ngày gần nhất, tạo đề nghị ứng lương (<strong>Tiền mặt</strong> hoặc <strong>Chuyển khoản</strong>) và tải ảnh NLĐ nhận tiền lên phiếu.</li>
+                <li><strong>Dành cho Kế toán dự án &amp; Cấp giám sát:</strong> Tiếp nhận danh sách đề nghị đang chờ xử lý, nhắn tin trao đổi/yêu cầu QLDA bổ sung thông tin ngay trên phiếu, phê duyệt, từ chối hoặc chuyển trạng thái <strong>Xử lý ngoài BI</strong>. Đặc biệt có màn hình đối chiếu song song ảnh chứng từ nhận tiền với ảnh chân dung gốc của NLĐ để xác nhận hợp lệ hoặc yêu cầu chụp lại ảnh, đồng thời hỗ trợ xuất danh sách ứng lương.</li>
               </ul>
               <div class="web-bi-tags" aria-hidden="true">
-                <span>KPI thời gian thực</span><span>Đối chiếu kỳ trước</span><span>Bộ lọc nâng cao</span>
+                <span>QLDA ↔ Kế toán</span><span>Đối chiếu chân dung</span><span>Xuất danh sách ứng</span>
               </div>
             </section>
 
             <section class="web-bi-module">
               <div class="web-bi-mod-head">
                 <span class="web-bi-mod-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="m22 7-8.5 8.5-5-5L2 17"/><path d="M16 7h6v6"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="m9 16 2 2 4-4"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num">MODULE 03 · RECRUITMENT ANALYTICS</span>
-                  <h3>3. Phân tích Xu hướng &amp; Hiệu suất Tuyển dụng</h3>
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.5 · LEAVE PORTAL &amp; HR POLICY</span>
+                  <h3>1.5. Nghỉ phép Cá nhân &amp; Quản trị Nghỉ phép (Nghỉ phép của tôi &amp; Quản trị nghỉ phép)</h3>
                 </div>
               </div>
               <ul class="web-bi-list">
-                <li><strong>Xu hướng thời gian:</strong> Biểu đồ biến động theo ngày, tuần, tháng giúp nhận diện chu kỳ nguồn lao động và điểm “đỉnh tuyển”.</li>
-                <li><strong>Phân bổ theo dự án:</strong> Thống kê tỷ trọng nhân sự cung ứng cho từng khách hàng, đánh giá quy mô dự án.</li>
-                <li><strong>Đo lường kênh nguồn (HRP và Vendor):</strong> Phân tích tỷ trọng, hiệu quả giữa nguồn tuyển nội bộ và thuê ngoài, chi tiết đến từng dự án.</li>
-                <li><strong>Đánh giá năng suất &amp; Cơ cấu:</strong> Xếp hạng chuyên viên tuyển dụng xuất sắc nhất và phân loại nhân sự theo tính chất hợp đồng (thời vụ, chính thức).</li>
+                <li><strong>Nghỉ phép cá nhân &amp; Duyệt phép:</strong> Xem số dư phép năm, phép thâm niên và phép tồn năm trước; tạo đơn xin nghỉ cả ngày hoặc nửa ngày (<strong>Sáng / Chiều</strong>) với 5 loại nghỉ (<em>Phép năm, Nghỉ ốm, Nghỉ cưới, Nghỉ tang, Nghỉ không lương</em>), có tính năng tự động gợi ý phân bổ ngày nghỉ theo quỹ phép còn lại; rút đơn hoặc duyệt/từ chối/hủy đơn đã duyệt.</li>
+                <li><strong>Quản trị nghỉ phép (dành cho HR / Admin / BoD):</strong>
+                  <ul class="web-bi-sublist hrp-sublist--indigo">
+                    <li>Thiết lập <strong>Chính sách nghỉ phép chung</strong> (như ngày/tháng hết hạn của phép tồn chuyển từ năm trước).</li>
+                    <li>Cấu hình <strong>Hồ sơ phép nhân sự</strong> (Thử việc / Chính thức, ngày vào làm, ngày lên chính thức, lộ trình cộng phép thâm niên) và gán Người duyệt theo bộ phận (Marketing, IT, Kế toán).</li>
+                    <li>Nhập hàng loạt <strong>Số dư phép đầu kỳ</strong>, cấp quyền nội bộ trong phân hệ và xem/xuất <strong>Báo cáo chốt công &amp; phép tháng</strong> của toàn công ty hoặc từng bộ phận.</li>
+                  </ul>
+                </li>
               </ul>
               <div class="web-bi-tags" aria-hidden="true">
-                <span>Đỉnh tuyển dụng</span><span>HRP vs Vendor</span><span>Xếp hạng Recruiter</span>
+                <span>Quỹ phép &amp; Thâm niên</span><span>Cấu hình chính sách</span><span>Chốt công &amp; phép tháng</span>
               </div>
             </section>
 
             <section class="web-bi-module">
               <div class="web-bi-mod-head">
                 <span class="web-bi-mod-icon" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 3h5v5"/><path d="M4 20 21 3"/><path d="M21 16v5h-5"/><path d="m15 15 6 6"/><path d="M4 4l5 5"/></svg>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="M8 13h8"/><path d="M8 17h5"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num">MODULE 04 · WORKFORCE SNAPSHOT &amp; FLOW</span>
-                  <h3>4. Quản lý Hiện trạng &amp; Biến động Trạng thái Lao động</h3>
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.6 · DYNAMIC REPORT TEMPLATES &amp; ASSIGNMENTS</span>
+                  <h3>1.6. Báo cáo Công việc &amp; Điều phối Giao việc (Báo cáo của tôi &amp; Quản lý/Giao báo cáo)</h3>
                 </div>
               </div>
               <ul class="web-bi-list">
-                <li><strong>Chốt hiện trạng (Snapshot):</strong> Thống kê cơ cấu trạng thái người lao động tại một thời điểm cụ thể (đang làm, đang chờ việc, đã nghỉ).</li>
-                <li><strong>Luồng chuyển tiếp trạng thái:</strong> Theo dõi dòng chảy nhân sự, chẳng hạn tỷ lệ chuyển từ “Đang làm” sang “Đã nghỉ”; phân tách rõ tuyển mới và biến động nội bộ.</li>
+                <li><strong>Cá nhân thực hiện:</strong> Xem danh sách báo cáo Cần làm theo hạn nộp (<strong>Ngày / Tuần / Tháng</strong>), lưu nháp hoặc gửi nộp chính thức và tra cứu lại Lịch sử các kỳ trước.</li>
+                <li><strong>Thiết lập &amp; Điều hành (dành cho Quản lý / Admin):</strong>
+                  <ul class="web-bi-sublist hrp-sublist--indigo">
+                    <li><strong>Thiết kế mẫu báo cáo:</strong> Tự tạo biểu mẫu báo cáo động với các trường thông tin phù hợp từng bộ phận.</li>
+                    <li><strong>Quản lý Nhóm nhận &amp; Đợt giao báo cáo:</strong> Tạo nhóm người nhận, phát hành đợt giao báo cáo định kỳ, thu hồi hoặc kích hoạt lại đợt giao khi cần.</li>
+                    <li><strong>Ủy quyền duyệt:</strong> Chuyển quyền duyệt báo cáo tạm thời cho người khác trong thời gian vắng mặt.</li>
+                    <li><strong>Chấm duyệt &amp; Theo dõi tiến độ:</strong> Xử lý hàng đợi Cần duyệt báo cáo và theo dõi bảng thống kê tỷ lệ nộp đúng hạn, số bài quá hạn của từng thành viên/nhóm.</li>
+                  </ul>
+                </li>
               </ul>
               <div class="web-bi-tags" aria-hidden="true">
-                <span>Snapshot tức thời</span><span>Dòng chảy nhân sự</span><span>Biến động nội bộ</span>
+                <span>Biểu mẫu động</span><span>Ủy quyền duyệt</span><span>Thống kê đúng hạn</span>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M2 13h20"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.7 · JOB PUBLISHING &amp; RECRUITMENT</span>
+                  <h3>1.7. Quản lý &amp; Tra cứu Tin Tuyển dụng (Tin tuyển dụng)</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li>Tra cứu bảng tin tuyển dụng đang hiệu lực và lọc nhanh theo <strong>Tỉnh/Thành, Khu công nghiệp (KCN), Dự án, Hình thức lao động</strong>.</li>
+                <li>Khác với bản di động chỉ xem tin, nền tảng Web cho phép người dùng được cấp quyền <strong>Tạo tin tuyển dụng mới</strong>, <strong>Chỉnh sửa nội dung</strong>, <strong>Ngừng đăng (Thu hồi)</strong> tin cũ, <strong>Sao chép</strong> tin đã thu hồi để đăng lại và <strong>Xuất nội dung chi tiết tin tuyển dụng thành tệp văn bản</strong> để gửi nhanh cho ứng viên hoặc cộng tác viên.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Tạo · Sửa · Thu hồi tin</span><span>Sao chép đăng lại</span><span>Xuất tệp văn bản</span>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.8 · ATTENDANCE MATRIX &amp; GPS GEOFENCE</span>
+                  <h3>1.8. Quản trị &amp; Báo cáo Chấm công (Báo cáo chấm công)</h3>
+                </div>
+              </div>
+              <p class="web-bi-mod-lead">Công cụ trên Web giúp Ban Giám đốc, Nhân sự và Trưởng nhóm kiểm soát dữ liệu chấm công gửi lên từ điện thoại:</p>
+              <ul class="web-bi-list">
+                <li><strong>Nhật ký Check-in chi tiết:</strong> Tra cứu theo khoảng ngày và nhân viên; xem trực tiếp ảnh chụp chấm công, vị trí trên Google Maps, khoảng cách tính bằng mét tới địa điểm làm việc và trạng thái xác minh giờ chuẩn hay đồng hồ máy.</li>
+                <li><strong>Bảng công Ma trận Tháng:</strong> Tổng hợp toàn bộ các ca chấm công trong tháng của từng nhân sự trên một bảng trực quan (kết hợp tự động với ngày nghỉ phép đã duyệt và giải trình đã duyệt) và hỗ trợ xuất file báo cáo tháng.</li>
+                <li><strong>Duyệt giải trình &amp; Cấu hình địa điểm, ca làm việc:</strong> Xét duyệt giải trình chấm công; thiết lập tọa độ GPS và bán kính cho Trụ sở chính / các Chi nhánh; cấu hình Khung giờ chấm công linh hoạt (số mốc chấm trong ngày, giờ chuẩn từng mốc, số phút cho phép chấm sớm/trễ) rồi gán riêng cho từng nhân sự hoặc bộ phận.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Google Maps &amp; Bán kính</span><span>Ma trận công tháng</span><span>Cấu hình ca linh hoạt</span>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c.26.604.852.997 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1Z"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num">PHÂN HỆ 1.9 · PROJECTS, MASTER DATA &amp; AUDIT LOGS</span>
+                  <h3>1.9. Quản trị Dự án, Tổ chức &amp; Hệ thống (Dự án &amp; Quản trị hệ thống)</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list">
+                <li><strong>Quản lý Dự án:</strong> Tạo mới, đổi tên, tạm ngừng/kích hoạt lại dự án, cài đặt tọa độ/bán kính chấm công tại dự án và bổ nhiệm hoặc thu hồi Quản lý dự án (QLDA).</li>
+                <li><strong>Quản trị Danh mục chuẩn &amp; Phòng ban:</strong> Quản lý tập trung danh mục Nhân sự/Người tuyển, Nhóm &amp; Trưởng nhóm, Phòng ban, Nhà cung cấp (Vendor), Tỉnh/Thành, Khu công nghiệp, Loại hình lao động và Liên kết phạm vi <strong>Dự án ↔ Nhóm</strong>.</li>
+                <li><strong>Tài khoản &amp; Kiểm toán:</strong> Tạo tài khoản đăng nhập, khóa/mở quyền truy cập, gắn kết tài khoản với hồ sơ nhân sự, tự đổi mật khẩu cá nhân và tra cứu <strong>Lịch sử chỉnh sửa hồ sơ NLĐ</strong> trên toàn hệ thống.</li>
+              </ul>
+              <div class="web-bi-tags" aria-hidden="true">
+                <span>Danh mục chuẩn</span><span>Liên kết Dự án ↔ Nhóm</span><span>Nhật ký kiểm toán</span>
               </div>
             </section>
           </div>
         </section>
 
-        <section class="web-bi-group web-bi-group--hris" id="web-bi-pillar-2" tabindex="-1">
+        <section class="web-bi-group web-bi-group--notes" id="mini-bi-notes" tabindex="-1">
           <div class="web-bi-group-head">
-            <span class="bi-platform-badge bi-platform-badge--android">PHÂN HỆ II · HUMAN RESOURCE INFORMATION SYSTEM</span>
-            <h2>II. Vận hành &amp; Quản trị Nhân sự (HRIS)</h2>
-            <p>Số hóa khép kín quy trình vận hành nhân sự từ chiến dịch tuyển dụng, chấm công, đơn từ nghỉ phép đến đối trừ ứng lương.</p>
+            <span class="bi-platform-badge--notes">PHẦN 2 · QUY TẮC VẬN HÀNH, KIỂM TOÁN &amp; AN TOÀN DỮ LIỆU</span>
+            <h2>2. Các Lưu ý Quan trọng Khi Sử dụng</h2>
+            <p>Tuân thủ các quy tắc kiểm soát dữ liệu, dán bảng tính, kế toán công nợ và cấu hình danh mục để đảm bảo tính chính xác toàn hệ thống.</p>
           </div>
 
           <div class="web-bi-grid">
             <section class="web-bi-module">
               <div class="web-bi-mod-head">
-                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M12 12v4"/><path d="M2 13h20"/></svg>
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 05 · JOB POSTINGS &amp; CAMPAIGNS</span>
-                  <h3>5. Quản trị Tin tuyển dụng</h3>
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.1 · AUDIT LOG &amp; CONCURRENCY</span>
+                  <h3>2.1. Lưu ý Chung về Thao tác, Phân quyền &amp; Chống Ghi đè Dữ liệu</h3>
                 </div>
               </div>
-              <ul class="web-bi-list web-bi-list--hris">
-                <li><strong>Quản lý chiến dịch:</strong> Đăng tải, lưu trữ và theo dõi trạng thái các yêu cầu tuyển dụng cho từng dự án.</li>
-                <li><strong>Thu hút &amp; Phân luồng:</strong> Khởi tạo mô tả công việc (JD), phân phối tin tuyển dụng ra các kênh và thu thập hồ sơ ứng viên (CV) vào kho dữ liệu chung.</li>
-                <li><strong>Kết nối dữ liệu:</strong> Đồng bộ hiệu quả chiến dịch tuyển dụng lên Bảng điều khiển tổng quan.</li>
+              <ul class="web-bi-list web-bi-list--notes">
+                <li><strong>Bắt buộc ghi rõ lý do với các thao tác quản trị:</strong> Khi đổi tên/đóng dự án, gán/gỡ quản lý, hoàn tác/điều chỉnh bút toán tài chính, ẩn dòng báo cáo nghỉ việc hoặc đề xuất sửa hồ sơ, hệ thống đều yêu cầu nhập <strong>Lý do thực hiện</strong> để lưu nhật ký kiểm toán.</li>
+                <li><strong>Cơ chế chống ghi đè khi làm việc nhiều người:</strong> Nếu hai người cùng mở và sửa một hồ sơ/phiếu yêu cầu cùng lúc, người bấm lưu sau sẽ nhận được thông báo dữ liệu đã thay đổi và cần tải lại bản mới nhất trước khi thao tác tiếp (hệ thống không tự động ghi đè làm mất nội dung của người lưu trước).</li>
+                <li><strong>Không đóng trình duyệt khi đang tải tệp:</strong> Khi vừa bấm lưu hồ sơ kèm nhiều ảnh chân dung/CCCD/hợp đồng, hãy chờ thông báo tải tệp hoàn tất rồi mới đóng tab hoặc đăng xuất.</li>
               </ul>
-              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
-                <span>Quản lý JD &amp; CV</span><span>Theo dõi chiến dịch</span><span>Đồng bộ Dashboard</span>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 3v18"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.2 · NHẬP LIỆU LƯỚI &amp; EXCEL</span>
+                  <h3>2.2. Lưu ý khi Nhập liệu Bảng tính &amp; Dán từ Excel (Nhập liệu)</h3>
+                </div>
+              </div>
+              <div class="hrp-callout hrp-callout--important">
+                <span class="hrp-callout-head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+                  IMPORTANT
+                </span>
+                <p class="hrp-callout-lead">Quy tắc dán dữ liệu từ Excel vào bảng lưới trên Web:</p>
+                <ul class="web-bi-list">
+                  <li>Mỗi lần dán tối đa <strong>100 dòng dữ liệu</strong>.</li>
+                  <li>Vùng dán không được vượt quá cột cuối cùng của bảng và không được đè lên các ô đang khóa/không có quyền sửa. Nếu vi phạm bất kỳ điều kiện nào, hệ thống sẽ từ chối toàn bộ lần dán đó để tránh lệch cột sai thông tin (bạn có thể bấm <strong>Hoàn tác</strong> ngay nếu vừa dán nhầm).</li>
+                  <li><strong>Tính hợp lệ của danh mục:</strong> Dự án, Người tuyển, Ngân hàng, Loại hình lao động được chọn phải đang ở trạng thái hoạt động. Đặc biệt, Người tuyển phải thuộc nhóm/nguồn tuyển đang có hiệu lực tại đúng <strong>Ngày bắt đầu làm việc</strong> của NLĐ.</li>
+                  <li><strong>Quy định tệp và số CCCD:</strong> Tệp đính kèm tối đa <strong>10 MB</strong> (ảnh JPG, PNG, WEBP hoặc PDF). Số CCCD phải đúng <strong>12 chữ số</strong> (hoặc CMND 9 số). Nếu NLĐ từng làm việc trước đó, hồ sơ cũ phải được chuyển sang trạng thái <strong>Đã nghỉ</strong> (có đủ ngày nghỉ và lý do nghỉ) trước khi tạo đợt làm việc mới; hồ sơ đã kết thúc không thể mở lại.</li>
+                </ul>
               </div>
             </section>
 
             <section class="web-bi-module">
               <div class="web-bi-mod-head">
-                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 06 · TIME &amp; ATTENDANCE</span>
-                  <h3>6. Quản lý Chấm công</h3>
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.3 · KẾ TOÁN &amp; CÔNG NỢ VENDOR</span>
+                  <h3>2.3. Lưu ý khi Sử dụng Phân hệ Tài chính Vendor (Tài chính)</h3>
                 </div>
               </div>
-              <ul class="web-bi-list web-bi-list--hris">
-                <li><strong>Kiểm soát thời gian thực tế:</strong> Ghi nhận giờ ra/vào, ca làm việc, thời gian đi muộn/về sớm và số giờ tăng ca (OT).</li>
-                <li><strong>Tổng hợp tự động:</strong> Hỗ trợ chốt công cuối kỳ nhanh chóng, giảm sai sót và cung cấp dữ liệu đầu vào chính xác cho bộ phận tính lương (C&amp;B).</li>
-              </ul>
-              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
-                <span>Ca kíp &amp; OT</span><span>Chốt công tự động</span><span>Chuẩn dữ liệu C&amp;B</span>
+              <div class="hrp-callout hrp-callout--warning">
+                <span class="hrp-callout-head">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
+                  WARNING
+                </span>
+                <p class="hrp-callout-lead">Lưu ý nghiệp vụ kế toán &amp; công nợ trên Mini BI:</p>
+                <ul class="web-bi-list web-bi-list--notes">
+                  <li><strong>Bản chất chứng từ:</strong> Tất cả phiếu lương, phiếu chi, tạm ứng và biên bản đối soát trên hệ thống là chứng từ ghi nhận quản trị nội bộ, không phải lệnh chuyển tiền ngân hàng hay xác nhận tiền đã vào tài khoản đối tác. Kế toán cần đính kèm ảnh chụp minh chứng giao dịch (JPG hoặc PNG, tối đa <strong>10 MB</strong>) để đối chiếu.</li>
+                  <li><strong>Không sửa/xóa lùi các bút toán đã ghi sổ:</strong> Khi phát hiện nhập nhầm số tiền hoặc sai nội dung, hãy sử dụng chức năng <strong>Hoàn tác bút toán</strong> hoặc ghi bút toán <strong>Điều chỉnh tăng / giảm</strong> kèm lý do giải trình rõ ràng.</li>
+                  <li><strong>Khởi tạo Số dư đầu kỳ:</strong> Mỗi lần nhập theo lô hỗ trợ tối đa <strong>200 dòng</strong>. Bạn bắt buộc bấm <strong>Xem trước</strong> và xử lý hết các dòng cảnh báo lỗi trước khi áp dụng chính thức.</li>
+                  <li><strong>Phân loại hợp đồng trên sổ phụ:</strong> Cần chọn đúng phân loại <strong>Thời vụ</strong> hoặc <strong>Chính thức</strong> cho sổ phụ của Vendor để báo cáo tháng cộng dồn chính xác theo từng nhóm lao động.</li>
+                </ul>
               </div>
             </section>
 
             <section class="web-bi-module">
               <div class="web-bi-mod-head">
-                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
-                </span>
-                <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 07 · LEAVE MANAGEMENT</span>
-                  <h3>7. Quản lý Nghỉ phép</h3>
-                </div>
-              </div>
-              <ul class="web-bi-list web-bi-list--hris">
-                <li><strong>Số hóa đơn từ:</strong> Hỗ trợ người lao động tạo và gửi trực tuyến các loại đơn xin nghỉ (phép năm, nghỉ ốm, không lương, thai sản...).</li>
-                <li><strong>Kiểm soát quỹ phép:</strong> Tự động theo dõi và cập nhật số ngày phép còn lại của từng cá nhân.</li>
-                <li><strong>Phê duyệt nhanh:</strong> Cấp quản lý xem lịch sử và duyệt đơn ngay trên hệ thống, giúp luồng công việc thông suốt.</li>
-              </ul>
-              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
-                <span>Đơn từ trực tuyến</span><span>Tự động tính quỹ phép</span><span>Duyệt tức thời</span>
-              </div>
-            </section>
-
-            <section class="web-bi-module">
-              <div class="web-bi-mod-head">
-                <span class="web-bi-mod-icon web-bi-mod-icon--hris" aria-hidden="true">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/><path d="M6 15h4"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num web-bi-mod-num--hris">MODULE 08 · SALARY ADVANCE</span>
-                  <h3>8. Quản lý Ứng lương</h3>
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.4 · ĐIỀU KIỆN &amp; ĐỐI SOÁT ỨNG LƯƠNG</span>
+                  <h3>2.4. Lưu ý khi Đề nghị &amp; Xử lý Ứng lương (Ứng lương)</h3>
                 </div>
               </div>
-              <ul class="web-bi-list web-bi-list--hris">
-                <li><strong>Đề xuất linh hoạt:</strong> Cho phép nhân sự gửi yêu cầu tạm ứng thu nhập dựa trên số ngày công đã hoàn thành.</li>
-                <li><strong>Quy trình đối trừ tự động:</strong> Hệ thống hóa luồng phê duyệt từ quản lý đến kế toán, ghi nhận khoản ứng để khấu trừ vào kỳ lương tiếp theo, bảo đảm minh bạch và an toàn dòng tiền.</li>
+              <ul class="web-bi-list web-bi-list--notes">
+                <li><strong>Điều kiện NLĐ được ứng lương:</strong> Hệ thống sẽ tự động chặn tạo phiếu nếu NLĐ thuộc nguồn Vendor, đã nghỉ việc, chưa xác nhận đi làm, thiếu ảnh chân dung, đang bị trùng CCCD chưa xử lý hoặc đang mở làm việc song song ở nhiều dự án.</li>
+                <li><strong>Yêu cầu chính chủ khi Chuyển khoản:</strong> Chỉ chọn được phương thức <strong>Chuyển khoản</strong> khi hồ sơ NLĐ có đủ ngân hàng, số tài khoản và tên chủ tài khoản <strong>trùng khớp chính chủ</strong> với họ tên NLĐ; nếu chưa đáp ứng thì phải nhận bằng <strong>Tiền mặt</strong> hoặc cập nhật lại thông tin ngân hàng trước.</li>
+                <li><strong>Xử lý ngoài hệ thống:</strong> Nếu một đề nghị ứng lương đã được giải quyết trực tiếp bên ngoài, Kế toán nên chuyển phiếu sang trạng thái <strong>Xử lý ngoài BI</strong> để đóng phiếu và giữ số liệu thống kê 30 ngày không bị sai lệch.</li>
               </ul>
-              <div class="web-bi-tags web-bi-tags--hris" aria-hidden="true">
-                <span>Ứng theo ngày công</span><span>Luồng duyệt Kế toán</span><span>Khấu trừ minh bạch</span>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.5 · CHÍNH SÁCH PHÉP &amp; TỌA ĐỘ GPS</span>
+                  <h3>2.5. Lưu ý khi Quản trị Nghỉ phép &amp; Báo cáo Chấm công</h3>
+                </div>
               </div>
+              <div class="hrp-note-group">
+                <p class="hrp-note-subhead">Thứ tự thiết lập Quản trị nghỉ phép:</p>
+                <ul class="web-bi-list web-bi-list--notes">
+                  <li>Trước khi nhập <strong>Phép tồn năm trước</strong> vào bảng Số dư đầu kỳ (tối đa <strong>300 dòng/lần</strong>), Admin bắt buộc phải cài đặt trước <strong>Ngày/tháng hết hạn phép chuyển năm</strong> trong mục Chính sách nghỉ phép.</li>
+                  <li>Mọi con số ngày phép nhập vào hệ thống phải là bội số của <strong>0,5 ngày</strong> (ví dụ: 0, 0.5, 1, 1.5...). Số dư đầu kỳ chỉ khởi tạo cho nhân sự diện <strong>Chính thức</strong> hợp lệ đã có Ngày bắt đầu làm việc và Ngày lên chính thức.</li>
+                  <li>Quy định giới hạn khi nhân sự tạo đơn vẫn giữ thống nhất: Nghỉ cưới / Nghỉ tang tối đa <strong>3 ngày/đơn</strong>; Nghỉ ốm / Nghỉ không lương tối đa <strong>7 ngày/đơn</strong>; tài khoản dùng chung không sử dụng quỹ phép cá nhân; người duyệt không được tự duyệt đơn của mình.</li>
+                  <li>Khi xuất <strong>Báo cáo chốt công &amp; phép tháng</strong>, mỗi lần tải tối đa <strong>5.000 nhân sự</strong> (nếu vượt giới hạn, hãy lọc theo bộ phận hoặc từ khóa tìm kiếm).</li>
+                </ul>
+              </div>
+              <div class="hrp-note-group">
+                <p class="hrp-note-subhead">Cấu hình Tọa độ trước khi xem khoảng cách Chấm công:</p>
+                <ul class="web-bi-list web-bi-list--notes">
+                  <li>Để báo cáo chấm công tính được khoảng cách xa/gần của nhân viên so với nơi làm việc, Admin cần khai báo trước tọa độ GPS của <strong>Trụ sở chính, Chi nhánh hoặc Dự án</strong>. Nếu chưa khai báo tọa độ tại thời điểm nhân viên chấm công, lượt chấm vẫn được lưu nhưng cột khoảng cách sẽ báo <code>Chưa cấu hình tọa độ</code>.</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="web-bi-module">
+              <div class="web-bi-mod-head">
+                <span class="web-bi-mod-icon web-bi-mod-icon--notes" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg>
+                </span>
+                <div class="web-bi-mod-titles">
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.6 · KHÓA QUÁ HẠN &amp; ĐĂNG LẠI TIN</span>
+                  <h3>2.6. Lưu ý khi Giao Báo cáo Công việc &amp; Đăng Tin Tuyển dụng</h3>
+                </div>
+              </div>
+              <ul class="web-bi-list web-bi-list--notes">
+                <li><strong>Báo cáo công việc:</strong> Bản <em>Lưu nháp</em> chưa được tính là đã nộp. Khi quá thời hạn nộp, biểu mẫu sẽ tự khóa sang chế độ <strong>Chỉ xem</strong> (chỉ những bài đã nộp đúng hạn nhưng được người duyệt trả lại trạng thái <strong>Cần bổ sung / Từ chối</strong> mới được phép sửa và nộp lại).</li>
+                <li><strong>Đăng lại tin tuyển dụng:</strong> Khi dùng tính năng <strong>Sao chép / Đăng lại</strong> từ một tin tuyển dụng cũ đã thu hồi, bạn cần đảm bảo mình vẫn đang giữ quyền trên dự án đó và Khu công nghiệp / Loại hình lao động gắn với tin cũ vẫn đang ở trạng thái hoạt động.</li>
+              </ul>
             </section>
           </div>
         </section>
