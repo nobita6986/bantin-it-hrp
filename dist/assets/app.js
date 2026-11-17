@@ -476,7 +476,7 @@ function renderRoute(moveFocus = false) {
   let article;
   const isIosUpdates = routeHash === routes.biIphoneUpdates;
   if (routeHash.startsWith("#bai-viet/")) {
-    article = orderedArticles.find((item) => articleUrl(item) === routeHash);
+    article = orderedArticles.find((item) => articleUrl(item) === routeHash || item.aliases?.some((alias) => `#bai-viet/${encodeURIComponent(alias)}` === routeHash));
     section = article?.section;
     if (article) renderArticle(article);
     else renderNotFound();

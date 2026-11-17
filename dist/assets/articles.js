@@ -335,7 +335,7 @@ const articles = [
             <p class="web-bi-sublead">Nếu ứng dụng di động tập trung vào thao tác nhanh tại hiện trường (như chụp ảnh chấm công, quét QR nhanh), thì nền tảng <strong>Web Mini BI</strong> là trung tâm điều hành toàn diện: xử lý dữ liệu bảng tính quy mô lớn, quản lý công nợ và chứng từ tài chính Vendor, kế toán duyệt ứng lương, cấu hình chính sách công – phép – ca làm việc, thiết kế mẫu báo cáo, đăng tin tuyển dụng và quản trị danh mục toàn hệ thống.</p>
             <div class="web-bi-cta-row">
               <a class="bi-action-btn bi-action-btn--ios" href="https://bi.hrpartner.vn/dashboard" target="_blank" rel="noopener noreferrer">Mở Web Mini BI ↗</a>
-              <a class="web-bi-url-chip" href="#bai-viet/tong-quan-hrp-bi-ios">Xem bản Ứng dụng iOS →</a>
+              <a class="web-bi-url-chip" href="#bai-viet/tong-quan-hrp-bi-ios">Xem bản Ứng dụng Mobile →</a>
               <span class="web-bi-stat-pill">9 Phân hệ chức năng · 6 Lưu ý vận hành</span>
             </div>
           </div>
@@ -753,39 +753,40 @@ const articles = [
   },
   {
     id: 'tong-quan-hrp-bi-ios',
+    aliases: ['tong-quan-hrp-bi-mobile'],
     pinRank: 2,
     compactReadingLayout: true,
     hideCategoryBadge: true,
     hideArticleSummary: true,
-    jumpTargets: ['hrp-ios-features', 'hrp-ios-notes'],
+    jumpTargets: ['hrp-mobile-features', 'hrp-mobile-notes'],
     section: 'news',
     category: 'feature',
-    title: 'Tổng quan Chức năng & Lưu ý Sử dụng Ứng dụng HRP BI (iOS)',
-    summary: 'Tổng quan 7 nhóm chức năng nghiệp vụ nhân sự – vận hành và 6 lưu ý quan trọng khi sử dụng ứng dụng di động HRP BI trên iPhone và iPad.',
-    keywords: 'hrp bi ios iphone ipad cham cong gps offline giai trinh nghi phep cccd qr ung luong qlda dashboard bao cao tuyen dung kcn nhac viec',
+    title: 'Tổng Quan Chức năng & Lưu ý Sử dụng Ứng dụng HRP BI trên phiên bản Mobile',
+    summary: 'Tổng quan 7 nhóm chức năng nghiệp vụ nhân sự – vận hành và 6 lưu ý quan trọng khi sử dụng ứng dụng di động HRP BI trên phiên bản Mobile (iOS & Android).',
+    keywords: 'hrp bi mobile di dong ios android iphone ipad cham cong gps offline giai trinh nghi phep cccd qr ung luong qlda dashboard bao cao tuyen dung kcn nhac viec',
     date: '2026-11-15',
     minutes: 8,
     image: 'hrp-bi-ios.jpg',
     body: `
       <div class="web-bi-overview">
-        <section class="web-bi-hero" aria-label="Giới thiệu ứng dụng di động HRP BI trên iOS">
+        <section class="web-bi-hero" aria-label="Giới thiệu ứng dụng di động HRP BI trên phiên bản Mobile">
           <div class="web-bi-hero-copy">
-            <span class="web-bi-eyebrow"><span class="intro-dot" aria-hidden="true"></span> ỨNG DỤNG DI ĐỘNG NỘI BỘ · IPHONE &amp; IPAD (IOS 16.0+)</span>
-            <p class="web-bi-lead"><strong>HRP BI</strong> là ứng dụng di động nội bộ trên <strong>iPhone và iPad</strong> của hệ thống <strong>HR Partner</strong>, hỗ trợ nhân viên văn phòng, chuyên viên tuyển dụng, quản lý dự án (QLDA), trưởng nhóm và ban lãnh đạo thực hiện các nghiệp vụ nhân sự – vận hành hằng ngày.</p>
-            <p class="web-bi-sublead">Các mục menu và thao tác trong ứng dụng sẽ tự động hiển thị theo đúng vai trò và quyền hạn của từng tài khoản.</p>
+            <span class="web-bi-eyebrow"><span class="intro-dot" aria-hidden="true"></span> ỨNG DỤNG DI ĐỘNG NỘI BỘ · MOBILE (IOS &amp; ANDROID)</span>
+            <p class="web-bi-lead"><strong>HRP BI</strong> là ứng dụng di động nội bộ trên <strong>điện thoại và máy tính bảng (iOS &amp; Android)</strong> của hệ thống <strong>HR Partner</strong>, hỗ trợ nhân viên văn phòng, chuyên viên tuyển dụng, quản lý dự án (QLDA), trưởng nhóm và ban lãnh đạo thực hiện các nghiệp vụ nhân sự – vận hành hằng ngày.</p>
+            <p class="web-bi-sublead">Giao diện và các tính năng nghiệp vụ được đồng bộ thống nhất trên cả hai nền tảng <strong>iOS</strong> và <strong>Android</strong>; các mục menu và thao tác trong ứng dụng sẽ tự động hiển thị theo đúng vai trò và quyền hạn của từng tài khoản.</p>
             <div class="web-bi-cta-row">
-              <a class="bi-action-btn bi-action-btn--ios" href="#bai-viet/cong-ho-tro-it">Hướng dẫn cài đặt &amp; cập nhật →</a>
-              <a class="web-bi-url-chip" href="#phien-ban-bi-iphone">Xem lịch sử phiên bản iOS →</a>
+              <a class="bi-action-btn bi-action-btn--ios" href="#bai-viet/cong-ho-tro-it">Hướng dẫn cài đặt iOS &amp; Android →</a>
+              <a class="web-bi-url-chip" href="#bai-viet/gioi-thieu-web-bi">Xem nền tảng Web Mini BI →</a>
               <span class="web-bi-stat-pill">7 Nhóm chức năng · 6 Lưu ý quan trọng</span>
             </div>
           </div>
           <div class="web-bi-hero-visual">
-            <img src="assets/hrp-bi-ios.jpg" alt="Minh họa ứng dụng di động HRP BI trên iPhone và iPad" width="960" height="536" decoding="async">
+            <img src="assets/hrp-bi-ios.jpg" alt="Minh họa ứng dụng di động HRP BI trên phiên bản Mobile (iOS và Android)" width="960" height="536" decoding="async">
           </div>
         </section>
 
-        <nav class="bi-platform-nav" aria-label="Chuyển nhanh nội dung ứng dụng HRP BI iOS">
-          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/tong-quan-hrp-bi-ios?jump=hrp-ios-features" data-jump-target="hrp-ios-features">
+        <nav class="bi-platform-nav" aria-label="Chuyển nhanh nội dung ứng dụng HRP BI Mobile">
+          <a class="bi-platform-switch bi-platform-switch--ios" href="#bai-viet/tong-quan-hrp-bi-ios?jump=hrp-mobile-features" data-jump-target="hrp-mobile-features">
             <span class="bi-platform-switch-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6.5" y="2.5" width="11" height="19" rx="2.5"/><path d="M10.5 5.5h3"/><path d="M11 18.5h2"/></svg>
             </span>
@@ -795,23 +796,23 @@ const articles = [
             </span>
             <span class="bi-platform-switch-go" aria-hidden="true">7 nhóm ↓</span>
           </a>
-          <a class="bi-platform-switch bi-platform-switch--notes" href="#bai-viet/tong-quan-hrp-bi-ios?jump=hrp-ios-notes" data-jump-target="hrp-ios-notes">
+          <a class="bi-platform-switch bi-platform-switch--notes" href="#bai-viet/tong-quan-hrp-bi-ios?jump=hrp-mobile-notes" data-jump-target="hrp-mobile-notes">
             <span class="bi-platform-switch-icon" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4"/><path d="M12 17h.01"/><path d="M10.29 3.86 1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0Z"/></svg>
             </span>
             <span class="bi-platform-switch-copy">
               <strong>2. Các Lưu ý Quan trọng Khi Sử dụng</strong>
-              <small>Quyền iOS, GPS/Offline, Giải trình, Cấp mới CCCD, Ứng lương &amp; Báo cáo</small>
+              <small>Quyền thiết bị, GPS/Offline, Giải trình, Cấp mới CCCD, Ứng lương &amp; Báo cáo</small>
             </span>
             <span class="bi-platform-switch-go" aria-hidden="true">6 lưu ý ↓</span>
           </a>
         </nav>
 
-        <section class="web-bi-group web-bi-group--bi" id="hrp-ios-features" tabindex="-1">
+        <section class="web-bi-group web-bi-group--bi" id="hrp-mobile-features" tabindex="-1">
           <div class="web-bi-group-head">
             <span class="bi-platform-badge bi-platform-badge--ios">PHẦN 1 · NGHIỆP VỤ NHÂN SỰ &amp; VẬN HÀNH DI ĐỘNG</span>
             <h2>1. Tổng quan Các Chức năng Chính</h2>
-            <p>Hệ thống chức năng hiển thị linh hoạt theo đúng phân quyền tài khoản trên iPhone và iPad.</p>
+            <p>Hệ thống chức năng được đồng bộ trên cả hai nền tảng iOS và Android, hiển thị linh hoạt theo đúng phân quyền của từng tài khoản.</p>
           </div>
 
           <div class="web-bi-grid">
@@ -995,7 +996,7 @@ const articles = [
           </div>
         </section>
 
-        <section class="web-bi-group web-bi-group--notes" id="hrp-ios-notes" tabindex="-1">
+        <section class="web-bi-group web-bi-group--notes" id="hrp-mobile-notes" tabindex="-1">
           <div class="web-bi-group-head">
             <span class="bi-platform-badge--notes">PHẦN 2 · QUY ĐỊNH &amp; LƯU Ý VẬN HÀNH BẮT BUỘC</span>
             <h2>2. Các Lưu ý Quan trọng Khi Sử dụng</h2>
@@ -1009,7 +1010,7 @@ const articles = [
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/></svg>
                 </span>
                 <div class="web-bi-mod-titles">
-                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.1 · QUYỀN THIẾT BỊ IOS</span>
+                  <span class="web-bi-mod-num web-bi-mod-num--notes">LƯU Ý 2.1 · QUYỀN TRUY CẬP TRÊN ĐIỆN THOẠI</span>
                   <h3>2.1. Cài đặt Quyền trên Điện thoại</h3>
                 </div>
               </div>
@@ -1018,15 +1019,15 @@ const articles = [
                   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
                   IMPORTANT
                 </span>
-                <p class="hrp-callout-lead">Trong lần đầu sử dụng các tính năng liên quan, bạn cần bấm <strong>Cho phép</strong> đủ 4 quyền trên iPhone/iPad:</p>
+                <p class="hrp-callout-lead">Trong lần đầu sử dụng các tính năng liên quan, bạn cần bấm <strong>Cho phép</strong> đủ 4 quyền trên điện thoại (iOS / Android):</p>
                 <ul class="web-bi-list">
                   <li><strong>Camera:</strong> Để chụp ảnh chấm công, quét QR CCCD và chụp tài liệu hồ sơ.</li>
                   <li><strong>Vị trí (GPS) khi dùng ứng dụng:</strong> Bắt buộc để xác thực địa điểm chấm công.</li>
-                  <li><strong>Thư viện ảnh:</strong> Để tải ảnh chân dung, CCCD, hợp đồng và lưu tệp xuất ra.</li>
+                  <li><strong>Thư viện ảnh / Bộ nhớ tệp:</strong> Để tải ảnh chân dung, CCCD, hợp đồng và lưu tệp xuất ra.</li>
                   <li><strong>Thông báo:</strong> Để tính năng Nhắc việc đổ chuông đúng giờ ngay cả khi đóng màn hình.</li>
                 </ul>
               </div>
-              <p class="hrp-note-foot">Ứng dụng yêu cầu <strong>iOS 16.0 trở lên</strong> và luôn hiển thị ở <strong>chế độ nền sáng</strong> (kể cả khi điện thoại đang bật chế độ tối) để đảm bảo ảnh chụp giấy tờ và bảng biểu luôn rõ nét.</p>
+              <p class="hrp-note-foot">Ứng dụng tương thích trên cả <strong>iOS (từ iOS 16.0 trở lên, cài qua TestFlight)</strong> và <strong>Android (tải trên Google Play)</strong>, luôn hiển thị ở <strong>chế độ nền sáng</strong> (kể cả khi điện thoại đang bật chế độ tối) để đảm bảo ảnh chụp giấy tờ và bảng biểu luôn rõ nét.</p>
             </section>
 
             <section class="web-bi-module">
