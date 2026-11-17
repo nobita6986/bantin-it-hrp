@@ -92,7 +92,6 @@ function cover(article, priority = false) {
 function filterBar(section, active) {
   const filters = { all: "Tất cả", ...categories[section] };
   return `<div class="filters" role="group" aria-label="Lọc theo chủ đề">
-    <span class="filter-pill" aria-hidden="true"></span>
     ${Object.entries(filters).map(([id, label]) => `
       <button class="filter" type="button" data-filter="${id}" aria-pressed="${id === active}">${label}</button>
     `).join("")}
@@ -136,67 +135,32 @@ function featuredCard(article) {
         <a class="button button-primary home-feature-button" href="${articleUrl(article)}">Đọc bài viết ${icon("arrow")}</a>
       </div>
       ${footerImage ? `
-        <a class="home-panel-thumb-link" href="${articleUrl(article)}" tabindex="-1" aria-hidden="true">
-          ${panelThumb("platforms")}
+        <a class="home-feature-thumb" href="${articleUrl(article)}" tabindex="-1" aria-hidden="true">
+          <img class="featured-footer-image" src="assets/${encodeURIComponent(footerImage.src)}"
+            alt="${escapeHtml(footerImage.alt)}" width="${footerImage.width}" height="${footerImage.height}"
+            loading="lazy" decoding="async">
         </a>` : ""}
     </div>
   </article>`;
 }
 
 function panelThumb(variant) {
-  if (variant === "platforms") {
-    return `<span class="home-panel-thumb home-panel-thumb--platforms">
-      <svg class="home-panel-thumb-bg" viewBox="0 0 120 58" preserveAspectRatio="none" aria-hidden="true">
-        <defs>
-          <linearGradient id="thumbPlatLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#eef5ef"/>
-            <stop offset="100%" stop-color="#dce8de"/>
-          </linearGradient>
-          <linearGradient id="thumbPlatRight" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f7f1e7"/>
-            <stop offset="100%" stop-color="#e3d8c7"/>
-          </linearGradient>
-        </defs>
-        <rect width="120" height="58" fill="url(#thumbPlatRight)"/>
-        <polygon points="0,0 65,0 55,58 0,58" fill="url(#thumbPlatLeft)"/>
-        <line x1="65" y1="0" x2="55" y2="58" stroke="#ffffff" stroke-opacity="0.75" stroke-width="1"/>
-      </svg>
-      <span class="home-panel-thumb-grid">
-        <span class="home-panel-emblem">
-          <span class="home-emblem-squircle home-emblem-squircle--android">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M17.523 15.341a.857.857 0 1 1 .001-1.715.857.857 0 0 1-.001 1.715Zm-11.046 0a.857.857 0 1 1 .001-1.715.857.857 0 0 1-.001 1.715Zm11.405-6.02 1.997-3.459a.416.416 0 0 0-.721-.416l-2.022 3.503A12.14 12.14 0 0 0 12 8.018c-1.852 0-3.597.338-5.136.931L4.842 5.446a.416.416 0 0 0-.721.416l1.997 3.459C2.688 11.186.435 14.66.24 18.75h23.52c-.195-4.09-2.448-7.564-5.878-9.429Z"/>
-            </svg>
-          </span>
-          <span class="home-emblem-label">Android</span>
-        </span>
-        <span class="home-panel-emblem">
-          <span class="home-emblem-squircle home-emblem-squircle--apple">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M16.365 1.43c0 1.14-.493 2.27-1.177 3.08-.744.9-1.99 1.57-2.987 1.57-.12 0-.23-.02-.3-.03-.01-.06-.04-.22-.04-.39 0-1.15.572-2.27 1.206-2.98.804-.94 2.142-1.64 3.248-1.68.03.13.05.28.05.43Zm4.565 15.71c-.03.07-.463 1.58-1.518 3.12-.945 1.34-1.94 2.71-3.43 2.71-1.517 0-1.9-.88-3.63-.88-1.698 0-2.302.91-3.67.91-1.377 0-2.332-1.26-3.428-2.8-1.287-1.82-2.323-4.63-2.323-7.28 0-4.28 2.797-6.55 5.552-6.55 1.448 0 2.675.95 3.6.95.865 0 2.222-1.01 3.902-1.01.613 0 2.886.06 4.374 2.19-.13.09-2.383 1.37-2.383 4.19 0 3.26 2.854 4.42 2.955 4.45Z"/>
-            </svg>
-          </span>
-          <span class="home-emblem-label">iOS</span>
-        </span>
-      </span>
-    </span>`;
-  }
   if (variant === "news") {
     return `<span class="home-panel-thumb home-panel-thumb--news">
       <svg class="home-panel-thumb-bg" viewBox="0 0 120 58" preserveAspectRatio="none" aria-hidden="true">
         <defs>
           <linearGradient id="thumbNewsLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#f7f1e7"/>
-            <stop offset="100%" stop-color="#e5dbcc"/>
+            <stop offset="0%" stop-color="#d2f7ea"/>
+            <stop offset="100%" stop-color="#c3dfff"/>
           </linearGradient>
           <linearGradient id="thumbNewsRight" x1="0%" y1="0%" x2="100%" y2="100%">
-            <stop offset="0%" stop-color="#efe5d7"/>
-            <stop offset="100%" stop-color="#ddd0bd"/>
+            <stop offset="0%" stop-color="#e0e7ff"/>
+            <stop offset="100%" stop-color="#bfd2ff"/>
           </linearGradient>
         </defs>
         <rect width="120" height="58" fill="url(#thumbNewsRight)"/>
         <polygon points="0,0 65,0 55,58 0,58" fill="url(#thumbNewsLeft)"/>
-        <line x1="65" y1="0" x2="55" y2="58" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+        <line x1="65" y1="0" x2="55" y2="58" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1"/>
       </svg>
       <span class="home-panel-thumb-grid">
         <span class="home-panel-emblem">
@@ -222,17 +186,17 @@ function panelThumb(variant) {
     <svg class="home-panel-thumb-bg" viewBox="0 0 120 58" preserveAspectRatio="none" aria-hidden="true">
       <defs>
         <linearGradient id="thumbIosLeft" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#f6f0e6"/>
-          <stop offset="100%" stop-color="#e3d9ca"/>
+          <stop offset="0%" stop-color="#dcf5ff"/>
+          <stop offset="100%" stop-color="#c3dcff"/>
         </linearGradient>
         <linearGradient id="thumbIosRight" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#ede3d5"/>
-          <stop offset="100%" stop-color="#dbd0be"/>
+          <stop offset="0%" stop-color="#d2f7ee"/>
+          <stop offset="100%" stop-color="#bdd7ff"/>
         </linearGradient>
       </defs>
       <rect width="120" height="58" fill="url(#thumbIosRight)"/>
       <polygon points="0,0 65,0 55,58 0,58" fill="url(#thumbIosLeft)"/>
-      <line x1="65" y1="0" x2="55" y2="58" stroke="#ffffff" stroke-opacity="0.7" stroke-width="1"/>
+      <line x1="65" y1="0" x2="55" y2="58" stroke="#ffffff" stroke-opacity="0.55" stroke-width="1"/>
     </svg>
     <span class="home-panel-thumb-grid">
       <span class="home-panel-emblem">
@@ -532,7 +496,6 @@ function renderRoute(moveFocus = false) {
     if (link.dataset.nav === section) link.setAttribute("aria-current", isSubpage ? "location" : "page");
     else link.removeAttribute("aria-current");
   });
-  syncAllPills(false);
   const heading = document.querySelector("#page-title");
   document.title = section === "news" && !isSubpage ? "Bản tin IT" : `${heading.textContent} | Bản tin IT`;
   const jumpParam = hashParams.get("jump");
@@ -605,11 +568,9 @@ main.addEventListener("click", (event) => {
   if (filter) {
     const section = window.location.hash === routes.docs ? "docs" : "news";
     state[`${section}Category`] = filter.dataset.filter;
-    const filtersEl = filter.parentElement;
-    filtersEl.querySelectorAll("button").forEach((button) => {
+    filter.parentElement.querySelectorAll("button").forEach((button) => {
       button.setAttribute("aria-pressed", String(button === filter));
     });
-    syncPill(filtersEl, ".filter-pill", '[aria-pressed="true"]', true);
     if (section === "docs") updateDocs();
     else updateNews();
   }
@@ -675,33 +636,6 @@ document.addEventListener("keydown", (event) => {
 });
 
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-const siteNav = document.querySelector(".site-nav");
-
-function syncPill(container, pillSelector, activeSelector, animate = false) {
-  if (!container) return;
-  const pill = container.querySelector(pillSelector);
-  const active = container.querySelector(activeSelector);
-  if (!pill || !active) {
-    if (pill) pill.style.opacity = "0";
-    return;
-  }
-  if (!animate || reducedMotion.matches) pill.classList.add("is-instant");
-  pill.style.opacity = "1";
-  pill.style.left = `${active.offsetLeft}px`;
-  pill.style.top = `${active.offsetTop}px`;
-  pill.style.width = `${active.offsetWidth}px`;
-  pill.style.height = `${active.offsetHeight}px`;
-  if (!animate || reducedMotion.matches) {
-    void pill.offsetWidth;
-    pill.classList.remove("is-instant");
-  }
-}
-
-function syncAllPills(animate = false) {
-  syncPill(siteNav, ".site-nav-pill", "[aria-current]", animate);
-  syncPill(main.querySelector(".filters"), ".filter-pill", '[aria-pressed="true"]', animate);
-}
-
 function transitionRoute(moveFocus = false) {
   if (document.startViewTransition && !reducedMotion.matches) {
     document.startViewTransition(() => renderRoute(moveFocus));
@@ -710,7 +644,5 @@ function transitionRoute(moveFocus = false) {
   }
 }
 
-window.addEventListener("resize", () => syncAllPills(false));
-document.fonts?.ready?.then(() => syncAllPills(false));
 window.addEventListener("hashchange", () => transitionRoute(true));
 renderRoute();
